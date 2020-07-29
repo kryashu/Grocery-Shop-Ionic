@@ -1,5 +1,3 @@
-image: beevelop/ionic:latest
-
 stages:
   - deploy
 
