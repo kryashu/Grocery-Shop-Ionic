@@ -1,45 +1,41 @@
-deploy:android:debug:
-  <<: *deploy
-  environment:
-    name: production
-  variables:
-    PLATFORM: android
-    FILE_TYPE: apk
-    OUTPUT_PATH: platforms/android/app/build/outputs/apk/debug/app-debug
-  script:
-    - npm ci
-    - ionic cordova build android --debug
-deploy:android:release:
-  <<: *deploy
-  environment:
-    name: production
-  variables:
-    PLATFORM: android
-    FILE_TYPE: apk
-    OUTPUT_PATH: platforms/android/app/build/outputs/apk/release/app-release
-  script:
-    - npm ci
-    - ionic cordova build android --release
+image: beevelop/ionic:latest
 
-deploy:ios:debug:
-  <<: *deploy
-  environment:
-    name: production
-  variables:
-    PLATFORM: iOS
-    FILE_TYPE: ipa
-    OUTPUT_PATH: platforms/ios/build/device/my-app
+stages:
+  - deploy
+
+cache:
+  untracked: true
+  key: "$CI_PROJECT_ID"
+  paths:
+    - node_modules/
+
+build_android:
+  stage: deploy
+  only:
+    - master
   script:
-    - npm ci
-    - ionic cordova build ios --debug
-deploy:ios:release:
-  <<: *deploy
-  environment:
-    name: production
-  variables:
-    PLATFORM: iOS
-    FILE_TYPE: ipa
-    OUTPUT_PATH: platforms/ios/build/device/my-app
+    - ls
+    - npm i
+    - ionic cordova platform rm android
+    - ionic cordova platform add android
+    - ionic cordova build android
+    - ls ./platforms/android/build/outputs/apk/android*.apk
+  artifacts:
+    paths:
+      - platforms/android/build/outputs/apk
+
+build_ios:
+  stage: deploy
+  only:
+    - master
   script:
-    - npm ci
-    - ionic cordova build ios --release
+    - ls
+    - npm i
+    - ionic cordova platform rm ios
+    - ionic cordova platform add ios
+    - ionic cordova build ios
+    - ls ./platforms/ios/build/outputs/apk/ios*.ipa
+  artifacts:
+    paths:
+      - platforms/ios/build/outputs/ipa
+  
