@@ -1,0 +1,45 @@
+deploy:android:debug:
+  <<: *deploy
+  environment:
+    name: production
+  variables:
+    PLATFORM: android
+    FILE_TYPE: apk
+    OUTPUT_PATH: platforms/android/app/build/outputs/apk/debug/app-debug
+  script:
+    - npm ci
+    - ionic cordova build android --debug
+deploy:android:release:
+  <<: *deploy
+  environment:
+    name: production
+  variables:
+    PLATFORM: android
+    FILE_TYPE: apk
+    OUTPUT_PATH: platforms/android/app/build/outputs/apk/release/app-release
+  script:
+    - npm ci
+    - ionic cordova build android --release
+
+deploy:ios:debug:
+  <<: *deploy
+  environment:
+    name: production
+  variables:
+    PLATFORM: iOS
+    FILE_TYPE: ipa
+    OUTPUT_PATH: platforms/ios/build/device/my-app
+  script:
+    - npm ci
+    - ionic cordova build ios --debug
+deploy:ios:release:
+  <<: *deploy
+  environment:
+    name: production
+  variables:
+    PLATFORM: iOS
+    FILE_TYPE: ipa
+    OUTPUT_PATH: platforms/ios/build/device/my-app
+  script:
+    - npm ci
+    - ionic cordova build ios --release
