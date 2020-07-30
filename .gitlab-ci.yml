@@ -18,7 +18,7 @@ build_android:
     - npm i
     - ionic cordova platform rm android
     - ionic cordova platform add android
-    - ionic cordova build android
+    - ionic cordova build android --release
     - ls ./platforms/android/build/outputs/apk/android*.apk
   artifacts:
     paths:
@@ -33,7 +33,7 @@ build_ios:
     - npm i
     - ionic cordova platform rm ios
     - ionic cordova platform add ios
-    - ionic cordova build ios
+    - ionic cordova build ios  --release
     - ls ./platforms/ios/build/outputs/apk/ios*.ipa
   artifacts:
     paths:
