@@ -9,6 +9,7 @@ cache:
   paths:
     - node_modules/
 
+# build android apk file
 build_android:
   stage: deploy
   only:
@@ -23,16 +24,17 @@ build_android:
     paths:
       - platforms/android/app/build/outputs/apk
 
-build_ios:
-  stage: deploy
-  only:
-    - master
-  script:
-    - ls
-    - npm i
-    - ionic cordova platform rm ios
-    - ionic cordova platform add ios
-    - ionic cordova build ios  
-  artifacts:
-    paths:
-      - platforms/android/app/build/outputs/ipa
+#build ios apk file
+#build_ios:
+#  stage: deploy
+#  only:
+#    - master
+#  script:
+#    - ls
+#    - npm i
+#    - ionic cordova platform rm ios
+#    - ionic cordova platform add ios
+#    - ionic cordova build ios
+#  artifacts:
+#    paths:
+#      - platforms/android/app/build/outputs/ipa
