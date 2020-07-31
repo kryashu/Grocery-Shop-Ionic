@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import {SignupSigninComponent} from "./signup-signin/signup-signin.component";
 
 const routes: Routes = [
   {
@@ -11,6 +12,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'sign',
+    loadChildren: () => import('./sign/sign.module').then( m => m.SignPageModule)
+  }
 ];
 
 @NgModule({

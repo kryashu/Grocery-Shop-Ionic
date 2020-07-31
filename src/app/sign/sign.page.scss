@@ -1,0 +1,30 @@
+.logo {
+  width: 25px;
+  margin: auto;
+
+}
+
+.image{
+  margin-top: 3rem;
+}
+.text-ionic {
+  font-size: 30pt;
+  //font-weight: 600;
+  font-family: 'sf bold';
+}
+.ionic-content {
+  text-align: center;
+  font-size: 16pt;
+  font-family: 'sf regular';
+  color: #1A1824;
+}
+.signin {
+  margin-top: 3rem;
+}
+ion-button {
+  --background: #EA0A8E;
+  width: 90%;
+  color: white;
+  height: 45px;
+  text-transform: none;
+}
