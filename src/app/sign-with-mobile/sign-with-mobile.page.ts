@@ -9,10 +9,12 @@ import {CountryCode} from './country-code.constant';
 export class SignWithMobilePage implements OnInit {
   countryList = CountryCode.countryCode;
   amd = '+91';
-  phoneNumber;
+  phoneNumber = 'Enter Your Phone Number';
   constructor() { }
 
   ngOnInit() {
   }
-
+clear(){
+    this.phoneNumber = undefined;
+}
 }

@@ -14,5 +14,19 @@ h1{
   margin-bottom: 100px
 }
 ion-input{
+  border-bottom: 1px solid;
   --placeholder-font-weight: bolder;
+}
+.otp{
+  text-align: center;
+  font-weight: bolder;
+  font-size: medium;
+}
+.warning{
+  color: #FF2650;
+  font-size: small;
+  margin-top: 5px;
+}
+ion-row{
+  margin-left: 30px
 }

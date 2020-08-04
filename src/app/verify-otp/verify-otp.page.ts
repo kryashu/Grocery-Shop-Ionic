@@ -8,10 +8,12 @@ import {Router, ActivatedRoute} from '@angular/router';
 })
 export class VerifyOtpPage implements OnInit {
   phoneNumber;
-  firstD;
-  secondD;
-  thirdD;
-  fourthD;
+  firstD = '.';
+  secondD = '.';
+  thirdD = '.';
+  fourthD = '.';
+  warningFlag = false;
+  style;
   constructor(private router: Router,
               private route: ActivatedRoute) { }
 
@@ -21,15 +23,31 @@ export class VerifyOtpPage implements OnInit {
   });
   }
 verify() {
-      console.log(this.firstD , this.secondD ,this.thirdD , this.fourthD);
+      console.log(this.firstD , this.secondD , this.thirdD , this.fourthD);
       if (this.firstD + this.secondD + this.thirdD + this.fourthD === '1111'){
             this.router.navigate(['/homepage']);
         }
-        else if (this.firstD === 'undefined' || this.secondD === undefined ||this.thirdD === undefined || this.fourthD === undefined) {
+        else if (this.firstD === undefined || this.secondD === undefined || this.thirdD === undefined || this.fourthD === undefined || this.firstD === '.' || this.secondD === '.' || this.thirdD === '.' || this.fourthD === '.') {
             return;
         }
         else {
-            alert('wrong otp');
+            this.warningFlag = true;
+            this.style = {
+                borderColor: '#FF2650',
+                color: '#FF2650'
+            };
+      }
+    }
+    clear(position){
+      if (position === 1){
+          this.firstD = undefined;
+      }else if (position === 2){
+          this.secondD = undefined;
+      }else if (position === 3){
+          this.thirdD = undefined;
+      }
+      else if (position === 4){
+          this.fourthD = undefined;
       }
     }
 }
