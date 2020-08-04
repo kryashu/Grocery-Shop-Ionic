@@ -1,9 +1,193 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>homepage</ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <div class="logo">
+            <img src="./assets/Logo.png">
+        </div>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <ion-grid class="">
+        <ion-row>
+            <ion-col size-xs="1">
 
+            </ion-col>
+            <ion-col size-xs="10">
+                <h2 class="discover">Discover new Product or Shops</h2>
+                <br>
+                <ion-searchbar placeholder="Search items"></ion-searchbar>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+    <!--  special offer grid-->
+    <ion-grid>
+        <ion-row>
+            <ion-col size-xs="1">
+
+            </ion-col>
+            <ion-col size-xs="11">
+                <ion-row>
+                    <ion-col size-xs="6">
+                        <h3>Special offers</h3>
+                    </ion-col>
+                    <ion-col size-xs="6" class="ion-align-self-center">
+                        <span class="span ion-float-right" ><small>View all</small><small><ion-icon
+                                name="chevron-forward-outline"></ion-icon></small></span>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-scroll scrollX="true" direction="x">
+                        <div>
+             <span>
+                <img class="card-img img-fluid" src="./assets/pizza.png"/>
+             <h5>Basic pizza</h5>
+             <h6>$,More Market </h6>
+           </span>
+                        </div>
+                        <div>
+             <span>
+                <img class="card-img img-fluid" src="./assets/pizza.png"/>
+             <h5>Basic pizza</h5>
+             <h6>$,More Market</h6>
+           </span>
+                        </div>
+                        <div>
+             <span>
+                <img class="card-img img-fluid" src="./assets/pizza.png"/>
+             <h5>Basic pizza</h5>
+             <h6>$,More Market</h6>
+           </span>
+                        </div>
+
+                    </ion-scroll>
+                </ion-row>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+    <!--  all categories-->
+    <ion-grid>
+        <ion-row>
+            <ion-col size-xs="1">
+
+            </ion-col>
+            <ion-col size-xs="11">
+                <ion-row>
+                    <ion-col size-xs="6">
+                        <h3>All Categories</h3>
+                    </ion-col>
+                    <ion-col size-xs="6" class="ion-align-self-center">
+                        <span class="span ion-float-right" ><small>View all</small><small><ion-icon
+                                name="chevron-forward-outline"></ion-icon></small></span>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-scroll scrollX="true" direction="x">
+                        <div>
+             <span>
+                <img class="categories-img" src="./assets/bananas.webp"/>
+             <h5>Fruits(24)</h5>
+           </span>
+                        </div>
+                        <div>
+             <span>
+                <img class="categories-img" src="./assets/bananas.webp"/>
+             <h5>Vegetable(24)</h5>
+           </span>
+                        </div>
+                        <div>
+             <span>
+                <img class="categories-img" src="./assets/bananas.webp"/>
+             <h5>Meat(24)</h5>
+           </span>
+                        </div>
+
+                    </ion-scroll>
+                </ion-row>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
+
+    <!--    All Shops-->
+    <ion-grid>
+        <ion-row>
+            <ion-col size-xs="1">
+
+            </ion-col>
+            <ion-col size-xs="11">
+                <ion-row>
+                    <ion-col size-xs="6">
+                        <h3>All Shops</h3>
+                    </ion-col>
+                    <ion-col size-xs="6" class="ion-align-self-center">
+                        <span class="span ion-float-right" ><small>View all</small><small><ion-icon
+                                name="chevron-forward-outline"></ion-icon></small></span>
+                    </ion-col>
+                </ion-row>
+                <ion-row>
+                    <ion-scroll scrollX="true" direction="x">
+                        <div>
+             <span>
+                <img class="shop-img" src="./assets/shop.jpg"/>
+             <h5>Basic kneads pizza</h5>
+                 <p>$$$$, india</p>
+                 <div class="rating-time">
+                     <div class="shop-rtf">
+                        <span class="span" ><ion-icon name="star-outline"></ion-icon>  <small>   4.8(120)</small></span>
+                     </div>
+                      <div class="shop-rtf">
+                        <span class="span" ><ion-icon name="time-outline"></ion-icon> <small>   60min</small></span>
+                     </div>
+                      <div class="shop-rtf">
+                        <span class="span" ><img style="width: 13px" src="./assets/dollar.png"> <small>   Free</small></span>
+                     </div>
+                 </div>
+           </span>
+                        </div>
+                        <div>
+             <span>
+                <img class="shop-img" src="./assets/shop.jpg"/>
+             <h5>Basic kneads pizza</h5>
+                 <p>$$$$, india</p>
+                  <div class="rating-time">
+                     <div class="shop-rtf">
+                        <span class="span" ><ion-icon name="star-outline"></ion-icon>  <small>   4.8(120)</small></span>
+                     </div>
+                      <div class="shop-rtf">
+                        <span class="span" ><ion-icon name="time-outline"></ion-icon> <small>   60min</small></span>
+                     </div>
+                      <div class="shop-rtf">
+                        <span class="span" ><img style="width: 13px" src="./assets/dollar.png"> <small>  Free</small></span>
+                     </div>
+                 </div>
+           </span>
+                        </div>
+                        <div>
+             <span>
+                <img class="shop-img" src="./assets/shop.jpg"/>
+             <h5>Basic kneads pizza</h5>
+                 <p>$$$$, india</p>
+ <div class="rating-time">
+                     <div class="shop-rtf">
+                        <span class="span" ><ion-icon name="star-outline"></ion-icon>     <small>   4.8(120)</small></span>
+                     </div>
+                      <div class="shop-rtf">
+                        <span class="span" ><ion-icon name="time-outline"></ion-icon>     <small>   60min</small></span>
+                     </div>
+                      <div class="shop-rtf">
+                        <span class="span" ><img style="width: 13px" src="./assets/dollar.png">     <small>   Free</small></span>
+                     </div>
+                 </div>
+           </span>
+                        </div>
+
+                    </ion-scroll>
+                </ion-row>
+            </ion-col>
+
+        </ion-row>
+    </ion-grid>
 </ion-content>
