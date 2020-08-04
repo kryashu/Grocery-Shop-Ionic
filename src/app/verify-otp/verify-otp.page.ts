@@ -23,9 +23,8 @@ export class VerifyOtpPage implements OnInit {
   });
   }
 verify() {
-      console.log(this.firstD , this.secondD , this.thirdD , this.fourthD);
       if (this.firstD + this.secondD + this.thirdD + this.fourthD === '1111'){
-            this.router.navigate(['/homepage']);
+            this.router.navigate(['tabs', 'homepage']);
         }
         else if (this.firstD === undefined || this.secondD === undefined || this.thirdD === undefined || this.fourthD === undefined || this.firstD === '.' || this.secondD === '.' || this.thirdD === '.' || this.fourthD === '.') {
             return;
