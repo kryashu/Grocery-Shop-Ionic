@@ -12,6 +12,10 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'tabs',
+    loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
+  },
+  {
     path: 'sign',
     loadChildren: () => import('./sign/sign.module').then( m => m.SignPageModule)
   },
@@ -27,14 +31,6 @@ const routes: Routes = [
     path: 'homepage',
     loadChildren: () => import('./homepage/homepage.module').then( m => m.HomepagePageModule)
   },
-  // {
-  //   path: 'signup',
-  //   loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
-  // },
-  // {
-  //   path: 'signin',
-  //   loadChildren: () => import('./signin/signin.module').then( m => m.SigninPageModule)
-  // }
 ];
 
 @NgModule({

@@ -1,0 +1,50 @@
+.logo {
+  width: 25px;
+  margin: auto;
+}
+.image{
+  margin-top: 3rem;
+}
+
+.signin-text{
+  margin-top: 3.5rem;
+  font-size: 2.5rem;
+  font-family: 'sf medium';
+  color: #1A1824;
+}
+.sign-apple{
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 80%;
+  margin-top: 2.5rem !important;
+  margin: auto;
+  font-family: 'sf medium';
+}
+.mobile-login {
+  border: 1px solid #EA0A8E;
+  border-radius: 5px;
+  margin-top: 1.5rem !important;
+  width: 80%;
+  margin: auto;
+  font-family: 'sf medium';
+
+}
+ion-button {
+  text-transform: none;
+  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 600;
+  //margin: auto;
+  //height: 45px;
+}
+
+.sign {
+  border: 1px solid #EA0A8E;
+  border-radius: 5px;
+  margin-top: 1.5rem;
+  //height: 45px;
+}
+.social-login {
+  margin: auto;
+  width: 90%;
+}

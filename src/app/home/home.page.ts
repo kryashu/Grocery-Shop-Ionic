@@ -1,12 +1,30 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
+export class HomePage implements OnInit {
+  loaderValue;
+  constructor(  private router: Router,) {
 
-  constructor() {}
+  }
 
+
+  ngOnInit(): void {
+    this.startTimer();
+  }
+  startTimer() {
+    console.log('start')
+    this.loaderValue = setTimeout(() => {
+      // my to do
+      this.router.navigate(['sign']);
+    }, 3000);
+    //
+    // setTimeout(() => {
+    //   this.router.navigate(['tabs', 'homepage']);
+    // }, 30000);
+  }
 }
