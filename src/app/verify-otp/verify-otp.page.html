@@ -1,9 +1,30 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>verify-otp</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-grid class=" ion-margin-top ">
+    <ion-row class="logo">
+      <img src="./assets/logo.PNG">
+    </ion-row>
+    <ion-row>
+      <h1>Enter the 4-digit code sent to you at <span style="color: #EA0A8E">{{phoneNumber}}</span></h1>
+    </ion-row>
+    <ion-row style="margin-left: 30px">
+      <ion-col size="3">
+        <ion-input maxlength="1" placeholder="." [(ngModel)]="firstD"  (ngModelChange)="verify()"></ion-input>
+      </ion-col>
 
+      <ion-col size="3">
+        <ion-input maxlength="1" placeholder="." [(ngModel)]="secondD"  (ngModelChange)="verify()"></ion-input>
+      </ion-col>
+
+      <ion-col size="3">
+        <ion-input maxlength="1" placeholder="." [(ngModel)]="thirdD" (ngModelChange)="verify()"></ion-input>
+      </ion-col>
+
+      <ion-col size="3">
+        <ion-input maxlength="1" placeholder="." [(ngModel)]="fourthD"  (ngModelChange)="verify()"></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <div class="text">
+  I haven't received a code.
+  </div>
 </ion-content>

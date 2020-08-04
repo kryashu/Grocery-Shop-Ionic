@@ -11,11 +11,7 @@ const routes: Routes = [
     component: SignPage,
       children: [],
   },
-    {
-        path: 'signup',
-        loadChildren: () => import('../signup/signup.module').then( m => m.SignupPageModule),
-        pathMatch: 'full'
-    },
+
     {
         path: 'signin',
         loadChildren: () => import('../signin/signin.module').then( m => m.SigninPageModule),

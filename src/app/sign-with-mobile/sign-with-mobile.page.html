@@ -1,9 +1,28 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>sign-with-mobile</ion-title>
-  </ion-toolbar>
-</ion-header>
-
+<ion-app>
 <ion-content>
-
+  <ion-grid class=" ion-margin-top ">
+    <ion-row class="logo">
+      <img src="./assets/logo.PNG">
+    </ion-row>
+    <ion-row>
+      <h1>Enter your phone number</h1>
+    </ion-row>
+    <ion-row style="margin-left: 10px">
+      <ion-col size="3">
+          <ion-select [(ngModel)]="amd">
+            <ion-select-option *ngFor="let item of countryList" [value]="item.Iso">{{item.countryCode}}</ion-select-option>
+          </ion-select>
+      </ion-col>
+      <ion-col size="3">
+        <ion-input [(ngModel)]="amd" disabled></ion-input>
+      </ion-col>
+      <ion-col size="6">
+      <ion-input placeholder="Enter your phone number"  [clearInput]="true" type="tel" [(ngModel)]="phoneNumber"></ion-input>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+    <ion-button expand="block" [routerLink]="['/verify-otp',{phone: amd+phoneNumber}]" [disabled]="!phoneNumber">Next</ion-button>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+</ion-app>
