@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 import {Keyboard} from '@ionic-native/keyboard/ngx';
 
+
 @Component({
   selector: 'app-verify-otp',
   templateUrl: './verify-otp.page.html',
@@ -9,17 +10,18 @@ import {Keyboard} from '@ionic-native/keyboard/ngx';
 })
 export class VerifyOtpPage implements OnInit {
   phoneNumber;
-  firstD = '.';
-  secondD = '.';
-  thirdD = '.';
-  fourthD = '.';
+  firstD ;
+  secondD ;
+  thirdD ;
+  fourthD ;
   warningFlag = false;
   style;
+  backspaceWave = 0;
   textFlag = true;
   constructor(private router: Router,
               private route: ActivatedRoute,
               private keyboard: Keyboard) {
-      this.keyboard.onKeyboardHide().subscribe(evemt => {
+      this.keyboard.onKeyboardHide().subscribe(() => {
           this.textFlag = true;
       });
   }
@@ -29,26 +31,31 @@ export class VerifyOtpPage implements OnInit {
       this.phoneNumber = params.phone;
   });
   }
-    moveFocus(nextElement, position, event) {
+    moveFocus(nextElement, prevElement, position, event) {
         this.textFlag = false;
-        console.log(event.target.value);
-        if (position === 1 && event.target.value !== ''){
-            this.secondD = undefined;
+        if (event.target.value !== ''){
+            this.backspaceWave = 1;
             nextElement.setFocus();
-        }else if (position === 2 && event.target.value !== ''){
-            this.thirdD = undefined;
-            nextElement.setFocus();
-        }else if (position === 3 && event.target.value !== ''){
-            this.fourthD = undefined;
-            nextElement.setFocus();
+            if (position === 4){
+                this.backspaceWave = 0;
+            }
         }
-    }
+        if (event.key === 'Backspace' && this.backspaceWave === 0){
+            this.backspaceWave += 1;
+            this.warningFlag = false;
+            this.style = undefined;
+        }else if (event.key === 'Backspace' && this.backspaceWave === 1){
+            prevElement.setFocus();
+            this.backspaceWave -= 1;
+        }
+  }
+
 verify() {
       if (this.firstD + this.secondD + this.thirdD + this.fourthD === '1111'){
             this.router.navigate(['tabs', 'homepage']);
         }
       // tslint:disable-next-line:max-line-length
-        else if (this.firstD === undefined || this.secondD === undefined || this.thirdD === undefined || this.fourthD === undefined || this.firstD === '.' || this.secondD === '.' || this.thirdD === '.' || this.fourthD === '.') {
+        else if (this.firstD === undefined || this.secondD === undefined || this.thirdD === undefined || this.fourthD === undefined || this.firstD === '' || this.secondD === '' || this.thirdD === '' || this.fourthD === '') {
             return;
         }
         else {
@@ -59,18 +66,8 @@ verify() {
             };
       }
     }
-    clear(position){
+    clear(){
       this.textFlag = false;
-      if (position === 1){
-          this.firstD = undefined;
-      }else if (position === 2){
-          this.secondD = undefined;
-      }else if (position === 3){
-          this.thirdD = undefined;
-      }
-      else if (position === 4){
-          this.fourthD = undefined;
-      }
     }
 }
 
