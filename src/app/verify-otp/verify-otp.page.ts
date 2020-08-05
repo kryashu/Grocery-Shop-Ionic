@@ -68,6 +68,7 @@ verify() {
       }
     }
     clear(){
+        this.backspaceWave = 1;
       this.textFlag = false;
     }
     public async showActionSheet() {
@@ -85,7 +86,7 @@ verify() {
                 text: 'No, I want to change it',
                 cssClass: 'sec',
                 handler: () => {
-                    // Nothing to do, action sheet is automatically closed
+                    this.router.navigate(['/sign-with-mobile']);
                 }
             }]
         });
