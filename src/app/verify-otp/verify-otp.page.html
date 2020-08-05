@@ -33,9 +33,9 @@
     </ion-row>
   </ion-grid>
   <div class="upperText" *ngIf="!textFlag">
-    I haven't received a code.
+    <a (click)="showActionSheet()" style="color: #0d0d0d; cursor: pointer">I haven't received a code.</a>
   </div>
   <div class="lowerText" *ngIf="textFlag">
-  I haven't received a code.
+    <a (click)="showActionSheet()" style="color: #0d0d0d; cursor: pointer">I haven't received a code.</a>
   </div>
 </ion-content>
