@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
-import { Platform } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-verify-otp',
@@ -17,11 +17,7 @@ export class VerifyOtpPage implements OnInit {
   style;
   textFlag = true;
   constructor(private router: Router,
-              private route: ActivatedRoute,
-              private platform: Platform) {
-      this.platform.backButton.subscribeWithPriority(10, () => {
-          this.textFlag = true;
-      });
+              private route: ActivatedRoute) {
   }
 
   ngOnInit() {
