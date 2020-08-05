@@ -29,15 +29,16 @@ export class VerifyOtpPage implements OnInit {
       this.phoneNumber = params.phone;
   });
   }
-    moveFocus(nextElement, position) {
+    moveFocus(nextElement, position, event) {
         this.textFlag = false;
-        if (position === 1){
+        console.log(event.target.value);
+        if (position === 1 && event.target.value !== ''){
             this.secondD = undefined;
             nextElement.setFocus();
-        }else if (position === 2){
+        }else if (position === 2 && event.target.value !== ''){
             this.thirdD = undefined;
             nextElement.setFocus();
-        }else if (position === 3){
+        }else if (position === 3 && event.target.value !== ''){
             this.fourthD = undefined;
             nextElement.setFocus();
         }
