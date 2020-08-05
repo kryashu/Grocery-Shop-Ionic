@@ -1,27 +1,32 @@
 <ion-app>
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <div>
+        <img>
+      </div>
+      <div class="logo">
+        <img src="./assets/Logo.png">
+      </div>
+    </ion-toolbar>
+  </ion-header>
 <ion-content>
   <ion-grid class=" ion-margin-top ">
-    <ion-row class="logo">
-      <img src="./assets/Logo.png">
-    </ion-row>
     <ion-row>
       <h1>Enter your phone number</h1>
     </ion-row>
-    <ion-row style="margin-left: 10px">
-      <ion-col size="3">
-          <ion-select [(ngModel)]="amd">
-            <ion-select-option *ngFor="let item of countryList" [value]="item.Iso">{{item.countryCode}}</ion-select-option>
-          </ion-select>
-      </ion-col>
-      <ion-col size="3">
-        <ion-input [(ngModel)]="amd" disabled></ion-input>
-      </ion-col>
-      <ion-col size="6">
-      <ion-input [clearInput]="true" (click)="clear()" type="tel" [(ngModel)]="phoneNumber"></ion-input>
+    <ion-row style="margin-left: 30px; margin-right: 30px">
+      <ion-col>
+        <ion-select (click)="changeFlag()" [(ngModel)]="amd">
+          <ion-select-option *ngFor="let item of countryList"  [value]="'+'+item.callingCodes[0]"><img style="width: 10px;height: 10px" src="{{item.flag}}">{{item.alpha2Code}}</ion-select-option>
+        </ion-select>
+        <ion-input class="amd" [(ngModel)]="amd" ></ion-input>
+      <ion-input class="main" placeholder="Enter Your Phone Number" [clearInput]="true" (click)="clear()" type="tel" [(ngModel)]="phoneNumber"></ion-input>
       </ion-col>
     </ion-row>
+    <a class="warning" *ngIf="warningFlag">Phone Number is Invalid!</a>
     <ion-row>
-    <ion-button expand="block" [routerLink]="['/verify-otp',{phone: amd+phoneNumber}]" [disabled]="!phoneNumber || phoneNumber === 'Enter Your Phone Number'">Next</ion-button>
+      <ion-button expand="block" class="upperBtn" (click)="click()" *ngIf="!buttonFlag" [disabled]="(!phoneNumber) ">Next</ion-button>
+    <ion-button expand="block" class="lowerBtn" (click)="click()" *ngIf="buttonFlag" [disabled]="(!phoneNumber)">Next</ion-button>
     </ion-row>
   </ion-grid>
 </ion-content>

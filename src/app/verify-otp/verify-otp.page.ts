@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
+import { Platform } from '@ionic/angular';
 
 @Component({
   selector: 'app-verify-otp',
@@ -14,18 +15,38 @@ export class VerifyOtpPage implements OnInit {
   fourthD = '.';
   warningFlag = false;
   style;
+  textFlag = true;
   constructor(private router: Router,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private platform: Platform) {
+      this.platform.backButton.subscribeWithPriority(10, () => {
+          this.textFlag = true;
+      });
+  }
 
   ngOnInit() {
      this.route.params.subscribe(params => {
       this.phoneNumber = params.phone;
   });
   }
+    moveFocus(nextElement, position) {
+        this.textFlag = false;
+        if (position === 1){
+            this.secondD = undefined;
+            nextElement.setFocus();
+        }else if (position === 2){
+            this.thirdD = undefined;
+            nextElement.setFocus();
+        }else if (position === 3){
+            this.fourthD = undefined;
+            nextElement.setFocus();
+        }
+    }
 verify() {
       if (this.firstD + this.secondD + this.thirdD + this.fourthD === '1111'){
             this.router.navigate(['tabs', 'homepage']);
         }
+      // tslint:disable-next-line:max-line-length
         else if (this.firstD === undefined || this.secondD === undefined || this.thirdD === undefined || this.fourthD === undefined || this.firstD === '.' || this.secondD === '.' || this.thirdD === '.' || this.fourthD === '.') {
             return;
         }
@@ -38,6 +59,7 @@ verify() {
       }
     }
     clear(position){
+      this.textFlag = false;
       if (position === 1){
           this.firstD = undefined;
       }else if (position === 2){
