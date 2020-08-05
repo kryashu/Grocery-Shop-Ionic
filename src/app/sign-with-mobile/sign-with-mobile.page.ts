@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {CountryCode} from './country-code.constant';
+import {Keyboard} from '@ionic-native/keyboard/ngx';
 
 @Component({
   selector: 'app-sign-with-mobile',
@@ -13,7 +14,11 @@ export class SignWithMobilePage implements OnInit {
   buttonFlag = true;
   phoneNumber ;
   warningFlag = false;
-  constructor(private router: Router) {
+  constructor(private router: Router,
+              private keyboard: Keyboard) {
+      this.keyboard.onKeyboardHide().subscribe(event => {
+          this.buttonFlag = true;
+      });
   }
 
   ngOnInit() {
