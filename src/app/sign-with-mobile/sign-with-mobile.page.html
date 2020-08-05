@@ -17,16 +17,16 @@
     <ion-row style="margin-left: 30px; margin-right: 30px">
       <ion-col>
         <ion-select (click)="changeFlag()" [(ngModel)]="amd">
-          <ion-select-option *ngFor="let item of countryList"  [value]="'+'+item.callingCodes[0]"><img style="width: 10px;height: 10px" src="{{item.flag}}">{{item.alpha2Code}}</ion-select-option>
+          <ion-select-option *ngFor="let item of countryList"  [value]="'+'+item.callingCodes[0]">{{item.alpha2Code}}</ion-select-option>
         </ion-select>
         <ion-input class="amd" [(ngModel)]="amd" ></ion-input>
-      <ion-input class="main" placeholder="Enter Your Phone Number" [clearInput]="true" (click)="clear()" type="tel" [(ngModel)]="phoneNumber"></ion-input>
+      <ion-input class="main" placeholder="Enter Your Phone Number" [clearInput]="true" (click)="clear()" type="tel" [(ngModel)]="phoneNumber" (ngModelChange)="changeflag()"></ion-input>
       </ion-col>
     </ion-row>
     <a class="warning" *ngIf="warningFlag">Phone Number is Invalid!</a>
     <ion-row>
-      <ion-button expand="block" class="upperBtn" (click)="click()" *ngIf="!buttonFlag" [disabled]="(!phoneNumber) ">Next</ion-button>
-    <ion-button expand="block" class="lowerBtn" (click)="click()" *ngIf="buttonFlag" [disabled]="(!phoneNumber)">Next</ion-button>
+      <ion-button expand="block" class="upperBtn" (click)="click()" *ngIf="!buttonFlag" >Next</ion-button>
+    <ion-button expand="block" class="lowerBtn" (click)="click()" *ngIf="buttonFlag" >Next</ion-button>
     </ion-row>
   </ion-grid>
 </ion-content>
