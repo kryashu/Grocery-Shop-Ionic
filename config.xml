@@ -25,24 +25,24 @@
         </edit-config>
         <resource-file src="resources/android/xml/network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
         <allow-intent href="market:*" />
-        <icon density="ldpi" src="./assets/Logo.png" />
-        <icon density="mdpi" src="./assets/Logo.png" />
-        <icon density="hdpi" src="./assets/Logo.png" />
-        <icon density="xhdpi" src="./assets/Logo.png" />
-        <icon density="xxhdpi" src="./assets/Logo.png" />
-        <icon density="xxxhdpi" src="./assets/Logo.png" />
-        <splash density="land-ldpi" src="./assets/Logo.png" />
-        <splash density="land-mdpi" src="./assets/Logo.png" />
-        <splash density="land-hdpi" src="./assets/Logo.png" />
-        <splash density="land-xhdpi" src="./assets/Logo.png" />
-        <splash density="land-xxhdpi" src="./assets/Logo.png" />
-        <splash density="land-xxxhdpi" src="./assets/Logo.png" />
-        <splash density="port-ldpi" src="./assets/Logo.png" />
-        <splash density="port-mdpi" src="./assets/Logo.png" />
-        <splash density="port-hdpi" src="./assets/Logo.png" />
-        <splash density="port-xhdpi" src="./assets/Logo.png" />
-        <splash density="port-xxhdpi" src="./assets/Logo.png" />
-        <splash density="port-xxxhdpi" src="./assets/Logo.png" />
+        <icon density="ldpi" src="src/assets/Logo.png" />
+        <icon density="mdpi" src="src/assets/Logo.png" />
+        <icon density="hdpi" src="src/assets/Logo.png" />
+        <icon density="xhdpi" src="src/assets/Logo.png" />
+        <icon density="xxhdpi" src="src/assets/Logo.png" />
+        <icon density="xxxhdpi" src="src/assets/Logo.png" />
+        <splash density="land-ldpi" src="src/assets/Logo.png" />
+        <splash density="land-mdpi" src="src/assets/Logo.png" />
+        <splash density="land-hdpi" src="src/assets/Logo.png" />
+        <splash density="land-xhdpi" src="src/assets/Logo.png" />
+        <splash density="land-xxhdpi" src="src/assets/Logo.png" />
+        <splash density="land-xxxhdpi" src="src/assets/Logo.png" />
+        <splash density="port-ldpi" src="src/assets/Logo.png" />
+        <splash density="port-mdpi" src="src/assets/Logo.png" />
+        <splash density="port-hdpi" src="src/assets/Logo.png" />
+        <splash density="port-xhdpi" src="src/assets/Logo.png" />
+        <splash density="port-xxhdpi" src="src/assets/Logo.png" />
+        <splash density="port-xxxhdpi" src="src/assets/Logo.png" />
     </platform>
     <platform name="ios">
         <allow-intent href="itms:*" />
