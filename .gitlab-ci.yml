@@ -22,7 +22,7 @@ build_android:
     - ionic cordova build android 
   artifacts:
     paths:
-      - platforms/android/app/build/outputs/apk/UntouchedApp.apk
+      - platforms/android/app/build/outputs/apk
 
 #build ios apk file
 #build_ios:
