@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
-
+import {Keyboard} from '@ionic-native/keyboard/ngx';
 
 @Component({
   selector: 'app-verify-otp',
@@ -17,7 +17,11 @@ export class VerifyOtpPage implements OnInit {
   style;
   textFlag = true;
   constructor(private router: Router,
-              private route: ActivatedRoute) {
+              private route: ActivatedRoute,
+              private keyboard: Keyboard) {
+      this.keyboard.onKeyboardHide().subscribe(evemt => {
+          this.textFlag = true;
+      });
   }
 
   ngOnInit() {
