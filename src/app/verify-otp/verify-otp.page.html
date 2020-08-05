@@ -1,33 +1,41 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <div class="logo">
+      <img src="./assets/logo.PNG">
+    </div>
+  </ion-toolbar>
+</ion-header>
 <ion-content>
   <ion-grid class=" ion-margin-top ">
-    <ion-row class="logo">
-      <img src="./assets/logo.PNG">
-    </ion-row>
     <ion-row>
       <h1>Enter the 4-digit code sent to you at <span style="color: #EA0A8E">{{phoneNumber}}</span></h1>
     </ion-row>
     <ion-row>
       <ion-col size="3">
-        <ion-input class="otp" [style]="style" clear-on-edit="true" maxlength="1" (click)="clear(1)"  [(ngModel)]="firstD"  (ngModelChange)="verify()"></ion-input>
+        <ion-input class="otp" #zero (keyup)="moveFocus(one,1)"  [style]="style"  maxlength="1" (click)="clear(1)"  [(ngModel)]="firstD"  (ngModelChange)="verify()"></ion-input>
       </ion-col>
 
       <ion-col size="3">
-        <ion-input class="otp" [style]="style" maxlength="1" clear-on-edit="true" (click)="clear(2)"  [(ngModel)]="secondD"  (ngModelChange)="verify()"></ion-input>
+        <ion-input class="otp" #one (keyup)="moveFocus(two,2)"  [style]="style" maxlength="1"   (click)="clear(2)"  [(ngModel)]="secondD"  (ngModelChange)="verify()"></ion-input>
       </ion-col>
 
       <ion-col size="3">
-        <ion-input class="otp" [style]="style" maxlength="1" clear-on-edit="true" (click)="clear(3)" [(ngModel)]="thirdD" (ngModelChange)="verify()"></ion-input>
+        <ion-input class="otp" #two (keyup)="moveFocus(three,3)"  [style]="style" maxlength="1"  (click)="clear(3)" [(ngModel)]="thirdD" (ngModelChange)="verify()"></ion-input>
       </ion-col>
 
       <ion-col size="3">
-        <ion-input class="otp" [style]="style" maxlength="1" (click)="clear(4)" [(ngModel)]="fourthD"  (ngModelChange)="verify()"></ion-input>
+        <ion-input class="otp" #three  [style]="style" maxlength="1"  (click)="clear(4)" [(ngModel)]="fourthD"  (ngModelChange)="verify()"></ion-input>
       </ion-col>
     </ion-row>
     <ion-row  *ngIf="warningFlag">
       <a class="warning">The code you entered does not match. Try Again!</a>
     </ion-row>
   </ion-grid>
-  <div class="text">
+  <div class="upperText" *ngIf="!textFlag">
+    I haven't received a code.
+  </div>
+  <div class="lowerText" *ngIf="textFlag">
   I haven't received a code.
   </div>
 </ion-content>

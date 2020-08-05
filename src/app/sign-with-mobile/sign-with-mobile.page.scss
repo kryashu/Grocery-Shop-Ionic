@@ -9,7 +9,7 @@ h1{
   margin: 30px;
 }
 
-ion-button{
+.lowerBtn{
   margin-left: 30px;
   margin-right: 30px;
   margin-top: 300px;
@@ -18,9 +18,34 @@ ion-button{
   width: 100%;
   border-radius: 50px;
 }
-ion-input{
+.upperBtn{
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  --background: #EA0A8E;
+  width: 100%;
+  border-radius: 50px;
+}
+.main{
   font-size: 10px;
+}
+.amd{
+  max-width: 60px;
 }
 ion-col{
   border-bottom: 1px solid;
+  display: flex;
 }
+ion-select{
+  padding: 0px;
+  width: 30px;
+  margin: 0px;
+}
+.warning{
+  color: #FF2650;
+  font-size: small;
+  margin-top: 5px;
+  margin-left: 30px;
+}
+
