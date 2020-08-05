@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Router, ActivatedRoute} from '@angular/router';
-import { Platform } from '@ionic/angular';
+import {Router} from '@angular/router';
 import {CountryCode} from './country-code.constant';
 
 @Component({
@@ -14,11 +13,7 @@ export class SignWithMobilePage implements OnInit {
   buttonFlag = true;
   phoneNumber ;
   warningFlag = false;
-  constructor(private platform: Platform,
-              private router: Router) {
-    this.platform.backButton.subscribeWithPriority(10, () => {
-      this.buttonFlag = true;
-    });
+  constructor(private router: Router) {
   }
 
   ngOnInit() {
