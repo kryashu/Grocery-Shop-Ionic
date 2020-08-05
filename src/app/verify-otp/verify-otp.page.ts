@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 import {Keyboard} from '@ionic-native/keyboard/ngx';
-
+import { ActionSheetController } from '@ionic/angular';
 
 @Component({
   selector: 'app-verify-otp',
@@ -20,7 +20,8 @@ export class VerifyOtpPage implements OnInit {
   textFlag = true;
   constructor(private router: Router,
               private route: ActivatedRoute,
-              private keyboard: Keyboard) {
+              private keyboard: Keyboard,
+              public actionSheetController: ActionSheetController) {
       this.keyboard.onKeyboardHide().subscribe(() => {
           this.textFlag = true;
       });
@@ -67,7 +68,29 @@ verify() {
       }
     }
     clear(){
+        this.backspaceWave = 1;
       this.textFlag = false;
+    }
+    public async showActionSheet() {
+        const actionSheet = await this.actionSheetController.create({
+            header: 'Is this your correct phone number?',
+            subHeader: this.phoneNumber,
+            cssClass: 'header',
+            buttons: [{
+                text: 'Yes, resend code by SMS',
+                cssClass: 'prime',
+                handler: () => {
+                    console.log(this.phoneNumber);
+                }
+            }, {
+                text: 'No, I want to change it',
+                cssClass: 'sec',
+                handler: () => {
+                    this.router.navigate(['/sign-with-mobile']);
+                }
+            }]
+        });
+        await actionSheet.present();
     }
 }
 
