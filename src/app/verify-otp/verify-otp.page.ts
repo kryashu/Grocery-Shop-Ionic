@@ -33,6 +33,7 @@ export class VerifyOtpPage implements OnInit {
   });
   }
     moveFocus(nextElement, prevElement, position, event) {
+      console.log(prevElement)
         this.textFlag = false;
         if (event.target.value !== ''){
             this.backspaceWave = 1;
