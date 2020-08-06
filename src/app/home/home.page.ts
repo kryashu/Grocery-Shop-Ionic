@@ -20,7 +20,7 @@ export class HomePage implements OnInit {
 
   ngOnInit(): void {
     this.startTimer();
-    this.exit()
+    this.exit();
   }
   exit(){
     this.platform.backButton.subscribe(() => {
