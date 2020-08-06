@@ -1,0 +1,40 @@
+.logo {
+  width: 25px;
+  margin: auto;
+}
+h1{
+  font-family: "sf bold";
+  font-size: 35px;
+  margin: 30px;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+ion-input {
+  border-bottom: 1px solid black;
+}
+ion-radio{
+   margin-right: 8px!important;
+  --color-checked: #EA0A8E;
+}
+::ng-deep ion-radio-group {
+  display: flex!important;
+}
+.gender {
+  margin-left: 10px;
+}
+.upperBtn{
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  --background: #EA0A8E;
+  width: 100%;
+  border-radius: 50px;
+  text-transform: none;
+}
+small {
+  color: #EA0A8E;
+}

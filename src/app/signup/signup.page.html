@@ -1,17 +1,17 @@
-<!--<ion-header>-->
-<!--  <ion-toolbar>-->
-<!--    <ion-buttons slot="end">-->
-<!--      <ion-back-button text="" icon="add"></ion-back-button>-->
-<!--    </ion-buttons>-->
-<!--  </ion-toolbar>-->
-<!--</ion-header>-->
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div class="logo">
+      <img src="./assets/Logo.png">
+    </div>
+  </ion-toolbar>
+</ion-header>
 <ion-app>
   <ion-content>
-    <ion-grid class=" ion-margin-top ">
-      <ion-row class="logo">
-        <img src="./assets/Logo.png">
-      </ion-row>
-    </ion-grid>
+<!--    <ion-grid class=" ion-margin-top ">-->
+<!--      <ion-row class="logo">-->
+<!--        <img src="./assets/Logo.png">-->
+<!--      </ion-row>-->
+<!--    </ion-grid>-->
     <ion-grid class=" ion-margin-top ">
       <ion-row class="image ion-justify-content-center">
         <img src="./assets/signup.png">
@@ -35,7 +35,7 @@
         </ion-col>
       </ion-row>
       <ion-row class="mobile-login ion-justify-content-center">
-        <ion-button expand="full" fill="clear"><span>Sign up with mobile</span></ion-button>
+        <ion-button expand="full" fill="clear" [routerLink]="['/sign-with-mobile']"><span>Sign up with mobile</span></ion-button>
       </ion-row>
     </ion-grid>
   </ion-content>

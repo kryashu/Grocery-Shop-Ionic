@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from '@angular/router';
+import {NavigationEnd, Router} from "@angular/router";
 import {Plugins} from '@capacitor/core';
 import {IonRouterOutlet,Platform} from '@ionic/angular';
 
@@ -20,6 +20,13 @@ export class HomePage implements OnInit {
         App.exitApp();
       }
     });
+          this.router.events.subscribe((e) => {
+              if (e instanceof NavigationEnd) {
+                  if (this.router.url === '/home') {
+                      this.startTimer();
+                  }
+              }
+          });
 
   }
 

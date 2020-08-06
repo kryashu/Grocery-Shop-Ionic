@@ -76,7 +76,8 @@ export class VerifyOtpPage implements OnInit {
 
 verify() {
       if (this.firstD + this.secondD + this.thirdD + this.fourthD === '1111'){
-            this.router.navigate(['tabs', 'homepage']);
+               this.router.navigate(['user-details'])
+            // this.router.navigate(['tabs', 'homepage']);
         }
       // tslint:disable-next-line:max-line-length
         else if (this.firstD === undefined || this.secondD === undefined || this.thirdD === undefined || this.fourthD === undefined || this.firstD === '' || this.secondD === '' || this.thirdD === '' || this.fourthD === '') {
