@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {Plugins} from '@capacitor/core';
-import {Platform} from '@ionic/angular';
+import {IonRouterOutlet,Platform} from '@ionic/angular';
 
 const { App } = Plugins;
 
@@ -13,20 +13,21 @@ const { App } = Plugins;
 export class HomePage implements OnInit {
   loaderValue;
   constructor(  private router: Router,
+                private routerOutlet: IonRouterOutlet,
                 private platform: Platform) {
+    this.platform.backButton.subscribeWithPriority(-1, () => {
+      if (!this.routerOutlet.canGoBack()) {
+        App.exitApp();
+      }
+    });
 
   }
 
 
   ngOnInit(): void {
     this.startTimer();
-    this.exit();
   }
-  exit(){
-    this.platform.backButton.subscribe(() => {
-      App.exitApp();
-    });
-  }
+
   startTimer() {
     console.log('start');
     this.loaderValue = setTimeout(() => {
