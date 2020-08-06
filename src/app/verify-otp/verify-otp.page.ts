@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 import {Keyboard} from '@ionic-native/keyboard/ngx';
 import { ActionSheetController } from '@ionic/angular';
@@ -69,7 +69,7 @@ verify() {
     }
     clear(){
         this.backspaceWave = 1;
-      this.textFlag = false;
+        this.textFlag = false;
     }
     public async showActionSheet() {
         const actionSheet = await this.actionSheetController.create({
