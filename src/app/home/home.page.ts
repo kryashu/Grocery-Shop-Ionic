@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -8,7 +8,7 @@ import {Router} from "@angular/router";
 })
 export class HomePage implements OnInit {
   loaderValue;
-  constructor(  private router: Router,) {
+  constructor(  private router: Router) {
 
   }
 
@@ -16,8 +16,9 @@ export class HomePage implements OnInit {
   ngOnInit(): void {
     this.startTimer();
   }
+  exit(){}
   startTimer() {
-    console.log('start')
+    console.log('start');
     this.loaderValue = setTimeout(() => {
       // my to do
       this.router.navigate(['sign']);
