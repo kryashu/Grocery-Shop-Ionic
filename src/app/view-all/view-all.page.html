@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div class="logo">
+      <img src="./assets/Logo.png">
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<ion-grid>
+  <ion-row>
+    <ion-col *ngFor="let item of viewList"  size-sm="3" size-xs="6" size-md="4">
+      <div *ngIf="item.img"><img src="{{item.img}}" class="image"></div>
+      <div class="name" *ngIf="item.name">
+      {{item.name}}</div>
+      <div class="subheading" *ngIf="item.subheading">
+      {{item.subheading}}</div>
+      <div class="details" *ngIf="item.star">
+        <div class="subdetails">
+          <span><ion-icon name="star-outline"></ion-icon>  <small>   {{item.star}}</small></span>
+        </div>
+        <div class="subdetails">
+          <span><ion-icon name="time-outline"></ion-icon><small>{{item.time}}</small></span>
+        </div>
+        <div class="subdetails">
+          <span><img style="width: 12px" src="./assets/dollar.png"><small>{{item.price}}</small></span>
+        </div>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+</ion-content>

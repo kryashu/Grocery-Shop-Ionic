@@ -1,0 +1,41 @@
+.image{
+  width: 300px;
+  height: 200px;
+}
+.name{
+  font-weight: bolder;
+  margin: auto;
+}
+.subheading{
+  font-size: smaller;
+  margin-top: 10px;
+}
+.details{
+  display: flex;
+  font-size: smaller;
+  margin-top: 10px;
+}
+.subdetails{
+  span{
+    display: flex;
+  }
+}
+ion-row{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+ion-col{
+  width: 300px;
+  height: 300px;
+}
+.logo {
+  width: 25px;
+  margin: auto;
+
+}
+small{
+  margin-top: 2px;
+  margin-left: 4px;
+  margin-right: 8px;
+}
