@@ -70,7 +70,21 @@ export class VerifyOtpPage implements OnInit {
             this.style = undefined;
         }else if (event.key === 'Backspace' && this.backspaceWave === 1){
             prevElement.setFocus();
+            if (position === 4  ){
+                if (this.thirdD === undefined || this.thirdD === ''){
+                    return;
+                }else {
+                    this.backspaceWave -= 1;
+                }
+            }else if (position === 3){
+                if (this.secondD === undefined || this.secondD === ''){
+                    return;
+                }else {
+                    this.backspaceWave -= 1;
+                }
+            }else {
             this.backspaceWave -= 1;
+            }
         }
   }
 
