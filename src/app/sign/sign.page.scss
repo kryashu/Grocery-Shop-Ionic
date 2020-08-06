@@ -4,7 +4,9 @@
 
 }
 .sign-button {
-  margin-top: 2rem;
+  margin-top: 4.6rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .image{
@@ -23,6 +25,8 @@
 }
 .signin {
   margin-top: 3rem;
+  margin: auto;
+  margin-bottom: 2.3em;
 }
 ion-button {
   --background: #EA0A8E;
