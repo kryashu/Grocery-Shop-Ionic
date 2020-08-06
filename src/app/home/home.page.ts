@@ -1,5 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import {Plugins} from '@capacitor/core';
+import {Platform} from '@ionic/angular';
+
+const { App } = Plugins;
 
 @Component({
   selector: 'app-home',
@@ -8,8 +12,11 @@ import {Router} from '@angular/router';
 })
 export class HomePage implements OnInit {
   loaderValue;
-  constructor(  private router: Router) {
-
+  constructor(  private router: Router,
+                private platform: Platform) {
+    this.platform.backButton.subscribe(() => {
+      App.exitApp();
+    });
   }
 
 

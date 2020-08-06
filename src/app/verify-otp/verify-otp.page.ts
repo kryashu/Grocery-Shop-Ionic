@@ -14,6 +14,9 @@ export class VerifyOtpPage implements OnInit {
   secondD ;
   thirdD ;
   fourthD ;
+  resendFlag = false;
+  counter = 15;
+  timerValue = '15';
   warningFlag = false;
   style;
   backspaceWave = 0;
@@ -22,6 +25,9 @@ export class VerifyOtpPage implements OnInit {
               private route: ActivatedRoute,
               private keyboard: Keyboard,
               public actionSheetController: ActionSheetController) {
+      this.keyboard.onKeyboardShow().subscribe(() =>{
+          this.textFlag = false;
+      });
       this.keyboard.onKeyboardHide().subscribe(() => {
           this.textFlag = true;
       });
@@ -30,7 +36,24 @@ export class VerifyOtpPage implements OnInit {
   ngOnInit() {
      this.route.params.subscribe(params => {
       this.phoneNumber = params.phone;
+
   });
+  }
+  timer(){
+     const interval =  setInterval(() => {
+          this.counter -= 1;
+          if (this.counter < 0){
+              this.resendFlag = false;
+              this.counter = 15;
+              this.timerValue = '15';
+              clearInterval(interval);
+              return;
+          }else if (this.counter < 10){
+              this.timerValue = '0' + this.counter.toString();
+          }else {
+              this.timerValue = this.counter.toString();
+          }
+      }, 1000);
   }
     moveFocus(nextElement, prevElement, position, event) {
         this.textFlag = false;
@@ -80,7 +103,8 @@ verify() {
                 text: 'Yes, resend code by SMS',
                 cssClass: 'prime',
                 handler: () => {
-                    console.log(this.phoneNumber);
+                    this.resendFlag = true;
+                    this.timer();
                 }
             }, {
                 text: 'No, I want to change it',
