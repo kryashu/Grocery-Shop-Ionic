@@ -14,16 +14,19 @@ export class HomePage implements OnInit {
   loaderValue;
   constructor(  private router: Router,
                 private platform: Platform) {
-    this.platform.backButton.subscribe(() => {
-      App.exitApp();
-    });
+
   }
 
 
   ngOnInit(): void {
     this.startTimer();
+    this.exit()
   }
-  exit(){}
+  exit(){
+    this.platform.backButton.subscribe(() => {
+      App.exitApp();
+    });
+  }
   startTimer() {
     console.log('start');
     this.loaderValue = setTimeout(() => {
