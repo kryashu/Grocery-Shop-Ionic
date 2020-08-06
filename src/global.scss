@@ -50,9 +50,13 @@
   .prime {
     background-color: #EA0A8E;
     color: white;
-    max-width: 300px;
+    //max-width: 300px;
+    width: 92%;
     border-radius: 10px;
-    padding-left: 50px;
+    padding-left: 93px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 110px;
