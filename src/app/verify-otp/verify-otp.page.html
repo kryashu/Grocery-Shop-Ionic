@@ -13,7 +13,7 @@
     </ion-row>
     <ion-row>
       <ion-col size="3">
-        <ion-input class="otp" #zero  (keyup)="moveFocus(one, zero, 1, $event)"  [style]="style"  maxlength="1" (click)="clear()"  [(ngModel)]="firstD" autofocus (ngModelChange)="verify()"></ion-input>
+        <ion-input class="otp" #zero  (keyup)="moveFocus(one, zero, 1, $event)"  [style]="style"  maxlength="1" (click)="clear()"  [(ngModel)]="firstD" autofocus = "true" (ngModelChange)="verify()"></ion-input>
       </ion-col>
 
       <ion-col size="3">

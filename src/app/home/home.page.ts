@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
-import {Platform} from 'ionic-angular/umd';
 
 @Component({
   selector: 'app-home',
@@ -9,26 +8,24 @@ import {Platform} from 'ionic-angular/umd';
 })
 export class HomePage implements OnInit {
   loaderValue;
-  constructor(  private router: Router,
-                private platform: Platform) {
-    this.exit();
+  constructor(  private router: Router) {
+
   }
 
 
   ngOnInit(): void {
     this.startTimer();
   }
-
-  exit(){
-    this.platform.backButton.subscribe(async () => {
-    this.platform.exitApp(); });
-  }
-
+  exit(){}
   startTimer() {
     console.log('start');
     this.loaderValue = setTimeout(() => {
       // my to do
       this.router.navigate(['sign']);
     }, 3000);
+    //
+    // setTimeout(() => {
+    //   this.router.navigate(['tabs', 'homepage']);
+    // }, 30000);
   }
 }
