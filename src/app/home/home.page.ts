@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Router} from "@angular/router";
+import {NavigationEnd, Router} from "@angular/router";
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,13 @@ import {Router} from "@angular/router";
 export class HomePage implements OnInit {
   loaderValue;
   constructor(  private router: Router,) {
-
+    this.router.events.subscribe((e) => {
+      if (e instanceof NavigationEnd) {
+        if (this.router.url === '/home') {
+          this.startTimer();
+        }
+      }
+    });
   }
 
 
