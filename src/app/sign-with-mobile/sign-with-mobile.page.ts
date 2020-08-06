@@ -16,6 +16,9 @@ export class SignWithMobilePage implements OnInit {
   warningFlag = false;
   constructor(private router: Router,
               private keyboard: Keyboard) {
+      this.keyboard.onKeyboardShow().subscribe(() =>{
+          this.buttonFlag = false;
+      });
       this.keyboard.onKeyboardHide().subscribe(() => {
           this.buttonFlag = true;
       });
