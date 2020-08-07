@@ -40,9 +40,14 @@ const routes: Routes = [
     loadChildren: () => import('./view-all/view-all.module').then( m => m.ViewAllPageModule)
   },
   {
+    path: 'shop',
+    loadChildren: () => import('./shop/shop.module').then( m => m.ShopPageModule)
+  },
+  {
     path: 'product',
     loadChildren: () => import('./product/product.module').then( m => m.ProductPageModule)
   }
+
 ];
 
 @NgModule({
