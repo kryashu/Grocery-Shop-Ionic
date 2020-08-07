@@ -1,11 +1,12 @@
 <ion-header class="ion-no-border">
     <ion-toolbar>
+        <ion-back-button class="ion-hide" slot="start"></ion-back-button>
         <div class="logo">
             <img src="./assets/Logo.png">
         </div>
+
     </ion-toolbar>
 </ion-header>
-
 <ion-content>
     <ion-grid class="">
         <ion-row>
@@ -32,7 +33,7 @@
                         <h3>Special offers</h3>
                     </ion-col>
                     <ion-col size-xs="6" class="ion-align-self-center">
-                        <span class="span ion-float-right" (click)="openViewAll('offer')"><small>View all</small><small><ion-icon
+                        <span class="span ion-float-right" (click)="openViewAll('offers')"><small>View all</small><small><ion-icon
                                 name="chevron-forward-outline"></ion-icon></small></span>
                     </ion-col>
                 </ion-row>
@@ -112,7 +113,7 @@
                         <h3>All Categories</h3>
                     </ion-col>
                     <ion-col size-xs="6" class="ion-align-self-center">
-                        <span class="span ion-float-right" (click)="openViewAll('category')"><small>View all</small><small><ion-icon
+                        <span class="span ion-float-right" (click)="openViewAll('categories')"><small>View all</small><small><ion-icon
                                 name="chevron-forward-outline"></ion-icon></small></span>
                     </ion-col>
                 </ion-row>
@@ -156,7 +157,7 @@
                         <h3>All Shops</h3>
                     </ion-col>
                     <ion-col size-xs="6" class="ion-align-self-center">
-                        <span class="span ion-float-right" (click)="openViewAll('shop')"><small>View all</small><small><ion-icon
+                        <span class="span ion-float-right" (click)="openViewAll('shops')"><small>View all</small><small><ion-icon
                                 name="chevron-forward-outline"></ion-icon></small></span>
                     </ion-col>
                 </ion-row>
