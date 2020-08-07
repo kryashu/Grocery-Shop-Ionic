@@ -38,7 +38,11 @@ const routes: Routes = [
   {
     path: 'view-all',
     loadChildren: () => import('./view-all/view-all.module').then( m => m.ViewAllPageModule)
+  },  {
+    path: 'shop',
+    loadChildren: () => import('./shop/shop.module').then( m => m.ShopPageModule)
   }
+
 ];
 
 @NgModule({
