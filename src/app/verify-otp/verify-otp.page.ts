@@ -1,4 +1,4 @@
-import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {Component, ElementRef, OnInit, ViewChild, ViewChildren} from '@angular/core';
 import {Router, ActivatedRoute} from '@angular/router';
 import {Keyboard} from '@ionic-native/keyboard/ngx';
 import { ActionSheetController } from '@ionic/angular';
@@ -9,6 +9,7 @@ import { ActionSheetController } from '@ionic/angular';
   styleUrls: ['./verify-otp.page.scss'],
 })
 export class VerifyOtpPage implements OnInit {
+    @ViewChildren('formRow') rows: any;
   phoneNumber;
   firstD ;
   secondD ;
@@ -56,22 +57,31 @@ export class VerifyOtpPage implements OnInit {
       }, 1000);
   }
     moveFocus(nextElement, prevElement, position, event) {
-        this.textFlag = false;
-        if (event.target.value !== ''){
-            this.backspaceWave = 1;
-            nextElement.setFocus();
-            if (position === 4){
-                this.backspaceWave = 0;
-            }
+        let pos = position;
+        if (event.keyCode === 8 && event.which === 8) {
+            pos = position - 1 ;
+        } else {
+            pos = position + 1 ;
         }
-        if (event.key === 'Backspace' && this.backspaceWave === 0){
-            this.backspaceWave += 1;
-            this.warningFlag = false;
-            this.style = undefined;
-        }else if (event.key === 'Backspace' && this.backspaceWave === 1){
-            prevElement.setFocus();
-            this.backspaceWave -= 1;
+        if (pos > -1 && pos < 4 ) {
+            this.rows._results[pos].setFocus();
         }
+        // this.textFlag = false;
+        // if (event.target.value !== ''){
+        //     this.backspaceWave = 1;
+        //     nextElement.setFocus();
+        //     if (position === 4){
+        //         this.backspaceWave = 0;
+        //     }
+        // }
+        // if (event.key === 'Backspace' && this.backspaceWave === 0){
+        //     this.backspaceWave += 1;
+        //     this.warningFlag = false;
+        //     this.style = undefined;
+        // }else if (event.key === 'Backspace' && this.backspaceWave === 1){
+        //     prevElement.setFocus();
+        //     this.backspaceWave -= 1;
+        // }
   }
 
 verify() {
