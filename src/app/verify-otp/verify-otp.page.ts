@@ -15,7 +15,9 @@ export class VerifyOtpPage implements OnInit {
   secondD ;
   thirdD ;
   fourthD ;
+  resendText = 'Text message resent.';
   resendFlag = false;
+  resendFlag1 = false;
   counter = 15;
   timerValue = '15';
   warningFlag = false;
@@ -26,7 +28,7 @@ export class VerifyOtpPage implements OnInit {
               private route: ActivatedRoute,
               private keyboard: Keyboard,
               public actionSheetController: ActionSheetController) {
-      this.keyboard.onKeyboardShow().subscribe(() =>{
+      this.keyboard.onKeyboardShow().subscribe(() => {
           this.textFlag = false;
       });
       this.keyboard.onKeyboardHide().subscribe(() => {
@@ -40,21 +42,27 @@ export class VerifyOtpPage implements OnInit {
 
   });
   }
-  timer(){
-     const interval =  setInterval(() => {
+  timer(bool){
+      if (bool){
+      this.resendFlag = true;
+      const interval =  setInterval(() => {
           this.counter -= 1;
           if (this.counter < 0){
+              this.resendText = 'Resend OTP';
               this.resendFlag = false;
               this.counter = 15;
               this.timerValue = '15';
               clearInterval(interval);
               return;
           }else if (this.counter < 10){
+              this.resendText = 'Text message resent.';
               this.timerValue = '0' + this.counter.toString();
           }else {
+              this.resendText = 'Text message resent.';
               this.timerValue = this.counter.toString();
           }
       }, 1000);
+      }
   }
     moveFocus(nextElement, prevElement, position, event) {
         let pos = position;
@@ -86,7 +94,7 @@ export class VerifyOtpPage implements OnInit {
 
 verify() {
       if (this.firstD + this.secondD + this.thirdD + this.fourthD === '1111'){
-               this.router.navigate(['user-details'])
+               this.router.navigate(['user-details']);
             // this.router.navigate(['tabs', 'homepage']);
         }
       // tslint:disable-next-line:max-line-length
@@ -114,8 +122,9 @@ verify() {
                 text: 'Yes, resend code by SMS',
                 cssClass: 'prime',
                 handler: () => {
+                    this.resendFlag1 = true;
                     this.resendFlag = true;
-                    this.timer();
+                    this.timer(true);
                 }
             }, {
                 text: 'No, I want to change it',
