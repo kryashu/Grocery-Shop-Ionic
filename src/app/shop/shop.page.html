@@ -13,9 +13,10 @@
         </h2>
       </ion-col>
         <ion-col size-xs="4">
-          <div class="info-nav ion-float-right">
+          <div class="info-nav">
             <img class="nav" src="./assets/nav.svg">
-            <img class="info" src="./assets/info.svg">
+              <ion-icon name="information-circle-outline"></ion-icon>
+<!--            <img class="info" src="./assets/info.svg">-->
           </div>
         </ion-col>
       </ion-row>
@@ -87,61 +88,61 @@
         <ion-scroll scrollX="true" direction="x">
           <div class="ion-margin-end">
              <span>
-          <p class="heading">Bevrages</p>
+          <ion-button (click)="productShow('Bevrages')" [ngStyle]="{'background-color': color}" fill="outline" class="heading category">Bevrages</ion-button>
            </span>
           </div>
           <div class="ion-margin-end">
              <span>
-               <p class="heading">Confectionaries</p>
+               <ion-button (click)="productShow('con')" [ngStyle]="{'background-color': color}"  fill="outline" class="heading category">Confectionaries</ion-button>
            </span>
           </div>
           <div>
              <span>
-             <p class="heading">Bevrages</p>
+             <ion-button (click)="productShow('Bevrages')" [ngStyle]="{'background-color': color}"  fill="outline" class="heading category">Bevrages</ion-button>
            </span>
           </div>
         </ion-scroll>
       </ion-row>
 <!--      Dairymilk sec-->
-      <ion-row>
+      <ion-row *ngFor="let item of viewList">
         <ion-col size-xs="2">
           <div style="background: grey; border: 1px solid lightgray; height: 50px; border-radius: 7px"></div>
         </ion-col>
         <ion-col size-xs="6" >
-            <b>Dairy Milk Silk</b>
+            <b>{{item.item}}</b>
           <br>
-          <small class="text-gray">Lorem Ipsum</small>
+          <small class="text-gray">{{item.subdel}}</small>
         </ion-col>
         <ion-col size-xs="3">
-             <b style="color: #EA0A8E" class="ion-float-right ion-margin-end">$ 15</b>
+             <b style="color: #EA0A8E" class="ion-float-right ion-margin-end">$15</b>
         </ion-col>
       </ion-row>
-      <ion-row>
-        <ion-col size-xs="2">
-          <div style="background: grey; border: 1px solid lightgray; height: 50px; border-radius: 7px"></div>
-        </ion-col>
-        <ion-col size-xs="6" >
-          <b>Dairy Milk Silk</b>
-          <br>
-          <small class="text-gray">Lorem Ipsum</small>
-        </ion-col>
-        <ion-col size-xs="3">
-          <b style="color: #EA0A8E" class="ion-float-right ion-margin-end">$ 15</b>
-        </ion-col>
-      </ion-row>
-      <ion-row>
-        <ion-col size-xs="2">
-          <div style="background: grey; border: 1px solid lightgray; height: 50px; border-radius: 7px"></div>
-        </ion-col>
-        <ion-col size-xs="6" >
-          <b>Dairy Milk Silk</b>
-          <br>
-          <small class="text-gray">Lorem Ipsum</small>
-        </ion-col>
-        <ion-col size-xs="3">
-          <b style="color: #EA0A8E" class="ion-float-right ion-margin-end">$ 15</b>
-        </ion-col>
-      </ion-row>
+<!--      <ion-row>-->
+<!--        <ion-col size-xs="2">-->
+<!--          <div style="background: grey; border: 1px solid lightgray; height: 50px; border-radius: 7px"></div>-->
+<!--        </ion-col>-->
+<!--        <ion-col size-xs="6" >-->
+<!--          <b>Dairy Milk Silk</b>-->
+<!--          <br>-->
+<!--          <small class="text-gray">Lorem Ipsum</small>-->
+<!--        </ion-col>-->
+<!--        <ion-col size-xs="3">-->
+<!--          <b style="color: #EA0A8E" class="ion-float-right ion-margin-end">$15</b>-->
+<!--        </ion-col>-->
+<!--      </ion-row>-->
+<!--      <ion-row>-->
+<!--        <ion-col size-xs="2">-->
+<!--          <div style="background: grey; border: 1px solid lightgray; height: 50px; border-radius: 7px"></div>-->
+<!--        </ion-col>-->
+<!--        <ion-col size-xs="6" >-->
+<!--          <b>Dairy Milk Silk</b>-->
+<!--          <br>-->
+<!--          <small class="text-gray">Lorem Ipsum</small>-->
+<!--        </ion-col>-->
+<!--        <ion-col size-xs="3">-->
+<!--          <b style="color: #EA0A8E" class="ion-float-right ion-margin-end">$15</b>-->
+<!--        </ion-col>-->
+<!--      </ion-row>-->
     </ion-grid>
 
 
