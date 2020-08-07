@@ -1,29 +1,155 @@
 <ion-app>
-<ion-content>
-    <div class="header">
-        <img src="./assets/pizza-dough-11.png" style=" filter: brightness(50%);">
-        <img src="./assets/Back%20button.png" class="back">
-        <img src="./assets/Share%20button.png" class="share">
-    </div>
-    <div>
+    <ion-content>
+        <div class="header">
+            <img src="./assets/pizza-dough-11.png" style=" filter: brightness(50%);">
+            <img src="./assets/Back%20button.png" class="back">
+            <img src="./assets/Share%20button.png" class="share">
+        </div>
+        <div>
+            <div class="heading">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="8">
+                            <h1>Pizza Dough</h1>
+                        </ion-col>
+                        <ion-col size="4">
+                            <div class="addImg">
+                                <img src="./assets/Add%20item%20button.png">
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+            <div style="margin-left: 20px;">
+                <span style="font-family: sf light; font-size: 16px">Starting From</span>
+                <span style="margin-left: 5%; color: #EA0A8E; font-family: 'Sf bold'">$4.50</span>
+            </div>
+            <div class="body1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua.
+            </div>
+        </div>
         <div class="heading">
-            <ion-grid>
-                <ion-row>
-                    <ion-col size="8">
-                <h1>Pizza Dough</h1>
-                    </ion-col>
-                    <ion-col size="4">
-                <div class="addImg">
-                    <img src="./assets/Add%20item%20button.png">
+            <h2>Reviews</h2>
+            <div *ngFor="let person of reviewList" style="margin-bottom: 20px; margin-top: 20px;margin-right: 30px">
+                <div style="display: flex;">
+                    <img src="./assets/blank.png" class="reviewImg">
+                    <div style="margin-left: 5%; margin-top: 1%;">
+                        <div style="margin-bottom: 8px">
+            <span style="font-family: 'Sf bold'; white-space: nowrap">
+                {{person.name}}
+            </span>
+                        </div>
+                        <div class="reviewSub">
+                            <div style="margin-right: 5px">{{person.country}}</div>
+                            <div style="margin-right: 5px"><div style="font-size: 10px; font-weight: bolder ;margin-bottom: 30px">.</div></div>
+                            <div style="white-space: nowrap">{{person.count}} Reviews</div>
+                        </div>
+                    </div>
+                    <div class="rating-selected rating" style="margin-left: 20%">
+                        <span style="font-size: 12px; color: white; font-family: 'sf regular'">{{person.star}}</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12.35" viewBox="0 0 13 12.35">
+                            <defs>
+                                <style>.a {
+                                    fill: #ea0a8e;
+                                }</style>
+                            </defs>
+                            <path class="a"
+                                  d="M6.5,0,8.531,4.062,13,4.712,9.75,7.881l.731,4.469L6.5,10.237,2.519,12.35,3.25,7.881,0,4.712l4.469-.65Z"
+                                  transform="translate(0 0)"/>
+                        </svg>
+                    </div>
                 </div>
-                    </ion-col>
-                </ion-row>
-            </ion-grid>
+                <div class="reviewContent">
+                    {{person.content}}
+                </div>
+                <div *ngIf="person.content2" class="reviewContent">
+                    {{person.content2}}
+                </div>
+            </div>
         </div>
-        <div style="margin-left: 30px; margin-top: 10px">
-            <span style="font-family: sf light; font-size: 16px">Starting From</span>
-            <span style="margin-left: 5%; color: #EA0A8E; font-family: 'Sf bold'">$4.50</span>
+        <ion-grid class="ion-margin-start">
+            <p class="head">Your rating</p>
+            <ion-row>
+                <div class="rating">
+                    <span style="font-size: 12px; color: white; font-family: 'sf regular'"> 1</span><img src="./assets/star.svg">
+                </div>
+                <div class="rating">
+                    <span style="font-size: 12px; color: white; font-family: 'sf regular'">   2</span><img src="./assets/star.svg">
+                </div>
+                <div class="rating">
+                    <span style="font-size: 12px; color: white; font-family: 'sf regular'">   3</span><img src="./assets/star.svg">
+                </div>
+                <div class="rating-selected rating">
+                    <span style="font-size: 12px; color: white; font-family: 'sf regular'">   4 </span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12.35" viewBox="0 0 13 12.35">
+                        <defs>
+                            <style>.a {
+                                fill: #ea0a8e;
+                            }</style>
+                        </defs>
+                        <path class="a"
+                              d="M6.5,0,8.531,4.062,13,4.712,9.75,7.881l.731,4.469L6.5,10.237,2.519,12.35,3.25,7.881,0,4.712l4.469-.65Z"
+                              transform="translate(0 0)"/>
+                    </svg>
+                </div>
+                <div class="rating">
+                    <span style="font-size: 12px; color: white; font-family: 'sf regular'">5</span><img src="./assets/star.svg">
+                </div>
+            </ion-row>
+            <ion-row class="ion-margin-vertical">
+                <small>We would love to hear more about your experience!</small>
+                <br>
+                <br>
+                <b style="color: #EA0A8E">+ Add your review</b>
+            </ion-row>
+        </ion-grid>
+        <div style="margin-left: 20px">
+        <ion-grid>
+            <ion-row>
+                <ion-col size-xs="11">
+                    <ion-row>
+                        <ion-col size-xs="6">
+                            <span class="head">Similar Products</span>
+                        </ion-col>
+                        <ion-col size-xs="6" class="ion-align-self-center">
+                        <span class="span ion-float-right"><small>View all</small><small><ion-icon
+                                name="chevron-forward-outline"></ion-icon></small></span>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row style="margin-top: 10%">
+                        <ion-scroll scrollX="true" direction="x">
+                            <div>
+             <span>
+                <img class="categories-img" src="./assets/blank.png"/>
+                 <div style="font-family: 'Sf bold'; font-size: 14px; margin-top: 5%">
+             MDH Masala
+                     </div>
+           </span>
+                            </div>
+                            <div>
+             <span>
+                <img class="categories-img" src="./assets/blank.png"/>
+                 <div style="font-family: 'Sf bold'; font-size: 14px; margin-top: 5%">
+                MDH Masala
+                     </div>
+           </span>
+                            </div>
+                            <div>
+             <span>
+                <img class="categories-img" src="./assets/blank.png"/>
+                 <div style="font-family: 'Sf bold'; font-size: 14px; margin-top: 5%">
+                 MDH Masala
+                     </div>
+           </span>
+                            </div>
+
+                        </ion-scroll>
+                    </ion-row>
+                </ion-col>
+
+            </ion-row>
+        </ion-grid>
         </div>
-    </div>
-</ion-content>
+    </ion-content>
 </ion-app>

@@ -34,7 +34,11 @@
 }
 @font-face {
   font-family: sf regular;
-  src: url(./assets/fonts/FontsFree-Net-SFProDisplay-Regular.ttf) format("opentype");
+  src: url(./assets/fonts/FontsFree-Net-SFProText-Regular.ttf) format("opentype");
+}
+@font-face {
+  font-family: sf light;
+  src: url(./assets/fonts/FontsFree-Net-SFProDisplay-Light.ttf) format("opentype");
 }
 .header {
   .action-sheet-group{
