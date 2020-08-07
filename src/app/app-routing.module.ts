@@ -50,6 +50,10 @@ const routes: Routes = [
   {
     path: 'add-basket',
     loadChildren: () => import('./add-basket/add-basket.module').then( m => m.AddBasketPageModule)
+  },
+  {
+    path: 'add-review',
+    loadChildren: () => import('./add-review/add-review.module').then( m => m.AddReviewPageModule)
   }
 
 ];
