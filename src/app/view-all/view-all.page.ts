@@ -22,11 +22,11 @@ export class ViewAllPage implements OnInit {
     this.selectView();
   }
 selectView(){
-    if (this.input === 'shop'){
+    if (this.input === 'shops'){
       this.viewList = this.shopsList;
-    }else if (this.input === 'category'){
+    }else if (this.input === 'categories'){
       this.viewList = this.categoryList;
-    }else if (this.input === 'offer'){
+    }else if (this.input === 'offers'){
       this.viewList = this.offerList;
     }
 }

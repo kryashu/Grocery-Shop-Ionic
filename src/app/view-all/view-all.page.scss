@@ -34,10 +34,18 @@ ion-col{
 .logo {
   width: 25px;
   margin: auto;
-
+margin-right: 200px;
 }
 small{
   margin-top: 2px;
   margin-left: 4px;
   margin-right: 8px;
+}
+.dollar {
+  width: 13px;
+}
+.view-all-header {
+  margin-right: 13px;
+  text-transform: capitalize;
+  font-family: "sf bold";
 }

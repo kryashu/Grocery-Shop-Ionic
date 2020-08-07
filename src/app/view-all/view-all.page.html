@@ -1,5 +1,6 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
     <div class="logo">
       <img src="./assets/Logo.png">
     </div>
@@ -8,6 +9,7 @@
 
 <ion-content>
 <ion-grid>
+  <h2 class="view-all-header">{{input}}</h2>
   <ion-row>
     <ion-col *ngFor="let item of viewList"  size-sm="3" size-xs="6" size-md="4">
       <div *ngIf="item.img"><img src="{{item.img}}" class="image"></div>
@@ -23,7 +25,7 @@
           <span><ion-icon name="time-outline"></ion-icon><small>{{item.time}}</small></span>
         </div>
         <div class="subdetails">
-          <span><img style="max-width: 13px" src="./assets/dollar.png"><small>{{item.price}}</small></span>
+          <span><img class="dollar" src="./assets/dollar.png"><small>{{item.price}}</small></span>
         </div>
       </div>
     </ion-col>
