@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'view-all',
     loadChildren: () => import('./view-all/view-all.module').then( m => m.ViewAllPageModule)
+  },
+  {
+    path: 'product',
+    loadChildren: () => import('./product/product.module').then( m => m.ProductPageModule)
   }
 ];
 
