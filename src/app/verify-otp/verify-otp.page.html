@@ -13,19 +13,19 @@
     </ion-row>
     <ion-row>
       <ion-col size="3">
-        <ion-input class="otp" #zero  (keyup)="moveFocus(one, zero, 1, $event)"  [style]="style"  maxlength="1" (click)="clear()"  [(ngModel)]="firstD" [autofocus] = "true" (ngModelChange)="verify()"></ion-input>
+        <ion-input class="otp" #formRow #zero  (keyup)="moveFocus(one, zero, 0, $event)"  [style]="style"  maxlength="1" (click)="clear()"  [(ngModel)]="firstD" [autofocus] = "true" (ngModelChange)="verify()"></ion-input>
       </ion-col>
 
       <ion-col size="3">
-        <ion-input class="otp" #one (keyup)="moveFocus(two, zero, 2, $event)"  [style]="style" maxlength="1"   (click)="clear()"  [(ngModel)]="secondD"  (ngModelChange)="verify()"></ion-input>
+        <ion-input class="otp" #formRow #one (keyup)="moveFocus(two, zero, 1, $event)"  [style]="style" maxlength="1"   (click)="clear()"  [(ngModel)]="secondD"  (ngModelChange)="verify()"></ion-input>
       </ion-col>
 
       <ion-col size="3">
-        <ion-input class="otp" #two (keyup)="moveFocus(three, one,  3, $event)"  [style]="style" maxlength="1"  (click)="clear()" [(ngModel)]="thirdD" (ngModelChange)="verify()"></ion-input>
+        <ion-input class="otp" #formRow #two (keyup)="moveFocus(three, one,  2, $event)"  [style]="style" maxlength="1"  (click)="clear()" [(ngModel)]="thirdD" (ngModelChange)="verify()"></ion-input>
       </ion-col>
 
       <ion-col size="3">
-        <ion-input class="otp" #three (keyup)="moveFocus(three,  two, 4, $event)"  [style]="style" maxlength="1"  (click)="clear()" [(ngModel)]="fourthD"  (ngModelChange)="verify()"></ion-input>
+        <ion-input class="otp" #formRow #three (keyup)="moveFocus(three,  two, 3, $event)"  [style]="style" maxlength="1"  (click)="clear()" [(ngModel)]="fourthD"  (ngModelChange)="verify()"></ion-input>
       </ion-col>
     </ion-row>
     <ion-row  *ngIf="warningFlag">
