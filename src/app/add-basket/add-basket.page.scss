@@ -28,6 +28,9 @@
   font-size: 14px;
   margin-left: 10px;
 }
+::ng-deep ion-radio-group {
+  display: block!important;
+}
 ion-radio{
   margin: 0px;
   --color-checked: #EA0A8E;
