@@ -83,16 +83,13 @@ ion-scroll {
   width: 270px;
   height: 150px;
   border-radius: 10px;
-  margin-right: 30px;
+  margin-right: 10px;
 }
 .text-gray {
   color: #919099;
 }
 .category {
   color: grey;
-   .category:focus {
-    color: black;
-  }
 }
 ion-button {
   --background: none;
