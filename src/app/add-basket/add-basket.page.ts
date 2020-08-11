@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {ModalController} from '@ionic/angular';
 
 @Component({
   selector: 'app-add-basket',
@@ -10,7 +12,8 @@ export class AddBasketPage implements OnInit {
   selectedItem;
   totalPrice = 0;
   itemList = [{name: '24cm(1 person)', count: 0, price: 4.50}, {name: '32cm(2-3 persons)', count: 0, price: 6.50}, {name: '40cm(3-4 persons)', count: 0, price: 6.50}];
-  constructor() { }
+  constructor(private router: Router,
+              public modalController: ModalController) { }
 
   ngOnInit() {
   }
@@ -37,5 +40,15 @@ export class AddBasketPage implements OnInit {
         }
       }
     }
+  }
+  submit(){
+
+      // using the injected ModalController this page
+      // can "dismiss" itself and optionally pass back data
+      this.modalController.dismiss({
+        dismissed: true
+      });
+
+      this.router.navigate(['shopping-bag']);
   }
 }
