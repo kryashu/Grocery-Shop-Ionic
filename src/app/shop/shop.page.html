@@ -88,17 +88,17 @@
         <ion-scroll scrollX="true" direction="x">
           <div class="ion-margin-end">
              <span>
-          <ion-button (click)="productShow('Bevrages')" [ngStyle]="{'background-color': color}" fill="outline" class="heading category">Bevrages</ion-button>
+          <ion-button (click)="productShow('Bevrages')" [ngStyle]="bevFlag ? {'color': 'black'} : undefined" fill="outline" class="heading category">Bevrages</ion-button>
            </span>
           </div>
           <div class="ion-margin-end">
              <span>
-               <ion-button (click)="productShow('con')" [ngStyle]="{'background-color': color}"  fill="outline" class="heading category">Confectionaries</ion-button>
+               <ion-button (click)="productShow('con')" [ngStyle]="conFlag ? {'color': 'black'} : undefined"  fill="outline" class="heading category">Confectionaries</ion-button>
            </span>
           </div>
           <div>
              <span>
-             <ion-button (click)="productShow('Bevrages')" [ngStyle]="{'background-color': color}"  fill="outline" class="heading category">Bevrages</ion-button>
+             <ion-button (click)="productShow('Bevrages1')" [ngStyle]="bevFlag1 ? {'color': 'black'} : undefined"  fill="outline" class="heading category">Bevrages</ion-button>
            </span>
           </div>
         </ion-scroll>

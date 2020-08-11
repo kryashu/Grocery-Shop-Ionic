@@ -65,31 +65,40 @@ export class VerifyOtpPage implements OnInit {
       }
   }
     moveFocus(nextElement, prevElement, position, event) {
-        let pos = position;
-        if (event.keyCode === 8 && event.which === 8) {
-            pos = position - 1 ;
-        } else {
-            pos = position + 1 ;
-        }
-        if (pos > -1 && pos < 4 ) {
-            this.rows._results[pos].setFocus();
-        }
-        // this.textFlag = false;
-        // if (event.target.value !== ''){
-        //     this.backspaceWave = 1;
-        //     nextElement.setFocus();
-        //     if (position === 4){
-        //         this.backspaceWave = 0;
-        //     }
+        // let pos = position;
+        // if (event.keyCode === 8 && event.which === 8) {
+        //     pos = position - 1 ;
+        // } else {
+        //     pos = position + 1 ;
         // }
-        // if (event.key === 'Backspace' && this.backspaceWave === 0){
-        //     this.backspaceWave += 1;
-        //     this.warningFlag = false;
-        //     this.style = undefined;
-        // }else if (event.key === 'Backspace' && this.backspaceWave === 1){
-        //     prevElement.setFocus();
-        //     this.backspaceWave -= 1;
+        // if (pos > -1 && pos < 4 ) {
+        //     this.rows._results[pos].setFocus();
         // }
+        this.textFlag = false;
+        if (event.target.value !== ''){
+            this.backspaceWave = 1;
+            nextElement.setFocus();
+            if (position === 4){
+                this.backspaceWave = 0;
+            }
+        }
+        if (event.key === 'Backspace' && this.backspaceWave === 0){
+            this.backspaceWave += 1;
+            this.warningFlag = false;
+            this.style = undefined;
+        }else if (event.key === 'Backspace' && this.backspaceWave === 1){
+            // prevElement.setFocus();
+            // this.backspaceWave -= 1;
+            if (position === 3 && (this.thirdD === undefined || this.thirdD === '')){
+                prevElement.setFocus();
+            }else if (position === 2 && (this.secondD === undefined || this.secondD === '')){
+                prevElement.setFocus();
+            }else {
+                prevElement.setFocus();
+                this.backspaceWave -= 1;
+            }
+        }
+
   }
 
 verify() {
@@ -99,7 +108,8 @@ verify() {
         }
       // tslint:disable-next-line:max-line-length
         else if (this.firstD === undefined || this.secondD === undefined || this.thirdD === undefined || this.fourthD === undefined || this.firstD === '' || this.secondD === '' || this.thirdD === '' || this.fourthD === '') {
-            return;
+          this.warningFlag = false;
+          this.style = undefined;
         }
         else {
             this.warningFlag = true;
@@ -109,9 +119,13 @@ verify() {
             };
       }
     }
-    clear(){
-        this.backspaceWave = 1;
-        this.textFlag = false;
+    clear(data){
+      if (data === undefined || data === '') {
+          this.backspaceWave = 1;
+      }else {
+          this.backspaceWave = 0;
+      }
+      this.textFlag = false;
     }
     public async showActionSheet() {
         const actionSheet = await this.actionSheetController.create({
