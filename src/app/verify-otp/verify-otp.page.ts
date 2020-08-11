@@ -42,6 +42,9 @@ export class VerifyOtpPage implements OnInit {
 
   });
   }
+  back(){
+      this.router.navigate(['/sign-with-mobile']);
+  }
   timer(bool){
       if (bool){
       this.resendFlag = true;

@@ -1,12 +1,12 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-back-button slot="start"></ion-back-button>
+    <img src="./assets/Back%20button.png" (click)="back()" class="back">
     <div class="logo">
       <img src="./assets/Logo.png">
     </div>
   </ion-toolbar>
 </ion-header>
-<ion-content>
+<ion-content style="overflow: hidden">
   <ion-grid class=" ion-margin-top ">
     <ion-row>
       <h1>Enter the 4-digit code sent to you at <span style="color: #EA0A8E">{{phoneNumber}}</span></h1>
@@ -32,7 +32,7 @@
       <a class="warning">The code you entered does not match. Try Again!</a>
     </ion-row>
   </ion-grid>
-  <div class="resent ion-align-self-center" (click)="timer(resendText !== 'Text message resent.')" *ngIf="resendFlag1">
+  <div class="resent" (click)="timer(resendText !== 'Text message resent.')" *ngIf="resendFlag1">
     {{resendText}}
   </div>
   <div class="timer" *ngIf="resendFlag">

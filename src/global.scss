@@ -57,18 +57,23 @@
     //max-width: 300px;
     width: 92%;
     border-radius: 10px;
-    padding-left: 93px;
-    display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
     margin-left: auto;
     margin-right: auto;
     margin-top: 110px;
   }
+  .action-sheet-button-inner {
+    justify-content: center;
+  }
   .sec {
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 92%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     margin-top: 15px;
     padding-left: 60px;
   }
