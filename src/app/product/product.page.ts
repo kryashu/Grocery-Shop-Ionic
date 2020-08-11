@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import {AddBasketPage} from '../add-basket/add-basket.page';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -9,7 +10,9 @@ import {AddBasketPage} from '../add-basket/add-basket.page';
 })
 export class ProductPage implements OnInit {
   reviewList = [{name: 'Mike Smithson', country: 'Australia', count: '45', star: '4', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', content2: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}, {name: 'Angela Williams', country: 'France', count: '23', star: '5', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}];
-  constructor(public modalController: ModalController) { }
+  constructor(public modalController: ModalController,
+              private router: Router,
+              ) { }
 
   ngOnInit() {
   }
@@ -26,5 +29,9 @@ export class ProductPage implements OnInit {
     this.modalController.dismiss({
       dismissed: true
     });
+  }
+  clickBack(){
+    this.close();
+    this.router.navigate(['homepage']);
   }
 }

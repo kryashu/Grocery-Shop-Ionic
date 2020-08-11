@@ -7,14 +7,16 @@ import { IonicModule } from '@ionic/angular';
 import { AddReviewPageRoutingModule } from './add-review-routing.module';
 
 import { AddReviewPage } from './add-review.page';
+import {TabsPageModule} from '../tabs/tabs.module';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    IonicModule,
-    AddReviewPageRoutingModule
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        IonicModule,
+        AddReviewPageRoutingModule,
+        TabsPageModule
+    ],
   declarations: [AddReviewPage]
 })
 export class AddReviewPageModule {}

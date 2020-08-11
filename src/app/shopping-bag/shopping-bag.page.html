@@ -1,3 +1,4 @@
+<ion-app>
 <ion-header class="ion-no-border">
     <ion-toolbar>
         <div class="logo">
@@ -20,13 +21,13 @@
                         <ion-col>
                             <div class="price-bar">
                                 <div class="minus-button"
-                                     [ngStyle]="item.count <= 1 ? {'background-color': '#FF2650'} : {'background-color': '#D0D0D2'}">
+                                     [ngStyle]="item.count <= 1 ? {'background-color': '#FF2650'} : {'background-color': '#D0D0D2'}" (click)="remove(item.name)">
                                     <span style="font-size: 25px;">-</span>
                                 </div>
                                 <div class="count-button">
                                     <div class="button-text">{{item.count}}</div>
                                 </div>
-                                <div class="plus-button">
+                                <div class="plus-button" (click)="add(item.name)">
                                     <span style="font-size: 25px;margin-top: 10px">+</span>
                                 </div>
                             </div>
@@ -69,7 +70,7 @@
                     </ion-col>
                     <ion-col>
                         <div class="total-text">
-                            {{totalValue}}
+                            {{discount}}
                         </div>
                     </ion-col>
                 </ion-row>
@@ -84,7 +85,7 @@
                     </ion-col>
                     <ion-col>
                         <div class="total-text2">
-                            {{total}}
+                            {{totalValue}}
                         </div>
                     </ion-col>
                 </ion-row>
@@ -94,3 +95,4 @@
         <div class="continue">Continue Shopping</div>
     </div>
 </ion-content>
+</ion-app>

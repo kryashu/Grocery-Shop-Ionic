@@ -88,23 +88,23 @@
         <ion-scroll scrollX="true" direction="x">
           <div class="ion-margin-end">
              <span>
-          <ion-button (click)="productShow('Bevrages')" [ngStyle]="bevFlag ? {'color': 'black'} : undefined" fill="outline" class="heading category">Bevrages</ion-button>
+          <div (click)="productShow('Bevrages')" [ngStyle]="bevFlag ? {'color': 'black'} : undefined"  class="heading category">Bevrages</div>
            </span>
           </div>
           <div class="ion-margin-end">
              <span>
-               <ion-button (click)="productShow('con')" [ngStyle]="conFlag ? {'color': 'black'} : undefined"  fill="outline" class="heading category">Confectionaries</ion-button>
+               <div (click)="productShow('con')" [ngStyle]="conFlag ? {'color': 'black'} : undefined"   class="heading category">Confectionaries</div>
            </span>
           </div>
           <div>
              <span>
-             <ion-button (click)="productShow('Bevrages1')" [ngStyle]="bevFlag1 ? {'color': 'black'} : undefined"  fill="outline" class="heading category">Bevrages</ion-button>
+             <div (click)="productShow('Bevrages1')" [ngStyle]="bevFlag1 ? {'color': 'black'} : undefined"   class="heading category">Bevrages</div>
            </span>
           </div>
         </ion-scroll>
       </ion-row>
 <!--      Dairymilk sec-->
-      <ion-row *ngFor="let item of viewList">
+      <ion-row style="margin-top: 5%" *ngFor="let item of viewList">
         <ion-col size-xs="2">
           <div style="background: grey; border: 1px solid lightgray; height: 50px; border-radius: 7px"></div>
         </ion-col>
@@ -311,4 +311,5 @@
       </ion-row>
     </ion-grid>
   </ion-content>
+
 </ion-app>

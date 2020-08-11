@@ -1,6 +1,6 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
 import {IonTabs} from "@ionic/angular";
-
+import {Router, ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-tabs',
   templateUrl: './tabs.page.html',
@@ -8,11 +8,11 @@ import {IonTabs} from "@ionic/angular";
 })
 export class TabsPage implements OnInit {
   @ViewChild('myTabs') tabs: IonTabs;
-  constructor() { }
+  constructor(  private route: ActivatedRoute,
+                private router: Router) { }
 
   ngOnInit() {
   }
   getSelectedTab(): void {
-  console.log('nkkk');
   }
 }
