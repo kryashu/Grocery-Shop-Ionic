@@ -15,11 +15,11 @@ export class HomepagePage implements OnInit {
               private toastController: ToastController) {
 
 
-    document.addEventListener('ionBackButton', (ev: BackButtonEvent) => {
-      ev.detail.register(-1, () => {
-          this.presentToastWithOptions();
-      });
-    });
+    // document.addEventListener('ionBackButton', (ev: BackButtonEvent) => {
+    //   ev.detail.register(-1, () => {
+    //       this.presentToastWithOptions();
+    //   });
+    // });
   }
 
   ngOnInit() {
@@ -48,7 +48,7 @@ export class HomepagePage implements OnInit {
         }, {
           text: 'Ok',
           handler: () => {
-            this.exit()
+            this.exit();
           }
         }
       ]

@@ -1,9 +1,13 @@
 .logo {
   width: 25px;
-  margin: auto;
-  margin-right: 200px;
+  margin-left: 45%;
 }
-
+.back {
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 30px;
+  transform: translate(-50%, -50%);
+}
 h1{
   font-weight: bolder;
   font-size: 30px;
@@ -11,8 +15,7 @@ h1{
 }
 .lowerText{
   text-align: center;
-  margin-top: 300px;
-  margin-bottom: 100px
+  margin-top: 60%;
 }
 .upperText{
   text-align: center;
@@ -45,20 +48,17 @@ ion-row{
   margin-right: 30px;
 }
 .resent{
-  //padding: .2rem;
-  text-align: center;
+  padding: .3rem;
+  justify-content: center;
+  display: flex;
+  align-items: center;
   background-color: #EA0A8E;
   margin-left: 30%;
   margin-right: 30%;
+  height: 35px;
   margin-top: 30%;
-  height: 4.5%;
-  min-height: 4.5%;
   color: white;
   font-size: 75%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-transform: none;
   border-radius: 7px;
   font-family: "sf regular";
 }
