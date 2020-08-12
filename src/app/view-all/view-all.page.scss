@@ -32,7 +32,7 @@ ion-col{
 .logo {
   width: 25px;
   margin: auto;
-  margin-right: 200px;
+  //margin-right: 200px;
 }
 small{
   margin-top: 2px;
@@ -42,6 +42,12 @@ small{
 .dollar {
   width: 13px;
   min-width: 13px;
+}
+.back {
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 30px;
+  transform: translate(-50%, -50%);
 }
 .view-all-header {
   margin-right: 13px;

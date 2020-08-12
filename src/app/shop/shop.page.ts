@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-shop',
@@ -20,7 +21,7 @@ export class ShopPage implements OnInit {
   conFlag = false;
   bevFlag1 = false;
 
-  constructor() {
+  constructor(private _location: Location) {
     this.viewList = this.fistList;
   }
 
@@ -45,5 +46,8 @@ export class ShopPage implements OnInit {
       this.viewList = this.fistList;
     }
 
+  }
+  back() {
+    this._location.back();
   }
 }
