@@ -1,6 +1,7 @@
 .logo {
   width: 25px;
-  margin-left: 45%;
+  //margin-left: 45%;
+  margin: auto;
 }
 .back {
   position: absolute;
@@ -37,6 +38,7 @@ ion-input {
   text-align: center;
   font-weight: bolder;
   font-size: medium;
+  --padding-start: 0 !important;
 }
 .warning{
   color: #FF2650;

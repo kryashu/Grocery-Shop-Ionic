@@ -67,6 +67,8 @@
   }
   .action-sheet-button-inner {
     justify-content: center;
+    //margin-top: 20px;
+    //margin-left: 20px;
   }
   .sec {
     width: 92%;
@@ -75,7 +77,13 @@
     align-items: center;
     text-align: center;
     margin-top: 15px;
-    padding-left: 60px;
+    margin: auto;
+    //padding-left: 60px;
+    .action-sheet-button-inner {
+      justify-content: center;
+      margin-top: 40px;
+      margin-bottom: 40px;
+    }
   }
   .action-sheet-sub-title{
     color: #EA0A8E;
