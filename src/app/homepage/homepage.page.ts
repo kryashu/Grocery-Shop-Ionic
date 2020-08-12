@@ -11,26 +11,21 @@ const { App } = Plugins;
   styleUrls: ['./homepage.page.scss'],
 })
 export class HomepagePage implements OnInit {
-
+  subscribe: any;
   constructor(private router: Router,
               private toastController: ToastController,
               private platform: Platform) {
+    this.subscribe = this.platform.backButton.subscribeWithPriority(666666, () =>{
+      if (this.constructor.name === 'HomepagePage'){
+        if (window.confirm('Are you sure you want to exit?')){
+          // tslint:disable-next-line
+          navigator["app"].exitApp();
+        }
+      }
+    });
   }
 
   ngOnInit() {
-    this.platform.backButton.subscribe(() => {
-      if (this.router.url === '/tabs/homepage') {
-        this.presentToastWithOptions();
-      }
-    });
-
-  }
-  exit(){
-    const routerEl = document.querySelector('ion-router');
-    const path = window.location.pathname;
-    if (path === routerEl.root) {
-      App.exitApp();
-    }
   }
   openViewAll(name){
     this.router.navigate(['/view-all', {value: name}]);
