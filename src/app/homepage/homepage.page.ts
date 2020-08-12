@@ -35,6 +35,7 @@ export class HomepagePage implements OnInit {
   openViewAll(name){
     this.router.navigate(['/view-all', {value: name}]);
   }
+
   async presentToastWithOptions() {
     const toast = await this.toastController.create({
       header: 'Untouched App',

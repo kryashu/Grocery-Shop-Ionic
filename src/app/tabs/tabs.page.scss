@@ -1,6 +1,25 @@
-ion-tab-button[aria-selected=true] {
-  --color-selected: #EA0A8E;
-  path{
-    fill: #EA0A8E;
+//ion-tab-button[aria-selected=true] {
+//  --color-selected: #EA0A8E;
+//  path{
+//    fill: #EA0A8E;
+//  }
+//}
+//ion-tab-button:focus {
+//  path {
+//    fill: #EA0A8E !important;
+//  }
+//  ion-icon, ion-label {
+//    color: #EA0A8E!important;
+//    --ion-color-base: #EA0A8E !important;
+//  }
+//}
+
+.my-tab {
+  &.active {
+    --color-selected: #EA0A8E;
+    color: #EA0A8E;
+      path{
+        fill: #EA0A8E;
+      }
   }
 }
