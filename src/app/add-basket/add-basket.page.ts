@@ -65,6 +65,6 @@ export class AddBasketPage implements OnInit {
         dismissed: true
       });
 
-      this.router.navigate(['shopping-bag']);
+      this.router.navigate(['tabs', 'cart-tab']);
   }
 }

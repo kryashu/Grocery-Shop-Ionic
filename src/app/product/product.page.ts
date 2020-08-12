@@ -32,6 +32,6 @@ export class ProductPage implements OnInit {
   }
   clickBack(){
     this.close();
-    this.router.navigate(['homepage']);
+    this.router.navigate(['tabs', 'homepage']);
   }
 }

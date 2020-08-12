@@ -1,5 +1,5 @@
 <ion-app>
-    <ion-content>
+    <ion-content overflow-scroll="true">
         <div class="header" (click)="close()">
             <img src="./assets/pizza-dough-11.png"
                  style=" filter: brightness(50%);min-width: 100%;min-height: 100%;width: auto;height: auto">
@@ -165,6 +165,8 @@
             </ion-grid>
         </div>
     </ion-content>
-
+    <ion-toolbar>
+ <app-tabs></app-tabs>
+    </ion-toolbar>
 </ion-app>
 

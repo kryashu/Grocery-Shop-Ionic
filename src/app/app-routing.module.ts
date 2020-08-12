@@ -54,10 +54,6 @@ const routes: Routes = [
   {
     path: 'add-review',
     loadChildren: () => import('./add-review/add-review.module').then( m => m.AddReviewPageModule)
-  },
-  {
-    path: 'shopping-bag',
-    loadChildren: () => import('./shopping-bag/shopping-bag.module').then( m => m.ShoppingBagPageModule)
   }
 
 ];

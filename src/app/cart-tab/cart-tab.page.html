@@ -1,9 +1,98 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>cart-tab</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
+  <ion-header class="ion-no-border">
+    <ion-toolbar>
+      <div class="logo">
+        <img src="./assets/Logo.png">
+      </div>
+    </ion-toolbar>
+  </ion-header>
 
-<ion-content>
+  <ion-content>
+    <div class="main">
+      <div class="header">My Shopping Bag</div>
+      <div class="subHead">3 items added</div>
+      <div class="items" *ngFor="let item of itemList">
+        <img src="./assets/blank.png" class="image-block">
+        <div class="item-details">
+          <div class="item-name">{{item.name}}</div>
+          <div class="item-quantity">{{item.quantity}}</div>
+          <ion-grid>
+            <ion-row>
+              <ion-col>
+                <div class="price-bar">
+                  <div class="minus-button"
+                       [ngStyle]="item.count <= 1 ? {'background-color': '#FF2650'} : {'background-color': '#D0D0D2'}" (click)="remove(item.name)">
+                    <span style="font-size: 25px;">-</span>
+                  </div>
+                  <div class="count-button">
+                    <div class="button-text">{{item.count}}</div>
+                  </div>
+                  <div class="plus-button" (click)="add(item.name)">
+                    <span style="font-size: 25px;margin-top: 10px">+</span>
+                  </div>
+                </div>
+              </ion-col>
+              <ion-col size="3">
+                <div class="priceTag">
+                  ${{item.discountedPrice.toString()}}.00
+                </div>
+                <div class="originalPrice">{{item.originalPrice}}</div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </div>
+      </div>
+      <div class="total">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="4">
+              <div class="total-text">
+                Total
+              </div>
+            </ion-col>
+            <ion-col size="5">
 
-</ion-content>
+            </ion-col>
+            <ion-col>
+              <div  class="total-text">
+                {{totalValue}}
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4">
+              <div class="total-text">
+                Discount
+              </div>
+            </ion-col>
+            <ion-col size="5">
+
+            </ion-col>
+            <ion-col>
+              <div class="total-text">
+                {{discount}}
+              </div>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="4">
+              <div class="total-text2">
+                Total
+              </div>
+            </ion-col>
+            <ion-col size="4.1">
+
+            </ion-col>
+            <ion-col>
+              <div class="total-text2">
+                {{totalValue}}
+              </div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+      <ion-button expand="block" class="subButton">Proceed to checkout</ion-button>
+      <div class="continue">Continue Shopping</div>
+    </div>
+  </ion-content>
+</ion-app>
