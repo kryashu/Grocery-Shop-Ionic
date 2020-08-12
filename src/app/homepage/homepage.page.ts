@@ -3,6 +3,7 @@ import {Router} from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { Plugins } from '@capacitor/core';
 import { BackButtonEvent } from '@ionic/core';
+import { Platform } from '@ionic/angular';
 const { App } = Plugins;
 @Component({
   selector: 'app-homepage',
@@ -12,15 +13,15 @@ const { App } = Plugins;
 export class HomepagePage implements OnInit {
 
   constructor(private router: Router,
-              private toastController: ToastController) {
+              private toastController: ToastController,
+              private platform: Platform) {
+    this.platform.backButton.subscribe(() => {
+      this.presentToastWithOptions();
+    });
+
   }
 
   ngOnInit() {
-    document.addEventListener('ionBackButton', (ev: BackButtonEvent) => {
-      ev.detail.register(-1, () => {
-        this.presentToastWithOptions();
-      });
-    });
   }
   exit(){
     const routerEl = document.querySelector('ion-router');
