@@ -36,7 +36,7 @@ gCheck = false
        this.gCheck = true;
        return false;
      } else {
-      this.router.navigate(['homepage']);
+      this.router.navigate(['tabs','homepage']);
       return true;
     }
 }

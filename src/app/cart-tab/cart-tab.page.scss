@@ -1,0 +1,128 @@
+.logo {
+  width: 25px;
+  margin-left: 49%;
+}
+.main{
+  margin-left: 10%;
+  margin-top: 2%;
+}
+
+.header{
+  font-family: "Sf bold";
+  font-size: 30px;
+}
+.subHead{
+  font-family: "sf regular";
+  font-size: 16px;
+  margin-top: 10px;
+}
+.items{
+  display: flex;
+  margin-top: 10%;
+}
+.image-block{
+  background-color: #EAEAEB;
+  border-radius: 5px;
+  width: 44px;
+  height: 44px;
+  max-width: 44px;
+  max-height: 44px;
+}
+.item-name{
+  color: #1A1A1A;
+  font-family: "Sf bold";
+  font-size: 14px;
+}
+.item-quantity{
+  color: #919099;
+  font-family: "sf regular";
+  font-size: 12px;
+  margin-top: 10px;
+}
+.item-details{
+  margin-left: 5%;
+  width: 100%;
+}
+.minus-button{
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  text-align: center;
+}
+.count-button{
+  background-color: #D0D0D2;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  text-align: center;
+  margin-left: 3%;
+}
+.plus-button{
+  background-color: #EA0A8E;
+  color: white;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  max-width: 30px;
+  max-height: 30px;
+  text-align: center;
+  margin-left: 3%;
+}
+.price-bar{
+  display: flex;
+  margin-top: 5%;
+}
+.button-text{
+  font-size: 12px;
+  margin-top: 6px;
+}
+.priceTag{
+  font-size: 14px;
+  color: #EA0A8E;
+  font-family: "Sf bold";
+  margin-top: 10px;
+}
+.originalPrice{
+  color: #1A1824;
+  font-size: 12px;
+  margin-left: 6%;
+  font-family: "sf regular";
+  text-decoration: line-through;
+}
+hr{
+  border-bottom: 1px solid black;
+}
+.total{
+  margin-top: 10%;
+}
+.total-text{
+  margin-left: 30%;
+  color: #D0D0D2;
+  font-family: "sf regular";
+  font-size: 12px;
+  white-space: nowrap;
+}
+.total-text2{
+  margin-left: 30%;
+  color: #EA0A8E;
+  font-size: 16px;
+  font-family: "Sf bold";
+  white-space: nowrap;
+}
+.subButton{
+  margin-top: 5%;
+  margin-right: 30px;
+  --background: #EA0A8E;
+}
+.continue{
+  margin-left: 25%;
+  margin-top: 5%;
+  font-size: 14px;
+  margin-bottom: 10%;
+}

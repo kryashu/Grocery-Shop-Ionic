@@ -35,4 +35,8 @@ export class ProductPage implements OnInit {
       dismissed: true
     });
   }
+  clickBack(){
+    this.close();
+    this.router.navigate(['tabs', 'homepage']);
+  }
 }
