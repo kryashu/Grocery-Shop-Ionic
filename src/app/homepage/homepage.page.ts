@@ -47,6 +47,7 @@ export class HomepagePage implements OnInit {
         }, {
           text: 'Ok',
           handler: () => {
+            window.close();
             this.exit();
           }
         }
