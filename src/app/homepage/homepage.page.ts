@@ -18,10 +18,12 @@ export class HomepagePage implements OnInit {
   }
 
   ngOnInit() {
-    if (this.router.url === '/tabs/homepage'){
     this.platform.backButton.subscribe(() => {
-      this.presentToastWithOptions();
-    }); }
+      if (this.router.url === '/tabs/homepage') {
+        this.presentToastWithOptions();
+      }
+    });
+
   }
   exit(){
     const routerEl = document.querySelector('ion-router');
