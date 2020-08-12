@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import { ToastController } from '@ionic/angular';
+import {NavController, ToastController} from '@ionic/angular';
 import { Plugins } from '@capacitor/core';
 import { BackButtonEvent } from '@ionic/core';
 import { Platform } from '@ionic/angular';
@@ -14,12 +14,15 @@ export class HomepagePage implements OnInit {
   subscribe: any;
   constructor(private router: Router,
               private toastController: ToastController,
-              private platform: Platform) {
+              private platform: Platform,
+              private navCtrl: NavController) {
     this.router.events.subscribe((e) => {
         if (this.router.url === '/tabs/homepage') {
-          this.subscribe = this.platform.backButton.subscribeWithPriority(666666, () =>{
+          this.subscribe = this.platform.backButton.subscribeWithPriority(666666, () => {
             if (this.router.url === '/tabs/homepage'){
               this.presentToastWithOptions();
+            }else{
+                this.navCtrl.pop();
             }
           });
         }
