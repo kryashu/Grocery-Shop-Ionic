@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import {Location} from "@angular/common";
 
 @Component({
   selector: 'app-view-all',
@@ -12,7 +13,8 @@ export class ViewAllPage implements OnInit {
   shopsList = [{img : './assets/shop.jpg', name: 'Basic Kneads Pizza', subheading: '$$$$,India', star: '4.8(120)', time: '60min', price: 'Free'}, {img : './assets/shop.jpg', name: 'Basic Kneads Pizza', subheading: '$$$$,India', star: '4.8(120)', time: '60min', price: 'Free'}, {img : './assets/shop.jpg', name: 'Basic Kneads Pizza', subheading: '$$$$,India', star: '4.8(120)', time: '60min', price: 'Free'}, {img : './assets/shop.jpg', name: 'Basic Kneads Pizza', subheading: '$$$$,India', star: '4.8(120)', time: '60min', price: 'Free'}];
   viewList;
   input;
-  constructor(private route: ActivatedRoute,) { }
+  constructor(private route: ActivatedRoute,
+              private _location: Location) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -20,6 +22,9 @@ export class ViewAllPage implements OnInit {
 
     });
     this.selectView();
+  }
+  back() {
+    this._location.back();
   }
 selectView(){
     if (this.input === 'shops'){
