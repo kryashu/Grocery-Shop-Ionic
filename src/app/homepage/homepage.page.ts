@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import { ToastController } from '@ionic/angular';
+import { Plugins } from '@capacitor/core';
+import { BackButtonEvent } from '@ionic/core';
 import { Platform } from '@ionic/angular';
-
+const { App } = Plugins;
 @Component({
   selector: 'app-homepage',
   templateUrl: './homepage.page.html',
