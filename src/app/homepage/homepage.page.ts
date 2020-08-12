@@ -37,6 +37,7 @@ export class HomepagePage implements OnInit {
     const toast = await this.toastController.create({
       header: 'Untouched App',
       message: 'Are you sure u want to exit?',
+      cssClass: 'Toast',
       buttons: [
         {
           text: 'Cancle',
