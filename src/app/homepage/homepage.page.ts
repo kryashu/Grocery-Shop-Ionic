@@ -15,13 +15,13 @@ export class HomepagePage implements OnInit {
   constructor(private router: Router,
               private toastController: ToastController,
               private platform: Platform) {
-    this.platform.backButton.subscribe(() => {
-      this.presentToastWithOptions();
-    });
-
   }
 
   ngOnInit() {
+    if (this.router.url === '/tabs/homepage'){
+    this.platform.backButton.subscribe(() => {
+      this.presentToastWithOptions();
+    }); }
   }
   exit(){
     const routerEl = document.querySelector('ion-router');
@@ -42,7 +42,7 @@ export class HomepagePage implements OnInit {
           text: 'Cancle',
           role: 'cancle',
           handler: () => {
-            console.log('Favorite clicked');
+            this.toastController.dismiss();
           }
         }, {
           text: 'Ok',
