@@ -8,11 +8,14 @@ import {Router, ActivatedRoute} from '@angular/router';
 })
 export class TabsPage implements OnInit {
   @ViewChild('myTabs') tabs: IonTabs;
+  homepage: boolean;
+  activeStep;
   constructor(  private route: ActivatedRoute,
                 private router: Router) { }
 
   ngOnInit() {
   }
-  getSelectedTab(): void {
-  }
+  getSelectedTab(): any {
+   this.activeStep = this.tabs.getSelected()
+   }
 }

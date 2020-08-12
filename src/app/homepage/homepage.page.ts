@@ -30,26 +30,29 @@ export class HomepagePage implements OnInit {
   openViewAll(name){
     this.router.navigate(['/view-all', {value: name}]);
   }
-  // async presentToastWithOptions() {
-  //   const toast = await this.toastController.create({
-  //     header: 'Untouched App',
-  //     message: 'Are you sure u want to exit?',
-  //     buttons: [
-  //       {
-  //         text: 'Cancle',
-  //         role: 'cancle',
-  //         handler: () => {
-  //           toast.dismiss();
-  //         }
-  //       }, {
-  //         text: 'Ok',
-  //         handler: () => {
-  //           window.close();
-  //         }
-  //       }
-  //     ]
-  //   });
-  //   toast.present();
-  // }
+
+  async presentToastWithOptions() {
+    const toast = await this.toastController.create({
+      header: 'Untouched App',
+      message: 'Are you sure u want to exit?',
+      cssClass: 'Toast',
+      buttons: [
+        {
+          text: 'Cancle',
+          role: 'cancle',
+          handler: () => {
+            toast.dismiss();
+          }
+        }, {
+          text: 'Ok',
+          handler: () => {
+            window.close();
+            this.exit();
+          }
+        }
+      ]
+    });
+    toast.present();
+  }
 
 }
