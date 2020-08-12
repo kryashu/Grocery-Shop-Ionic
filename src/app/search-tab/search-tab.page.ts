@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, ElementRef, NgZone } from '@angular/core';
 import { MapsAPILoader, AgmMap } from '@agm/core';
+import {NavController} from '@ionic/angular';
 @Component({
   selector: 'app-search-tab',
   templateUrl: './search-tab.page.html',
@@ -17,7 +18,8 @@ export class SearchTabPage implements OnInit {
   @ViewChild('search',{static:false})
   public searchElementRef: ElementRef;
   constructor( private mapsAPILoader: MapsAPILoader,
-               private ngZone: NgZone) { }
+               private ngZone: NgZone,
+               private navCtrl: NavController) { }
 
   ngOnInit() {
     // //load Places Autocomplete

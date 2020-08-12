@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild} from '@angular/core';
-import {IonTabs} from "@ionic/angular";
+import {IonTabs, NavController} from '@ionic/angular';
 import {Router, ActivatedRoute} from '@angular/router';
 @Component({
   selector: 'app-tabs',
@@ -11,11 +11,12 @@ export class TabsPage implements OnInit {
   homepage: boolean;
   activeStep;
   constructor(  private route: ActivatedRoute,
-                private router: Router) { }
+                private router: Router,
+                private navCtrl: NavController) { }
 
   ngOnInit() {
   }
   getSelectedTab(): any {
-   this.activeStep = this.tabs.getSelected()
+   this.activeStep = this.tabs.getSelected();
    }
 }

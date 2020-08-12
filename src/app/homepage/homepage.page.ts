@@ -37,13 +37,13 @@ export class HomepagePage implements OnInit {
   async presentToastWithOptions() {
     const toast = await this.toastController.create({
       header: 'Untouched App',
-      message: 'Are you sure u want to exit?',
+      message: 'Are you sure you want to exit?',
       duration: 5000,
       position: 'middle',
       buttons: [
         {
-          text: 'Cancle',
-          role: 'cancle',
+          text: 'Cancel',
+          role: 'cancel',
           handler: () => {
             toast.dismiss();
           }
