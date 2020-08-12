@@ -13,16 +13,14 @@ export class HomepagePage implements OnInit {
 
   constructor(private router: Router,
               private toastController: ToastController) {
-
-
-    document.addEventListener('ionBackButton', (ev: BackButtonEvent) => {
-      ev.detail.register(-1, () => {
-          this.presentToastWithOptions();
-      });
-    });
   }
 
   ngOnInit() {
+    document.addEventListener('ionBackButton', (ev: BackButtonEvent) => {
+      ev.detail.register(-1, () => {
+        this.presentToastWithOptions();
+      });
+    });
   }
   exit(){
     const routerEl = document.querySelector('ion-router');

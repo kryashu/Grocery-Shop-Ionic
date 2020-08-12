@@ -21,6 +21,7 @@ export class ShopPage implements OnInit {
   conFlag = false;
   bevFlag1 = false;
 
+  // tslint:disable-next-line:variable-name
   constructor(private _location: Location) {
     this.viewList = this.fistList;
   }
