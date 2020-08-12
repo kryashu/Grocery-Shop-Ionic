@@ -42,7 +42,7 @@ export class HomepagePage implements OnInit {
           text: 'Cancle',
           role: 'cancle',
           handler: () => {
-            this.toastController.dismiss();
+            toast.dismiss();
           }
         }, {
           text: 'Ok',
