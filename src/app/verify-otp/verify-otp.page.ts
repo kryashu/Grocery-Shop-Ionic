@@ -90,7 +90,7 @@ export class VerifyOtpPage implements OnInit {
 
   }
 
-verify() {
+verify(error) {
       if (this.firstD + this.secondD + this.thirdD + this.fourthD === '1111'){
                this.router.navigate(['user-details']);
             // this.router.navigate(['tabs', 'homepage']);
@@ -102,6 +102,7 @@ verify() {
         }
         else {
             this.warningFlag = true;
+            error.setFocus();
             this.style = {
                 borderBottom: '1px solid #FF2650',
                 color: '#FF2650'
@@ -109,6 +110,8 @@ verify() {
       }
     }
     clear(data){
+      this.warningFlag = false;
+      this.style = undefined;
       if (data === undefined || data === '') {
           this.backspaceWave = 1;
       }else {
