@@ -1,0 +1,15 @@
+<ion-app style="background: grey">
+  <ion-content style="--background: #EA0A8E; color: white">
+    <ion-grid class=" ion-margin-start ion-margin-horizontal" style="margin-top: 15px"  >
+      <b class="header">Untouched Ionic</b>
+      <p class="content">Are you sure want to exit?</p>
+    </ion-grid>
+    <ion-grid>
+     <div class="bottom">
+       <p class="cancel" (click)="close()" >Cancel</p>
+       <p class="ok" style="margin-left: 30px" (click)="exit()">OK</p>
+     </div>
+    </ion-grid>
+  </ion-content>
+</ion-app>
+

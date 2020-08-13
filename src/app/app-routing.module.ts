@@ -54,7 +54,11 @@ const routes: Routes = [
   {
     path: 'add-review',
     loadChildren: () => import('./add-review/add-review.module').then( m => m.AddReviewPageModule)
+  },  {
+    path: 'dialog-exit-app',
+    loadChildren: () => import('./dialog-exit-app/dialog-exit-app.module').then( m => m.DialogExitAppPageModule)
   }
+
 
 ];
 
