@@ -16,8 +16,13 @@ export class ProductPage implements OnInit {
               private _location: Location
               ) {
     this.router.events.subscribe((e) => {
-      this.modalController.dismiss();
+      // this.modalController.dismiss({
+      //   dismissed: true
+      // });
+      this.router.navigate(['product']);
     });
+
+
   }
 
   ngOnInit() {

@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {NavController, ToastController} from '@ionic/angular';
+import {ModalController, NavController, ToastController} from '@ionic/angular';
 import { Plugins } from '@capacitor/core';
 import { BackButtonEvent } from '@ionic/core';
 import { Platform } from '@ionic/angular';
+import {AddBasketPage} from "../add-basket/add-basket.page";
+import {DialogExitAppPage} from "../dialog-exit-app/dialog-exit-app.page";
 const { App } = Plugins;
 @Component({
   selector: 'app-homepage',
@@ -15,14 +17,15 @@ export class HomepagePage implements OnInit {
   constructor(private router: Router,
               private toastController: ToastController,
               private platform: Platform,
+              public modalController: ModalController,
               private navCtrl: NavController) {
     this.router.events.subscribe((e) => {
         if (this.router.url === '/tabs/homepage') {
           this.subscribe = this.platform.backButton.subscribeWithPriority(666666, () => {
             if (this.router.url === '/tabs/homepage'){
-              this.presentToastWithOptions();
+              this.exitApp();
             }else{
-                this.navCtrl.back();
+                this.navCtrl.navigateBack('/tabs/homepage');
             }
           });
         }
@@ -34,29 +37,12 @@ export class HomepagePage implements OnInit {
   openViewAll(name){
     this.router.navigate(['/view-all', {value: name}]);
   }
-  async presentToastWithOptions() {
-    const toast = await this.toastController.create({
-      header: 'Untouched App',
-      message: 'Are you sure you want to exit?',
-      duration: 5000,
-      position: 'middle',
-      buttons: [
-        {
-          text: 'Cancel',
-          role: 'cancel',
-          handler: () => {
-            toast.dismiss();
-          }
-        }, {
-          text: 'Ok',
-          handler: () => {
-            // tslint:disable-next-line
-            navigator["app"].exitApp();
-          }
-        }
-      ]
+  async exitApp() {
+    const modal = await this.modalController.create({
+      component: DialogExitAppPage,
+      cssClass: 'exitApp'
     });
-    toast.present();
+    return await modal.present();
   }
 
 }

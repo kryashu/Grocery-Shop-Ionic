@@ -1,0 +1,21 @@
+//ion-content {
+//  --background: black;
+//  color: white;
+//}
+.header {
+  font-family: 'sf bold';
+  color: white;
+  font-size: 20px;
+}
+.content {
+  font-family: 'sf regular';
+  color: white;
+  font-size: 18px;
+}
+.bottom {
+  display: flex;
+ justify-content: flex-end;
+  color: white;
+  margin-right: 10px;
+  font-family: 'sf bold';
+}
