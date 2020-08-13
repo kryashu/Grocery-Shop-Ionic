@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import {AddBasketPage} from '../add-basket/add-basket.page';
 import {Router} from '@angular/router';
-import {Location} from "@angular/common";
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-product',
@@ -14,7 +14,11 @@ export class ProductPage implements OnInit {
   constructor(public modalController: ModalController,
               private router: Router,
               private _location: Location
-              ) { }
+              ) {
+    this.router.events.subscribe((e) => {
+      this.modalController.dismiss();
+    });
+  }
 
   ngOnInit() {
   }

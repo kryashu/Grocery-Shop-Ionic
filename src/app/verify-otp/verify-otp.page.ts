@@ -81,9 +81,6 @@ export class VerifyOtpPage implements OnInit {
         if (event.target.value !== ''){
             this.backspaceWave = 1;
             nextElement.setFocus();
-            if (position === 4){
-                this.backspaceWave = 0;
-            }
         }
         if (event.key === 'Backspace' && this.backspaceWave === 0){
             this.backspaceWave += 1;
@@ -117,7 +114,7 @@ verify() {
         else {
             this.warningFlag = true;
             this.style = {
-                borderColor: '#FF2650',
+                borderBottom: '1px solid #FF2650',
                 color: '#FF2650'
             };
       }
@@ -141,6 +138,10 @@ verify() {
                 handler: () => {
                     this.resendFlag1 = true;
                     this.resendFlag = true;
+                    this.firstD = undefined;
+                    this.secondD = undefined;
+                    this.thirdD = undefined;
+                    this.fourthD = undefined;
                     this.timer(true);
                 }
             }, {

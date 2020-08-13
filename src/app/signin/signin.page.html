@@ -21,22 +21,22 @@
         <h3 class="signin-text">Sign in options</h3>
       </ion-row>
       <ion-row class="sign-apple ion-justify-content-center">
-        <ion-button expand="full" fill="clear"><ion-icon name="logo-apple"></ion-icon><span>Sign in with apple</span></ion-button>
+        <div class="button"><ion-icon name="logo-apple" style="margin-right: 10px;margin-bottom: 2px"></ion-icon><span>Sign in with apple</span></div>
       </ion-row>
       <ion-row class="social-login ion-justify-content-center">
         <ion-col size-xs="5" class="sign">
           <div>
-            <ion-button expand="full" fill="clear"><img src="./assets/google.png"></ion-button>
+            <div class="button"><img src="./assets/google.png"></div>
           </div>
         </ion-col>
         <ion-col size-xs="5" offset="1" class="sign">
           <div>
-            <ion-button expand="full" fill="clear"><img src="./assets/facebook.png"></ion-button>
+            <div class="button"><img src="./assets/facebook.png"></div>
           </div>
         </ion-col>
       </ion-row>
       <ion-row class="mobile-login ion-justify-content-center">
-        <ion-button expand="full" fill="clear" [routerLink]="['/sign-with-mobile']"><span>Sign in with mobile</span></ion-button>
+        <div class="button" [routerLink]="['/sign-with-mobile']"><span>Sign in with mobile</span></div>
       </ion-row>
     </ion-grid>
   </ion-content>
