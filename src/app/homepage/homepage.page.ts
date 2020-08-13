@@ -34,6 +34,7 @@ export class HomepagePage implements OnInit {
 
   ngOnInit() {
   }
+
   openViewAll(name){
     this.router.navigate(['/view-all', {value: name}]);
   }
