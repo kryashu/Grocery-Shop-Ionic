@@ -20,3 +20,4 @@ export class TabsPage implements OnInit {
    this.activeStep = this.tabs.getSelected();
    }
 }
+

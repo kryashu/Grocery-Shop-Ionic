@@ -13,8 +13,8 @@
       <h1>Enter your phone number</h1>
     </ion-row>
     <ion-row style="margin-left: 30px; margin-right: 30px">
-      <ion-col>
-        <ion-select (click)="changeFlag()" [(ngModel)]="amd">
+      <ion-col style="width: fit-content">
+        <ion-select (click)="changeFlag()" style="width: fit-content" [(ngModel)]="amd">
           <ion-select-option *ngFor="let item of countryList"  [value]="'+'+item.callingCodes[0]">{{item.alpha2Code}}</ion-select-option>
         </ion-select>
         <ion-input class="amd" [(ngModel)]="amd" ></ion-input>

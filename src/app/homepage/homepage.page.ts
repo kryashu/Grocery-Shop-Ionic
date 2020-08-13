@@ -22,7 +22,7 @@ export class HomepagePage implements OnInit {
             if (this.router.url === '/tabs/homepage'){
               this.presentToastWithOptions();
             }else{
-                this.navCtrl.pop();
+                this.navCtrl.back();
             }
           });
         }
