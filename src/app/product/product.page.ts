@@ -15,12 +15,12 @@ export class ProductPage implements OnInit {
               private router: Router,
               private _location: Location
               ) {
-    this.router.events.subscribe((e) => {
-      this.modalController.dismiss({
-        dismissed: true
-      });
+    // this.router.events.subscribe((e) => {
+    //   this.modalController.dismiss({
+    //     dismissed: true
+    //   });
 
-    });
+    // });
 
 
   }
