@@ -68,18 +68,9 @@ export class VerifyOtpPage implements OnInit {
       }
   }
     moveFocus(nextElement, prevElement, position, event) {
-        // let pos = position;
-        // if (event.keyCode === 8 && event.which === 8) {
-        //     pos = position - 1 ;
-        // } else {
-        //     pos = position + 1 ;
-        // }
-        // if (pos > -1 && pos < 4 ) {
-        //     this.rows._results[pos].setFocus();
-        // }
         this.textFlag = false;
         if (event.target.value !== ''){
-            this.backspaceWave = 1;
+            this.backspaceWave = 0;
             nextElement.setFocus();
         }
         if (event.key === 'Backspace' && this.backspaceWave === 0){
@@ -87,8 +78,6 @@ export class VerifyOtpPage implements OnInit {
             this.warningFlag = false;
             this.style = undefined;
         }else if (event.key === 'Backspace' && this.backspaceWave === 1){
-            // prevElement.setFocus();
-            // this.backspaceWave -= 1;
             if (position === 3 && (this.thirdD === undefined || this.thirdD === '')){
                 prevElement.setFocus();
             }else if (position === 2 && (this.secondD === undefined || this.secondD === '')){
@@ -142,6 +131,8 @@ verify() {
                     this.secondD = undefined;
                     this.thirdD = undefined;
                     this.fourthD = undefined;
+                    this.style = undefined;
+                    this.warningFlag=false;
                     this.timer(true);
                 }
             }, {

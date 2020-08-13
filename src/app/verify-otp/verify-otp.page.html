@@ -38,10 +38,11 @@
   <div class="timer" *ngIf="resendFlag">
     Resend in 00:{{timerValue}}
   </div>
-  <div class="upperText" *ngIf="!textFlag && !resendFlag">
+  <div class="upperText" *ngIf="!textFlag && !resendFlag1">
     <a (click)="showActionSheet()" style="color: #0d0d0d; cursor: pointer">I haven't received a code.</a>
   </div>
-  <div class="lowerText" *ngIf="textFlag && !resendFlag">
+
+  <div class="lowerText" *ngIf="textFlag && !resendFlag1">
     <a (click)="showActionSheet()" style="color: #0d0d0d; cursor: pointer">I haven't received a code.</a>
   </div>
 </ion-content>
