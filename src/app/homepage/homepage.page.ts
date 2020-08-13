@@ -31,6 +31,7 @@ export class HomepagePage implements OnInit {
 
   ngOnInit() {
   }
+
   openViewAll(name){
     this.router.navigate(['/view-all', {value: name}]);
   }
@@ -45,7 +46,8 @@ export class HomepagePage implements OnInit {
           text: 'Cancel',
           role: 'cancel',
           handler: () => {
-            toast.dismiss();
+            this.toastController.dismiss();
+
           }
         }, {
           text: 'Ok',
