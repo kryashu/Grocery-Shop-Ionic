@@ -13,8 +13,8 @@ export class SearchTabPage implements OnInit {
   address: string;
   private geoCoder;
   // tslint:disable-next-line:max-line-length
-  storeList = [{name: 'More Market', tag: 'Medical, Confectionary, European, International…', star: '4.8(120+)', time: '60', cost: 'Free'},{name: 'More Market', tag: 'Medical, Confectionary, European, International…', star: '4.8(120+)', time: '60', cost: 'Free'}];
-  caardList = [{name: '$1000 Monthly Gift Card', tag: 'Lorem Ipsum', star: '4.8(120+)', time: '60', cost: 'Free'},{name: '$1000 Monthly Gift Card', tag: 'Lorem Ipsum', star: '4.8(120+)', time: '60', cost: 'Free'}];
+  storeList = [{name: 'More Market', tag: 'Medical, Confectionary, European, International…', star: '4.8(120+)', time: '60 Min', cost: 'Free'},{name: 'More Market', tag: 'Medical, Confectionary, European, International…', star: '4.8(120+)', time: '60 Min', cost: 'Free'}];
+  caardList = [{name: '$1000 Monthly Gift Card', tag: 'Lorem Ipsum', star: '4.8(120+)', time: '60 Min', cost: 'Free'},{name: '$1000 Monthly Gift Card', tag: 'Lorem Ipsum', star: '4.8(120+)', time: '60 Min', cost: 'Free'}];
   @ViewChild('search',{static:false})
   public searchElementRef: ElementRef;
   constructor( private mapsAPILoader: MapsAPILoader,

@@ -9,11 +9,7 @@ ion-content {
 }
 
 .search-div{
-  position: fixed;
-  overflow:scroll;
-  bottom: 0;
   width: 99.99%;
-  height: 275px;
   background-color: white;
   border-top-right-radius: 10px;
   border-top-left-radius: 10px;
@@ -43,8 +39,7 @@ ion-content {
 .search-button{
   text-transform: none;
   --background: #EA0A8E;
-  margin-right: 30px;
-  height: 45px;
+  width: 90%;
   font-family: "sf regular";
   font-size: 16px;
   --border-radius: 7px !important;

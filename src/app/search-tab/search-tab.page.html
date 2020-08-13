@@ -4,15 +4,21 @@
 <!--  <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">-->
 <!--    <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"-->
 <!--                (dragEnd)="markerDragEnd($event)"></agm-marker>-->
+    <div style="height: 60%">
+
+    </div>
     <div class="search-div">
+            <div style="height: 1px">
+
+            </div>
       <div class="header ion-margin-start">
         Search nearby stores
       </div>
       <div class="search ion-margin-start">
       <ion-searchbar type="text" class="native-input sc-ion-input-ios" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search></ion-searchbar>
       </div>
-      <div>
-        <ion-button class="search-button ion-margin-start" expand="block">Search</ion-button>
+      <div style="display: flex;justify-content: center;align-items: center">
+        <ion-button class="search-button" expand="block">Search</ion-button>
       </div>
 
       <div class="header ion-margin-start">
@@ -48,13 +54,13 @@
                  <p style="display: flex;font-size: 12px;font-family: 'sf regular'">{{shop.tag}}</p>
                  <div class="rating-time">
                      <div class="shop-rtf">
-                        <span class="span" ><img style="width: 13px; margin-right: 10px" src="./assets/star.svg">  <small>   {{shop.star}}</small></span>
+                        <span class="span" ><img style="width: 13px; margin-right: 5px" src="./assets/star.svg">  <small>   {{shop.star}}</small></span>
                      </div>
                       <div class="shop-rtf">
-                        <span class="span" ><ion-icon name="time-outline" style="margin-right: 10px"></ion-icon> <small>  {{shop.time}}</small></span>
+                        <span class="span" ><ion-icon name="time-outline" style="margin-right: 5px"></ion-icon> <small>  {{shop.time}}</small></span>
                      </div>
                       <div class="shop-rtf">
-                        <span class="span" ><img style="width: 13px; margin-right: 10px" src="./assets/dollar.png"> <small>   {{shop.cost}}</small></span>
+                        <span class="span" ><img style="width: 13px; margin-right: 5px" src="./assets/dollar.png"> <small>   {{shop.cost}}</small></span>
                      </div>
                  </div>
            </span>
