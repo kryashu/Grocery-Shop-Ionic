@@ -15,6 +15,7 @@
 //}
 
 .my-tab {
+  --ripple-color: white;
   &.active {
     --color-selected: #EA0A8E;
     color: #EA0A8E;
