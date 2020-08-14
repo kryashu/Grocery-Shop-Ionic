@@ -34,12 +34,14 @@ export class HomepagePage implements OnInit {
   }
 
   ngOnInit() {
-    this.presentalert();
+
+  }
+  async close() {
+    await this.modalController.dismiss();
   }
 
-
-   presentalert() {
-    const alert = this.alertController.create({
+  async presentalert() {
+    const alert = await this.alertController.create({
       header: 'Untouched Ionic',
       message: 'Are you sure you want to exit?',
       cssClass: 'alertCancel',
