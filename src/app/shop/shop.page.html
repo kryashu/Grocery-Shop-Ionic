@@ -5,7 +5,7 @@
   <img class="back" src="./assets/back.png" (click)="back()">
   <img class="share" src="./assets/share.png">
 </div>
-    <ion-grid class="ion-margin-start">
+    <ion-grid class="ion-margin-horizontal">
       <ion-row class="marketHeading">
       <ion-col size-xs="8">
         <h2>
@@ -40,7 +40,7 @@
       </ion-row>
     </ion-grid>
 <!--    Feature Product-->
-    <ion-grid  class="ion-margin-start">
+    <ion-grid  class="ion-margin-horizontal">
       <ion-row>
         <ion-col size-xs="12">
           <ion-row>
@@ -83,7 +83,7 @@
       </ion-row>
     </ion-grid>
 <!--Product cateogories-->
-    <ion-grid class="ion-margin-start">
+    <ion-grid class="ion-margin-horizontal">
       <ion-row>
         <ion-scroll scrollX="true" direction="x">
           <div class="ion-margin-end">
@@ -105,7 +105,7 @@
       </ion-row>
 <!--      Dairymilk sec-->
       <ion-row style="margin-top: 5%" *ngFor="let item of viewList">
-        <ion-col size-xs="2">
+        <ion-col size-xs="2" class="review-img">
           <div style="background: grey; border: 1px solid lightgray; height: 50px; border-radius: 7px"></div>
         </ion-col>
         <ion-col size-xs="6" >
@@ -114,25 +114,25 @@
           <small class="text-gray">{{item.subdel}}</small>
         </ion-col>
         <ion-col size-xs="4">
-             <b style="color: #EA0A8E" class="ion-float-right ion-margin-end">$15</b>
+             <b style="color: #EA0A8E;float: right ">$15</b>
         </ion-col>
       </ion-row>
     </ion-grid>
 
 
 <!--Review section-->
-<ion-grid class="ion-margin-start">
+<ion-grid class="ion-margin-horizontal">
     <ion-row>
       <ion-col size-xs="8">
         <h3 class="heading">Reviews</h3>
       </ion-col>
       <ion-col size-xs="4" class="ion-align-self-center">
-                        <span class="span1 " style="margin: 0 0 0 27%"><small>Read all 189</small><small><ion-icon
+                        <span class="span1 "><small>Read all 189</small><small><ion-icon
                                 name="chevron-forward-outline"></ion-icon></small></span>
       </ion-col>
     </ion-row>
     <ion-row>
-    <ion-col size-xs="2">
+    <ion-col size-xs="2" class="review-img">
       <div style="background: grey; border: 1px solid lightgray; height: 50px; border-radius: 7px"></div>
     </ion-col>
     <ion-col size-xs="6" >
@@ -150,7 +150,7 @@
     </ion-row>
 
   <ion-row>
-    <ion-col size-xs="2">
+    <ion-col size-xs="2" class="review-img">
       <div style="background: grey; border: 1px solid lightgray; height: 50px; border-radius: 7px"></div>
     </ion-col>
     <ion-col size-xs="6" >
@@ -168,7 +168,7 @@
   </ion-row>
 
   <ion-row>
-    <ion-col size-xs="2">
+    <ion-col size-xs="2" class="review-img">
       <div style="background: grey; border: 1px solid lightgray; height: 50px; border-radius: 7px"></div>
     </ion-col>
     <ion-col size-xs="6" >
@@ -188,7 +188,7 @@
 </ion-grid>
 
 <!--    Rating section-->
-    <ion-grid class="ion-margin-start">
+    <ion-grid class="ion-margin-horizontal">
       <p class="heading">Your rating</p>
       <ion-row>
         <div class="your-rating">
@@ -215,7 +215,7 @@
       </ion-row>
     </ion-grid>
 <!--    Similar shops section-->
-    <ion-grid  class="ion-margin-start">
+    <ion-grid  class="ion-margin-horizontal">
       <ion-row>
         <ion-col size-xs="12">
           <ion-row>

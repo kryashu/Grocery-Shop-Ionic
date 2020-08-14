@@ -7,42 +7,41 @@
             <img src="./assets/Share%20button.png" class="share">
         </div>
         <div>
-            <div class="heading">
+            <div class="heading ion-margin-horizontal">
                 <ion-grid>
                     <ion-row>
                         <ion-col size-xs="8" size-sm="8" size-md="8">
                             <h1>Pizza Dough</h1>
                         </ion-col>
                         <ion-col size-xs="4" size-sm="4" size-md="4">
-                            <div class="addImg">
+                            <div class="addImg ">
                                 <img src="./assets/Add%20item%20button.png" (click)="presentModal()">
                             </div>
                         </ion-col>
                     </ion-row>
                 </ion-grid>
             </div>
-            <div style="margin-left: 20px;">
+            <div class="ion-margin-horizontal">
                 <span style="font-family: sf light; font-size: 16px">Starting From</span>
                 <span style="margin-left: 5%; color: #EA0A8E; font-family: 'Sf bold'">$4.50</span>
             </div>
-            <div class="body1">
+            <div class="body1 ion-margin-horizontal">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
                 dolore magna aliqua.
             </div>
         </div>
-        <div class="heading">
+        <div class="heading ion-margin-horizontal">
             <h2>Reviews</h2>
-            <div *ngFor="let person of reviewList" style="margin-bottom: 20px; margin-top: 20px;margin-right: 30px">
-
+            <div *ngFor="let person of reviewList" style="margin-bottom: 20px;">
                 <ion-grid>
                     <ion-row>
-                        <ion-col size-xs="3" size-sm="3" size-md='3'>
+                        <ion-col size-xs="2" size-sm="2" size-md='2'>
                             <img src="./assets/blank.png" class="reviewImg">
                         </ion-col>
                         <ion-col size-xs="6" size-sm="6" size-md="6">
-                            <div style="margin-top: 1%;">
+                            <div style="margin-top: 1%; margin-left: 8px">
                                 <div style="margin-bottom: 8px">
-            <span style="font-family: 'Sf bold'; white-space: nowrap">
+            <span style="font-family: 'Sf bold';">
                 {{person.name}}
             </span>
                                 </div>
@@ -55,8 +54,8 @@
                                 </div>
                             </div>
                         </ion-col>
-                        <ion-col>
-                            <div class="rating-selected rating">
+                        <ion-col size-xs="4" size-sm="4" size-md="4">
+                            <div class="rating-selected rating ion-float-right">
                                 <span style="font-size: 12px; color: white; font-family: 'sf regular'; margin-right: 3px">{{person.star}}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12.35"
                                      viewBox="0 0 13 12.35">
@@ -117,15 +116,15 @@
                 <b style="color: #EA0A8E" routerLink="/add-review">+ Add your review</b>
             </ion-row>
         </ion-grid>
-        <div style="margin-left: 20px">
-            <ion-grid>
+        <div>
+            <ion-grid class="ion-margin-horizontal">
                 <ion-row>
-                    <ion-col size-xs="11">
+                    <ion-col size-xs="12">
                         <ion-row>
-                            <ion-col size-xs="6">
+                            <ion-col size-xs="8">
                                 <span class="head">Similar Products</span>
                             </ion-col>
-                            <ion-col size-xs="6" class="ion-align-self-center">
+                            <ion-col size-xs="4" class="ion-align-self-center">
                         <span class="span ion-float-right"><small>View all</small><small><ion-icon
                                 name="chevron-forward-outline"></ion-icon></small></span>
                             </ion-col>
