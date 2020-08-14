@@ -18,7 +18,7 @@ import { Keyboard } from '@ionic-native/keyboard/ngx';
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
   SigninPageModule,
   TabsPageModule,
-  HttpClientModule
+  HttpClientModule,
   ],
   providers: [
     StatusBar,
