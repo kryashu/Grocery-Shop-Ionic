@@ -1,55 +1,80 @@
-.title{
+.title {
   font-family: "Sf bold";
   font-size: 30px;
   margin-left: 30px;
   margin-top: 30px
 }
-.itemCount{
+
+.itemCount {
   font-family: "sf regular";
   font-size: 16px;
   margin-left: 30px;
   margin-top: 30px;
 }
-.item{
+
+.item {
   font-family: "Sf bold";
   margin-left: 30px;
   font-size: 16px;
 }
-.lowerBtn{
+
+.lowerBtn {
   --background: #EA0A8E;
   border-radius: 50px;
 }
-.ion-justify-content-center{
+
+.ion-justify-content-center {
   margin-left: 10%;
   margin-right: 10%;
 }
-.radioLable1{
+
+.radioLable1 {
   font-family: "sf regular";
-  font-size: 14px;
-  margin-left: 10px;
+  font-size: 15px;
 }
+
 ::ng-deep ion-radio-group {
-  display: block!important;
+  display: block !important;
 }
-ion-radio{
+
+ion-radio {
   margin: 0px;
   --color-checked: #EA0A8E;
 }
-ion-item{
+
+ion-item {
   margin-left: 30px;
 }
-.price{
+
+.price {
   color: #EA0A8E;
   font-size: 16px;
   font-family: "Sf bold";
 }
-ion-col{
+
+ion-col {
   padding: 0;
   margin-top: 2%;
 }
+
 ion-item {
   --highlight-color-focused: none !important;
 }
-.item  .in-list .ion-activatable .ion-focusable {
+
+.item .in-list .ion-activatable .ion-focusable {
   --highlight-color-focused: none !important;
+}
+
+.minus {
+  background-color: #D0D0D2;
+  width: 25px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  border-radius: 50%;
+}
+
+.plus {
+  height: 25px;
 }
