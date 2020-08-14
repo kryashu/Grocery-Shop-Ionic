@@ -1,0 +1,16 @@
+<ion-content>
+<ion-list>
+  <ion-item *ngFor="let country of countryList" (click)="select(country)">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <img [src]="country.flag" width="30">
+        </ion-col>
+        <ion-col>
+          {{country.name}}
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+</ion-list>
+</ion-content>

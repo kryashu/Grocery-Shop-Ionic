@@ -57,6 +57,10 @@ const routes: Routes = [
   },  {
     path: 'dialog-exit-app',
     loadChildren: () => import('./dialog-exit-app/dialog-exit-app.module').then( m => m.DialogExitAppPageModule)
+  },
+  {
+    path: 'country-popup',
+    loadChildren: () => import('./country-popup/country-popup.module').then( m => m.CountryPopupPageModule)
   }
 
 
