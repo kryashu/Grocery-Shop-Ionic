@@ -14,6 +14,7 @@ export class ViewAllPage implements OnInit {
   viewList;
   input;
   constructor(private route: ActivatedRoute,
+              private router: Router,
               private _location: Location) { }
 
   ngOnInit() {
@@ -33,6 +34,11 @@ selectView(){
       this.viewList = this.categoryList;
     }else if (this.input === 'offers'){
       this.viewList = this.offerList;
+    }
+}
+click(){
+    if (this.input === 'offers'){
+      this.router.navigate(['product']);
     }
 }
 }
