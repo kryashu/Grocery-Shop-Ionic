@@ -116,10 +116,12 @@ hr {
 
 .total {
   margin-top: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .total-text {
-  margin-left: 30%;
   color: #D0D0D2;
   font-family: "sf regular";
   font-size: 12px;
@@ -127,7 +129,6 @@ hr {
 }
 
 .total-text2 {
-  margin-left: 30%;
   color: #EA0A8E;
   font-size: 16px;
   font-family: "Sf bold";
@@ -135,30 +136,40 @@ hr {
 }
 
 .no-item {
-  justify-content: center;
   display: flex;
-  white-space: nowrap;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+  margin-right: 5%;
+  white-space: nowrap;
   font-family: "Sf regular";
   font-size: 20px;
-  margin-right: 10%;
 }
 
 .subButton {
   text-transform: none;
   margin-top: 5%;
-  margin-right: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5%;
   --background: #EA0A8E;
 }
 
 .continue {
-  margin-left: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-top: 5%;
   font-size: 14px;
+  margin-right: 5%;
   margin-bottom: 10%;
 }
 
 .basket {
-  margin-left: 15%;
-  margin-top: 10%
+  margin-top: 10%;
+  margin-right: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
