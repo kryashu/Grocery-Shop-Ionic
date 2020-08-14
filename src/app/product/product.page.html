@@ -1,7 +1,7 @@
 <ion-app>
     <ion-content overflow-scroll="true">
-        <div class="header" (click)="close()">
-            <img src="./assets/pizza-dough-11.png"
+        <div class="header" >
+            <img src="./assets/pizza-dough-11.png" (click)="close()"
                  style=" filter: brightness(50%);min-width: 100%;min-height: 100%;width: auto;height: auto">
             <img src="./assets/Back%20button.png" (click)="back()" class="back">
             <img src="./assets/Share%20button.png" class="share">
@@ -56,7 +56,7 @@
                             </div>
                         </ion-col>
                         <ion-col>
-                            <div class="rating-selected rating" style="margin-left: 20%">
+                            <div class="rating-selected rating">
                                 <span style="font-size: 12px; color: white; font-family: 'sf regular'; margin-right: 3px">{{person.star}}</span>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12.35"
                                      viewBox="0 0 13 12.35">
@@ -84,16 +84,16 @@
         <ion-grid class="ion-margin-start">
             <p class="head">Your rating</p>
             <ion-row>
-                <div class="rating">
+                <div class="your-rating">
                     <span style="font-size: 12px; font-family: 'sf regular'; margin-right: 3px">  1</span><img src="./assets/star.svg">
                 </div>
-                <div class="rating">
+                <div class="your-rating">
                     <span style="font-size: 12px; font-family: 'sf regular'; margin-right: 3px">  2</span><img src="./assets/star.svg">
                 </div>
-                <div class="rating">
+                <div class="your-rating">
                     <span style="font-size: 12px; font-family: 'sf regular'; margin-right: 3px">  3</span><img src="./assets/star.svg">
                 </div>
-                <div class="rating-selected rating">
+                <div class="rating-selected your-rating">
                     <span style="font-size: 12px; color: white; font-family: 'sf regular'; margin-right: 3px">   4 </span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="13" height="12.35" viewBox="0 0 13 12.35">
                         <defs>
@@ -106,7 +106,7 @@
                               transform="translate(0 0)"/>
                     </svg>
                 </div>
-                <div class="rating">
+                <div class="your-rating">
                     <span style="font-size: 12px;  font-family: 'sf regular'; margin-right: 3px">   5</span><img src="./assets/star.svg">
                 </div>
             </ion-row>

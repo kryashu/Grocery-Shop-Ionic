@@ -47,5 +47,9 @@ ion-col{
   padding: 0;
   margin-top: 2%;
 }
-
-
+ion-item {
+  --highlight-color-focused: none !important;
+}
+.item  .in-list .ion-activatable .ion-focusable {
+  --highlight-color-focused: none !important;
+}

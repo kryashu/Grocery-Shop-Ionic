@@ -12,12 +12,8 @@ export class DialogExitAppPage implements OnInit {
 
   ngOnInit() {
   }
-  close() {
-    // using the injected ModalController this page
-    // can "dismiss" itself and optionally pass back data
-    this.modalController.dismiss({
-      dismissed: true
-    });
+  async close() {
+    await this.modalController.dismiss();
   }
   exit() {
     // tslint:disable-next-line
