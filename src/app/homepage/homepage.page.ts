@@ -34,7 +34,6 @@ export class HomepagePage implements OnInit {
   }
 
   ngOnInit() {
-
   }
   async close() {
     await this.modalController.dismiss();
