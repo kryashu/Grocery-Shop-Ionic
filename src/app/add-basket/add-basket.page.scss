@@ -32,20 +32,6 @@
   font-family: "sf regular";
   font-size: 15px;
 }
-
-::ng-deep ion-radio-group {
-  display: block !important;
-}
-
-ion-radio {
-  margin: 0px;
-  --color-checked: #EA0A8E;
-}
-
-ion-item {
-  margin-left: 30px;
-}
-
 .price {
   color: #EA0A8E;
   font-size: 16px;
