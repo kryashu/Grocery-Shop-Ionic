@@ -27,7 +27,8 @@ export class AddBasketPage implements OnInit {
     });
     toast.present();
   }
-  add(){
+  add(name){
+    this.selectedItem = name;
     if (this.selectedItem){
     for (const item of this.itemList){
       if (item.name === this.selectedItem){
@@ -39,7 +40,8 @@ export class AddBasketPage implements OnInit {
         this.presentToast();
     }
   }
-  remove(){
+  remove(name){
+    this.selectedItem = name;
     if (this.selectedItem){
     for (const item of this.itemList){
       if (item.name === this.selectedItem){
@@ -66,5 +68,19 @@ export class AddBasketPage implements OnInit {
       });
 
       this.router.navigate(['tabs', 'cart-tab']);
+  }
+  addZeroes(num) {
+// Convert input string to a number and store as a variable.
+    let value = Number(num);
+// Split the input string into two arrays containing integers/decimals
+    const res = num.split('.');
+// If there is no decimal point or only one decimal place found.
+    if (res.length === 1 || res[1].length < 3) {
+// Set the number to two decimal places
+      // @ts-ignore
+      value = value.toFixed(2);
+    }
+// Return updated or original number.
+    return value;
   }
 }

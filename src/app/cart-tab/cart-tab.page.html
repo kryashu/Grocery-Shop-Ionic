@@ -10,7 +10,8 @@
   <ion-content>
     <div class="main">
       <div class="header">My Shopping Bag</div>
-      <div class="subHead">3 items added</div>
+      <div *ngIf="itemList.length !== 0" class="subHead">{{maxCount}} items added</div>
+      <div *ngIf="itemList.length === 0" class="no-item ion-margin-vertical"> No item in cart!</div>
       <div class="items" *ngFor="let item of itemList">
         <img src="./assets/blank.png" class="image-block">
         <div class="item-details">
@@ -91,7 +92,7 @@
           </ion-row>
         </ion-grid>
       </div>
-      <ion-button expand="block" class="subButton">Proceed to checkout</ion-button>
+      <ion-button expand="block" class="subButton" [disabled]="itemList.length === 0">Proceed to checkout</ion-button>
       <div class="continue" routerLink="/tabs/homepage">Continue Shopping</div>
     </div>
   </ion-content>

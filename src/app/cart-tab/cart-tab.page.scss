@@ -115,6 +115,14 @@ hr{
   font-family: "Sf bold";
   white-space: nowrap;
 }
+.no-item{
+  justify-content: center;
+  display: flex;
+  white-space: nowrap;
+  text-align: center;
+  font-family: "Sf regular";
+  font-size: 20px;
+}
 .subButton{
   text-transform: none;
   margin-top: 5%;
