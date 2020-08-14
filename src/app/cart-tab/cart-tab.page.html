@@ -11,6 +11,7 @@
     <div class="main">
       <div class="header">My Shopping Bag</div>
       <div *ngIf="itemList.length !== 0" class="subHead">{{maxCount}} items added</div>
+      <div *ngIf="itemList.length === 0" class="basket"><img src="./assets/blank.png" width="200"> </div>
       <div *ngIf="itemList.length === 0" class="no-item ion-margin-vertical"> No item in cart!</div>
       <div class="items" *ngFor="let item of itemList">
         <img src="./assets/blank.png" class="image-block">
@@ -43,7 +44,7 @@
           </ion-grid>
         </div>
       </div>
-      <div class="total">
+      <div class="total" *ngIf="itemList.length !== 0">
         <ion-grid>
           <ion-row>
             <ion-col size="4">
@@ -92,7 +93,7 @@
           </ion-row>
         </ion-grid>
       </div>
-      <ion-button expand="block" class="subButton" [disabled]="itemList.length === 0">Proceed to checkout</ion-button>
+      <ion-button expand="block" class="subButton" *ngIf = "itemList.length !== 0">Proceed to checkout</ion-button>
       <div class="continue" routerLink="/tabs/homepage">Continue Shopping</div>
     </div>
   </ion-content>
