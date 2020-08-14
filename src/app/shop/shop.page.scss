@@ -17,6 +17,10 @@ h2 {
   font-family: "sf bold";
   font-size: 2rem;
 }
+h5 {
+  font-family: 'sf bold';
+  color: #1A1A1A;
+}
 .marketHeading {
   display: flex;
   align-items: center;
@@ -79,7 +83,7 @@ ion-scroll {
   height: 30px;
   width: 50px;
   background: #EAEAEB;
-  margin: 0 0 0 40%;
+  margin: 0 0 0 45%;
   display: flex;
   align-items: center;
   justify-content: center;
