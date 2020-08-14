@@ -1,13 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="start" class="ion-margin-start">Select Country</ion-title>
+    <a slot="end" class="ion-margin-end" (click)="modalController.dismiss()">Close</a>
+  </ion-toolbar>
+ </ion-header>
 <ion-content>
 <ion-list>
   <ion-item *ngFor="let country of countryList" (click)="select(country)">
     <ion-grid>
       <ion-row>
         <ion-col>
-          <img [src]="country.flag" width="30">
+          <img [src]="country?.flag" width="30">
         </ion-col>
         <ion-col>
-          {{country.name}}
+          {{country?.name}}
         </ion-col>
       </ion-row>
     </ion-grid>

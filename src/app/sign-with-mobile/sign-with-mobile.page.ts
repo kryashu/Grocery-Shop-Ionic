@@ -12,7 +12,7 @@ import {CountryPopupPage} from '../country-popup/country-popup.page';
 })
 export class SignWithMobilePage implements OnInit {
   country = CountryCode.countryCode[0];
-  amd = '+91';
+  amd = '+' + this.country.callingCodes[0];
   buttonFlag = true;
   phoneNumber ;
   warningFlag = false;
@@ -52,9 +52,13 @@ async openModal(){
       const modal = await this.modalController.create({
           component: CountryPopupPage,
           cssClass: 'countryModal',
+          backdropDismiss: true,
       });
       await modal.present();
       const data = await modal.onWillDismiss();
-      this.country = data.data;
+      if (data.data) {
+          this.country = data.data;
+          this.amd = '+' + data.data.callingCodes[0];
+      }
 }
 }

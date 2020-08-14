@@ -24,7 +24,8 @@ export class HomepagePage implements OnInit {
         if (this.router.url === '/tabs/homepage') {
           this.subscribe = this.platform.backButton.subscribeWithPriority(0, () => {
             if (this.router.url === '/tabs/homepage'){
-              this.presentalert();
+              //this.presentalert();
+              this.navCtrl.navigateBack('/tabs/homepage');
             }else{
                 this.navCtrl.navigateBack('/tabs/homepage');
             }
