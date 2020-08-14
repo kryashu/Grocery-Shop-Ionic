@@ -14,12 +14,14 @@ export class CartTabPage implements OnInit {
   totalValue = '$0.00';
   discount = '$0.00';
   discountValue = 0;
+  maxCount = 0;
   total = 0;
   constructor() { }
 
   ngOnInit() {
     for (const item of this.itemList) {
       this.total += item.discountedPrice;
+      this.maxCount += item.count;
       this.discountValue += item.discount;
     }
     this.discount = '$' + this.addZeroes(this.discountValue.toString()).toString();
@@ -29,6 +31,7 @@ export class CartTabPage implements OnInit {
     for (const item of this.itemList){
       if (item.name === name){
         item.count += 1;
+        this.maxCount += 1;
         this.total += item.discountedPrice;
         this.discountValue += item.discount;
         this.discount = '$' + this.addZeroes(this.discountValue.toString()).toString();
@@ -58,6 +61,7 @@ export class CartTabPage implements OnInit {
             this.itemList.splice(this.itemList.indexOf(item), 1);
           }
           item.count -= 1;
+          this.maxCount -= 1;
           if (this.total > 0){
             this.total -= item.discountedPrice;
             this.discountValue -= item.discount;
