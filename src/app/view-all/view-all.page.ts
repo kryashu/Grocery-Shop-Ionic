@@ -39,6 +39,8 @@ selectView(){
 click(){
     if (this.input === 'offers'){
       this.router.navigate(['product']);
+    }else if (this.input === 'shops'){
+      this.router.navigate(['shops']);
     }
 }
 }
