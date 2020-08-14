@@ -3,13 +3,18 @@
   margin: auto;
 }
 
-h1{
+h1 {
   font-weight: bolder;
   font-size: 30px;
-  margin: 30px;
 }
 
-.lowerBtn{
+.img-class {
+  justify-content: flex-start;
+  display: flex;
+  align-items: center;
+}
+
+.lowerBtn {
   margin-left: 30px;
   margin-right: 30px;
   margin-top: 90%;
@@ -19,7 +24,8 @@ h1{
   border-radius: 50px;
   height: 45px;
 }
-.upperBtn{
+
+.upperBtn {
   margin-left: 30px;
   margin-right: 30px;
   margin-top: 20%;
@@ -29,24 +35,29 @@ h1{
   height: 45px;
   border-radius: 50px;
 }
-.main{
+
+.main {
   font-size: 12.5px;
 }
-.amd{
+
+.amd {
   max-width: 60px;
   font-size: 12.5px;
 }
-ion-col{
+
+ion-col {
   border-bottom: 1px solid;
   display: flex;
 }
-ion-select{
+
+ion-select {
   padding: 0px;
   width: 30px;
   margin: 0px;
   font-size: 12.5px;
 }
-.warning{
+
+.warning {
   color: #FF2650;
   font-size: small;
   margin-top: 5px;
