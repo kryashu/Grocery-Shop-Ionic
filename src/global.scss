@@ -119,5 +119,20 @@
   background-color: #EA0A8E;
   color: white;
 }
-
+.alertCancel{
+  .alert-wrapper{
+    background: #EA0A8E;
+    color: white;
+  }
+  .alert-title.sc-ion-alert-md {
+    color: white;
+    font-family: 'sf bold';
+  }
+  .alert-message.sc-ion-alert-md {
+    color: white;
+  }
+  .alert-button {
+    color: white;
+  }
+}
 
