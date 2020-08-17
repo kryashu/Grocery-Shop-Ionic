@@ -4,7 +4,7 @@
 }
 .discover {
   font-family: 'sf bold';
-  font-size: 25pt;
+  font-size: 30px;
 }
 
 ::ng-deep .searchbar-search-icon.sc-ion-searchbar-md{
@@ -69,4 +69,10 @@ small {
 }
 h3 {
   font-family: "sf bold";
+}
+ion-grid {
+  padding: 0px;
+}
+ion-col{
+  padding: 0px;
 }

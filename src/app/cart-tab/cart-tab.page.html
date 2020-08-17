@@ -1,100 +1,101 @@
 <ion-app>
-  <ion-header class="ion-no-border">
-    <ion-toolbar>
-      <div class="logo">
-        <img src="./assets/Logo.png">
-      </div>
-    </ion-toolbar>
-  </ion-header>
+    <ion-header class="ion-no-border">
+        <ion-toolbar>
+            <div class="logo">
+                <img src="./assets/Logo.png">
+            </div>
+        </ion-toolbar>
+    </ion-header>
 
-  <ion-content>
-    <div class="main">
-      <div class="header">My Shopping Bag</div>
-      <div *ngIf="itemList.length !== 0" class="subHead">{{maxCount}} items added</div>
-      <div class="items" *ngFor="let item of itemList">
-        <img src="./assets/blank.png" class="image-block">
-        <div class="item-details">
-          <div class="item-name">{{item.name}}</div>
-          <div class="item-quantity">{{item.quantity}}</div>
-          <ion-grid>
-            <ion-row>
-              <ion-col>
-                <div class="price-bar">
-                  <div class="minus-button"
-                       [ngStyle]="item.count <= 1 ? {'background-color': '#FF2650'} : {'background-color': '#D0D0D2'}" (click)="remove(item.name)">
-                    <img src="./assets/Rectangle%203.png" width="15">
-                  </div>
-                  <div class="count-button">
-                    <div class="button-text">{{item.count}}</div>
-                  </div>
-                  <div class="plus-button" (click)="add(item.name)">
-                    <span class="plus">+</span>
-                  </div>
+    <ion-content>
+        <div class="main ion-margin-horizontal ion-margin-vertical">
+            <div class="header">My Shopping Bag</div>
+            <div *ngIf="itemList.length !== 0" class="subHead">{{maxCount}} items added</div>
+            <div class="items" *ngFor="let item of itemList">
+                <img src="./assets/blank.png" class="image-block">
+                <div class="item-details">
+                    <div class="item-name">{{item.name}}</div>
+                    <div class="item-quantity">{{item.quantity}}</div>
+                    <ion-grid>
+                        <ion-row>
+                            <ion-col>
+                                <div class="price-bar">
+                                    <div class="minus-button"
+                                         [ngStyle]="item.count <= 1 ? {'background-color': '#FF2650'} : {'background-color': '#D0D0D2'}"
+                                         (click)="remove(item.name)">
+                                        <img src="./assets/Rectangle%203.png" width="15">
+                                    </div>
+                                    <div class="count-button">
+                                        <div class="button-text">{{item.count}}</div>
+                                    </div>
+                                    <div class="plus-button" (click)="add(item.name)">
+                                        <span class="plus">+</span>
+                                    </div>
+                                </div>
+                            </ion-col>
+                            <ion-col size="3">
+                                <div class="priceTag">
+                                    ${{item.discountedPrice.toString()}}.00
+                                </div>
+                                <div class="originalPrice">{{item.originalPrice}}</div>
+                            </ion-col>
+                        </ion-row>
+                    </ion-grid>
                 </div>
-              </ion-col>
-              <ion-col size="3">
-                <div class="priceTag">
-                  ${{item.discountedPrice.toString()}}.00
-                </div>
-                <div class="originalPrice">{{item.originalPrice}}</div>
-              </ion-col>
-            </ion-row>
-          </ion-grid>
+            </div>
+            <div class="total" *ngIf="itemList.length !== 0">
+                <ion-grid>
+                    <ion-row>
+                        <ion-col size="4">
+                            <div class="total-text">
+                                Total
+                            </div>
+                        </ion-col>
+                        <ion-col size="6">
+
+                        </ion-col>
+                        <ion-col>
+                            <div class="total-text">
+                                {{totalValue}}
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col size="4">
+                            <div class="total-text">
+                                Discount
+                            </div>
+                        </ion-col>
+                        <ion-col size="6.1">
+
+                        </ion-col>
+                        <ion-col>
+                            <div class="total-text">
+                                {{discount}}
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                    <ion-row>
+                        <ion-col size="4">
+                            <div class="total-text2">
+                                Total
+                            </div>
+                        </ion-col>
+                        <ion-col size="5.2">
+
+                        </ion-col>
+                        <ion-col>
+                            <div class="total-text2">
+                                {{totalValue}}
+                            </div>
+                        </ion-col>
+                    </ion-row>
+                </ion-grid>
+            </div>
+            <ion-button expand="block" class="subButton" *ngIf="itemList.length !== 0">Proceed to checkout</ion-button>
+            <div *ngIf="itemList.length === 0" class="basket"><img src="./assets/bag.png" width="200"></div>
+            <div *ngIf="itemList.length === 0" class="no-item ion-margin-vertical"> No item in cart!</div>
+            <div class="continue" routerLink="/tabs/homepage">Continue Shopping</div>
         </div>
-      </div>
-      <div class="total" *ngIf="itemList.length !== 0">
-        <ion-grid>
-          <ion-row>
-            <ion-col size="4">
-              <div class="total-text">
-                Total
-              </div>
-            </ion-col>
-            <ion-col size="6">
-
-            </ion-col>
-            <ion-col>
-              <div  class="total-text">
-                {{totalValue}}
-              </div>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col size="4">
-              <div class="total-text">
-                Discount
-              </div>
-            </ion-col>
-            <ion-col size="6.1">
-
-            </ion-col>
-            <ion-col>
-              <div class="total-text">
-                {{discount}}
-              </div>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col size="4">
-              <div class="total-text2">
-                Total
-              </div>
-            </ion-col>
-            <ion-col size="5.2">
-
-            </ion-col>
-            <ion-col>
-              <div class="total-text2">
-                {{totalValue}}
-              </div>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </div>
-      <ion-button expand="block" class="subButton" *ngIf = "itemList.length !== 0">Proceed to checkout</ion-button>
-      <div *ngIf="itemList.length === 0" class="basket"><img src="./assets/bag.png" width="200"> </div>
-      <div *ngIf="itemList.length === 0" class="no-item ion-margin-vertical"> No item in cart!</div>
-      <div class="continue" routerLink="/tabs/homepage">Continue Shopping</div>
-    </div>
-  </ion-content>
+    </ion-content>
 </ion-app>
