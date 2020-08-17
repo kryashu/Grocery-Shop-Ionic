@@ -5,8 +5,9 @@
   </ion-toolbar>
  </ion-header>
 <ion-content>
+  <ion-searchbar [(ngModel)]="searchInput" (ngModelChange)="search()"></ion-searchbar>
 <ion-list>
-  <ion-item *ngFor="let country of countryList" (click)="select(country)">
+  <ion-item *ngFor="let country of viewList" (click)="select(country)">
     <ion-grid>
       <ion-row>
         <ion-col>

@@ -1,9 +1,55 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>profile-tab</ion-title>
+    <div class="logo">
+      <img src="./assets/Logo.png">
+    </div>
   </ion-toolbar>
 </ion-header>
-
+<div class="ion-margin-start ion-margin-vertical">
+<div class="header">Profile</div>
+  <div class="tag ion-margin-top">Name</div>
+  <div class="value">Aditya Kaushal</div>
+  <div class="tag">Mobile Number</div>
+  <div class="value">9654882872</div>
+  <div class="tag">Default Address</div>
+  <div class="value">Bucharest, Romania</div>
+  <div class="tag">Default Payment Method</div>
+  <div class="value">•••• •••• •••• 4432</div>
+  <div class="tag2">Mastercard - 06/23</div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8">
+        <div class="tag">Receive notifications</div>
+        <div class="value">{{notification? 'Enabled' : 'Disabled'}}</div>
+      </ion-col>
+      <ion-col class="toggle-col">
+        <ion-toggle [(ngModel)]="notification"></ion-toggle>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8">
+        <div class="tag">Receive newsletters</div>
+        <div class="value">{{newsletters? 'Enabled' : 'Disabled'}}</div>
+      </ion-col>
+      <ion-col class="toggle-col">
+        <ion-toggle [(ngModel)]="newsletters"></ion-toggle>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8">
+        <div class="tag">&nbsp;</div>
+        <div class="value">{{blank? 'Enabled' : 'Disabled'}}</div>
+      </ion-col>
+      <ion-col class="toggle-col">
+        <ion-toggle [(ngModel)]="blank"></ion-toggle>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
 <ion-content>
 
 </ion-content>

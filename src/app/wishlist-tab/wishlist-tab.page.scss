@@ -1,0 +1,72 @@
+.logo {
+  width: 25px;
+  margin: auto;
+}
+.header{
+  font-family: "Sf bold";
+  font-size: 30px;
+}
+.subheader{
+  font-family: "Sf regular";
+  font-size: 16px;
+}
+.item-image{
+  border-radius: 5px;
+  width: 44px;
+  height: 44px;
+}
+.item-name{
+  font-family: "Sf bold";
+  font-size: 14px;
+  white-space: nowrap;
+}
+.item-quantity{
+  color: #919099;
+  font-size: 12px;
+  font-family: "Sf regular";
+  margin-top: 15px;
+}
+.item-price{
+  color: #EA0A8E;
+  font-family: "Sf bold";
+  font-size: 14px;
+  white-space: nowrap;
+}
+.item-subprice{
+  font-family: "Sf regular";
+  font-size: 12px;
+  text-decoration: line-through;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+.button{
+  display: flex;
+}
+.delete-button{
+  --background: white;
+  border-radius: 5px;
+  width: 80px;
+  height: 28px;
+  border: 1px solid #EA0A8E;
+  color: #EA0A8E;
+  margin-left: 45%;
+}
+.add-button{
+  --background: #EA0A8E;
+  width: 76px;
+  height: 28px;
+  border-radius: 5px;
+  color: white;
+  margin-left: 5%;
+}
+.empty{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-size: large;
+  margin-top: 30%;
+  font-family: "Sf bold";
+}

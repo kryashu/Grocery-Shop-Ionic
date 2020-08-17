@@ -1,9 +1,43 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>wishlist-tab</ion-title>
-  </ion-toolbar>
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <div class="logo">
+            <img src="./assets/Logo.png">
+        </div>
+    </ion-toolbar>
 </ion-header>
 
 <ion-content>
+    <div class="ion-margin-end ion-margin-vertical ion-margin-start">
+        <div class="header">My Wishlist</div>
+        <div class="subheader ion-margin-vertical" *ngIf="wishlist.length > 0">
+            {{wishlist.length}} items added
+        </div>
+        <div *ngIf="wishlist.length === 0" class="empty">
+            Your wishlist is empty!
+        </div>
+        <div class="ion-margin-vertical" *ngFor="let item of wishlist">
+        <ion-grid>
+            <ion-row>
+                <ion-col size="3">
+                    <img src="./assets/blank.png" class="item-image">
+                </ion-col>
+                <ion-col size="5">
+                    <div class="item-name">{{item.name}}</div>
+                    <div class="item-quantity">{{item.amount}}gms</div>
+                </ion-col>
+                <ion-col size="2">
+                    <div class="item-price">${{addZeroes(item.discountedPrice.toString())}}</div>
+                </ion-col>
+                <ion-col size="2">
+                    <div class="item-subprice">${{addZeroes(item.price.toString())}}</div>
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+            <div class="button">
+                <ion-button class="delete-button" (click)="delete()">Delete</ion-button>
+                <ion-button class="add-button" (click)="router.navigate(['tabs','cart-tab'])">Buy</ion-button>
+            </div>
+        </div>
+    </div>
 
 </ion-content>
