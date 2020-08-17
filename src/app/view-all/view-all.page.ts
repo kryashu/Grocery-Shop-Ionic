@@ -28,18 +28,18 @@ export class ViewAllPage implements OnInit {
     this._location.back();
   }
 selectView(){
-    if (this.input === 'shops'){
+    if (this.input === 'Shops'){
       this.viewList = this.shopsList;
-    }else if (this.input === 'categories'){
+    }else if (this.input === 'Categories'){
       this.viewList = this.categoryList;
-    }else if (this.input === 'offers'){
+    }else if (this.input === 'Offers'){
       this.viewList = this.offerList;
     }
 }
 click(){
-    if (this.input === 'offers'){
+    if (this.input === 'Offers'){
       this.router.navigate(['product']);
-    }else if (this.input === 'shops'){
+    }else if (this.input === 'Shops'){
       this.router.navigate(['shop']);
     }
 }
