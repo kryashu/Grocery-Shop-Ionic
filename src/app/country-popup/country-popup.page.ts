@@ -11,10 +11,11 @@ export class CountryPopupPage implements OnInit {
   countryList = CountryCode.countryCode;
   viewList: any;
   searchInput;
-  constructor(public modalController: ModalController) { }
+  constructor(public modalController: ModalController) {
+      this.viewList = this.countryList;
+  }
 
   ngOnInit() {
-    this.viewList = this.countryList;
   }
 select(data){
     this.modalController.dismiss(data);
@@ -22,14 +23,12 @@ select(data){
 search(){
     const searched = [];
     this.countryList.forEach(country => {
+        // tslint:disable-next-line:max-line-length
       if (country.name.toLowerCase().substring(0, this.searchInput.length) === this.searchInput.toLowerCase() || country.alpha2Code.toLowerCase().substring(0, this.searchInput.length) === this.searchInput.toLowerCase() || country.alpha3Code.toLowerCase().substring(0, this.searchInput.length) === this.searchInput.toLowerCase()){
         searched.push(country);
       }
-      if (searched.length !== 0){
-        this.viewList = searched;
-      }else {
-        this.viewList = this.countryList;
-      }
+      this.viewList = searched;
+
     });
 }
 }

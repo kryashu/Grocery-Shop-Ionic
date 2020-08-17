@@ -51,7 +51,6 @@ changeflag(){this.warningFlag = false;
 async openModal(){
       const modal = await this.modalController.create({
           component: CountryPopupPage,
-          cssClass: 'countryModal',
           backdropDismiss: true,
       });
       await modal.present();
