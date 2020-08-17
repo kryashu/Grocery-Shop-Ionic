@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profile-tab.page.scss'],
 })
 export class ProfileTabPage implements OnInit {
-
+  notification = true;
+  newsletters = false;
+  blank = true;
   constructor() { }
 
   ngOnInit() {
