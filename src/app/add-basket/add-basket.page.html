@@ -38,9 +38,9 @@
                     </div>
                 </ion-col>
                 <ion-col size="2" style="align-items: center;text-align: center;justify-content: center;display: flex">
-                    <span style="border: 1px solid black;padding:2px;white-space: nowrap">
-                    x{{item.count}}
-                        </span>
+                    <div class="count-button">
+                        <div class="button-text">{{item.count}}</div>
+                    </div>
                 </ion-col>
                 <ion-col size="1">
                     <img src="./assets/Add%20item%20button.png" width="25" class="plus" (click)="add(item.name)">
@@ -51,7 +51,7 @@
                 </ion-col>
             </ion-row>
         </ion-grid>
-        <div class="ion-justify-content-center" style="margin-top: 5em">
+        <div class="button ion-margin-start" style="margin-top: 5em">
             <ion-button expand="block" class="lowerBtn" [disabled]="totalPrice === 0" (click)="submit()">Add to order ${{addZeroes(totalPrice.toString())}}</ion-button>
         </div>
     </ion-content>

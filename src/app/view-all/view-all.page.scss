@@ -40,8 +40,7 @@ small{
   margin-right: 8px;
 }
 .dollar {
-  width: 5px;
-  min-width: 13px;
+  width: 30%;
 }
 .back {
   position: absolute;
@@ -50,11 +49,13 @@ small{
   transform: translate(-50%, -50%);
 }
 .view-all-header {
-  margin-right: 13px;
-  text-transform: capitalize;
-  font-family: "sf bold";
+  font-family: 'sf bold';
+  font-size: 25pt;
 }
 .span{
+  justify-content: center;
+  display: flex;
+  align-items: center;
   font-family: "sf regular";
   font-size: 14px;
 }

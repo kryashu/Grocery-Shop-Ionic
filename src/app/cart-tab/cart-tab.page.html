@@ -22,13 +22,13 @@
                 <div class="price-bar">
                   <div class="minus-button"
                        [ngStyle]="item.count <= 1 ? {'background-color': '#FF2650'} : {'background-color': '#D0D0D2'}" (click)="remove(item.name)">
-                    <span style="font-size: 25px;">-</span>
+                    <img src="./assets/Rectangle%203.png" width="15">
                   </div>
                   <div class="count-button">
                     <div class="button-text">{{item.count}}</div>
                   </div>
                   <div class="plus-button" (click)="add(item.name)">
-                    <span style="font-size: 25px;margin-top: 10px">+</span>
+                    <span class="plus">+</span>
                   </div>
                 </div>
               </ion-col>
