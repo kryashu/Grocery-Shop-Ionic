@@ -39,6 +39,7 @@
   justify-content: center;
   align-items: center;
   display: flex;
+  padding-top: 1px;
   text-align: center;
   margin-left: 10px;
 }
@@ -52,6 +53,8 @@
   height: 28px;
   border: 1px solid #EA0A8E;
   color: #EA0A8E;
+  font-family: "Sf bold";
+  font-size: 14px;
   margin-left: 45%;
 }
 .add-button{
@@ -60,7 +63,9 @@
   height: 28px;
   border-radius: 5px;
   color: white;
-  margin-left: 5%;
+  margin-left: 7%;
+  font-family: "Sf bold";
+  font-size: 14px;
 }
 .empty{
   justify-content: center;

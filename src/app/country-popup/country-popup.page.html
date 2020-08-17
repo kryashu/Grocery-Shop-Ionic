@@ -6,8 +6,8 @@
  </ion-header>
 <ion-content>
   <ion-searchbar [(ngModel)]="searchInput" (ngModelChange)="search()"></ion-searchbar>
-<ion-list>
-  <ion-item *ngFor="let country of viewList" (click)="select(country)">
+<ion-list *ngIf="viewList.length > 0">
+  <ion-item *ngFor="let country of viewList" (click)="select(country)" >
     <ion-grid>
       <ion-row>
         <ion-col>
@@ -20,4 +20,7 @@
     </ion-grid>
   </ion-item>
 </ion-list>
+  <div *ngIf="viewList.length === 0" class="no-item ion-margin-vertical">
+    No country found!
+  </div>
 </ion-content>
