@@ -53,9 +53,10 @@
   height: 28px;
   border: 1px solid #EA0A8E;
   color: #EA0A8E;
-  font-family: "Sf bold";
+  font-family: "sf medium";
   font-size: 14px;
   //margin-left: 45%;
+  text-transform: none;
 }
 .add-button{
   --background: #EA0A8E;
@@ -64,8 +65,9 @@
   border-radius: 5px;
   color: white;
   margin-left: 7%;
-  font-family: "Sf bold";
+  font-family: "sf medium";
   font-size: 14px;
+  text-transform: none;
 }
 .empty{
   justify-content: center;

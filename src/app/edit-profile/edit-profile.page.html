@@ -1,0 +1,22 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <div class="logo">
+            <img src="./assets/Logo.png">
+        </div>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="ion-margin-horizontal ion-margin-vertical">
+        <div class="header">Edit Profile</div>
+        <div class="tag ion-margin-top">Name</div>
+        <ion-input class="value" [(ngModel)]="name" (ngModelChange)="clearWarning('name')"></ion-input>
+        <a class="warning" *ngIf="nameFlag">Please Enter a Name!</a>
+        <div class="tag">Mobile Number</div>
+        <ion-input class="value" [(ngModel)]="phone" type="tel" (ngModelChange)="clearWarning('phone')"></ion-input>
+        <a class="warning" *ngIf="phoneFlag">{{phone === '' ? "Please Enter a Phone Number" :"Phone Number is Invalid!"}}</a>
+        <div class="tag">Default Address</div>
+        <ion-input class="value" [(ngModel)]="address" (ngModelChange)="clearWarning('address')"></ion-input>
+        <a class="warning" *ngIf="addressFlag">Please Enter an Address!</a>
+        <ion-button expand="block" class="update" (click)="update()">Update</ion-button>
+    </div>
+</ion-content>
