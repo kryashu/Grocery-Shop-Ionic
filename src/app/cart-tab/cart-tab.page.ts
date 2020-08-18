@@ -10,9 +10,9 @@ import {ModalController, ToastController} from '@ionic/angular';
 export class CartTabPage implements OnInit {
 
   // tslint:disable-next-line:max-line-length
-  itemList = [{name: 'MDH Masala', quantity: '200 gms', originalPrice: '$19.50' , discount: 2.50, discountedPrice: 17.00, count: 1 }, {name: 'Chunky Chat Masala', quantity: '500 gms', originalPrice: '$19.50' , discount: 3.50, discountedPrice: 16.00, count: 1 }];
-  totalValue = '$0.00';
-  discount = '$0.00';
+  itemList = [{name: 'MDH Masala', quantity: '200 gms', originalPrice: `19.50` , discount: 2.50, discountedPrice: 17.00, count: 1 }, {name: 'Chunky Chat Masala', quantity: '500 gms', originalPrice: '19.50' , discount: 3.50, discountedPrice: 16.00, count: 1 }];
+  totalValue = '0.00';
+  discount = '0.00';
   discountValue = 0;
   maxCount = 0;
   total = 0;
@@ -24,8 +24,8 @@ export class CartTabPage implements OnInit {
       this.maxCount += item.count;
       this.discountValue += item.discount;
     }
-    this.discount = '$' + this.addZeroes(this.discountValue.toString()).toString();
-    this.totalValue = '$' + this.addZeroes(this.total.toString()).toString();
+    this.discount =  this.addZeroes(this.discountValue.toString()).toString();
+    this.totalValue =  this.addZeroes(this.total.toString()).toString();
   }
   add(name){
     for (const item of this.itemList){
@@ -34,8 +34,8 @@ export class CartTabPage implements OnInit {
         this.maxCount += 1;
         this.total += item.discountedPrice;
         this.discountValue += item.discount;
-        this.discount = '$' + this.addZeroes(this.discountValue.toString()).toString();
-        this.totalValue = '$' + this.addZeroes(this.total.toString()).toString();
+        this.discount =   this.addZeroes(this.discountValue.toString()).toString();
+        this.totalValue = this.addZeroes(this.total.toString()).toString();
       }
     }
   }
@@ -69,7 +69,7 @@ export class CartTabPage implements OnInit {
         }
       }
     }
-    this.discount = '$' + this.addZeroes(this.discountValue.toString()).toString();
-    this.totalValue = '$' + this.addZeroes(this.total.toString()).toString();
+    this.discount =  this.addZeroes(this.discountValue.toString()).toString();
+    this.totalValue =  this.addZeroes(this.total.toString()).toString();
   }
 }

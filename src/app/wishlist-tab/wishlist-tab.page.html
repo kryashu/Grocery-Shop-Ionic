@@ -26,20 +26,25 @@
                     <div class="item-quantity">{{item.amount}} gms</div>
                 </ion-col>
                 <ion-col size="4">
-                    <div style="display: flex">
-                        <div class="item-price">${{addZeroes(item.discountedPrice.toString())}}</div>
-                        <div class="item-subprice">${{addZeroes(item.price.toString())}}</div>
+                    <div style="display: flex; float: right"  >
+                        <div class="item-price">&#x20b9;{{addZeroes(item.discountedPrice.toString())}}</div>
+                        <div class="item-subprice">&#x20b9;{{addZeroes(item.price.toString())}}</div>
                     </div>
                 </ion-col>
 <!--                <ion-col size="2">-->
 <!--                    <div class="item-subprice">${{addZeroes(item.price.toString())}}</div>-->
 <!--                </ion-col>-->
             </ion-row>
+
+            <ion-row>
+                <ion-col size-xs="12">
+                    <div class="button ion-float-right" >
+                        <ion-button class="delete-button" (click)="delete()">Delete</ion-button>
+                        <ion-button class="add-button" (click)="router.navigate(['tabs','cart-tab'])">Buy</ion-button>
+                    </div>
+                </ion-col>
+            </ion-row>
         </ion-grid>
-            <div class="button">
-                <ion-button class="delete-button" (click)="delete()">Delete</ion-button>
-                <ion-button class="add-button" (click)="router.navigate(['tabs','cart-tab'])">Buy</ion-button>
-            </div>
         </div>
     </div>
 

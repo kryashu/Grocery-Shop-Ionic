@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {AlertController, ModalController, NavController, ToastController} from '@ionic/angular';
 import { Plugins } from '@capacitor/core';
@@ -6,6 +6,7 @@ import { BackButtonEvent } from '@ionic/core';
 import { Platform } from '@ionic/angular';
 import {AddBasketPage} from "../add-basket/add-basket.page";
 import {DialogExitAppPage} from "../dialog-exit-app/dialog-exit-app.page";
+import {fromEvent, Subscription} from "rxjs";
 const { App } = Plugins;
 @Component({
   selector: 'app-homepage',
@@ -19,7 +20,8 @@ export class HomepagePage implements OnInit {
               private platform: Platform,
               public modalController: ModalController,
               private navCtrl: NavController,
-              public alertController: AlertController) {
+              public alertController: AlertController,
+              ) {
     this.router.events.subscribe((e) => {
         if (this.router.url === '/tabs/homepage') {
           this.subscribe = this.platform.backButton.subscribeWithPriority(0, () => {
@@ -32,9 +34,13 @@ export class HomepagePage implements OnInit {
           });
         }
     });
+
+
+
   }
 
   ngOnInit() {
+
   }
   async close() {
     await this.modalController.dismiss();
@@ -45,14 +51,15 @@ export class HomepagePage implements OnInit {
       header: 'Untouched Ionic',
       message: 'Are you sure you want to exit?',
       cssClass: 'alertCancel',
+      backdropDismiss: true,
       buttons: [
         {
           text: 'NO',
           role: 'cancel',
           cssClass: 'alertButton',
           handler: () => {
-            this.navCtrl.navigateBack('/tabs/homepage')
-            console.log('Confirm Cancel');
+            this.alertController.dismiss()
+            return false;
           }
         }, {
           text: 'YES',

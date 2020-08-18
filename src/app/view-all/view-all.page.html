@@ -8,29 +8,31 @@
 </ion-header>
 
 <ion-content>
-<ion-grid class="ion-margin-start ion-margin-end">
-  <h2 class="view-all-header">{{input}}</h2>
-  <ion-row>
-    <ion-col *ngFor="let item of viewList"  size-sm="3" size-xs="6" size-md="4" (click)="click()">
-      <div *ngIf="item.img"><img src="{{item.img}}" class="image"></div>
-      <div class="name" *ngIf="item.name">
-      {{item.name}}</div>
-      <div class="subheading" *ngIf="item.subheading">
-        <h6>{{item.subheading}}</h6></div>
-      <div class="details" *ngIf="item.star">
-        <div class="subdetails">
-          <span class="span"><ion-icon name="star-outline"></ion-icon>  <small>   {{item.star}}</small></span>
+<div class="ion-margin-horizontal ion-margin-vertical">
+  <ion-grid >
+    <h2 class="view-all-header">{{input}}</h2>
+    <ion-row>
+      <ion-col *ngFor="let item of viewList"  size-sm="3" size-xs="6" size-md="4" (click)="click()">
+        <div style="margin-right: 10px" *ngIf="item.img"><img src="{{item.img}}" class="image"></div>
+        <div class="name" *ngIf="item.name">
+          {{item.name}}</div>
+        <div class="subheading" *ngIf="item.subheading">
+          <h6>&#x20b9;&#x20b9;, {{item.subheading}}</h6></div>
+        <div class="details" *ngIf="item.star">
+          <div class="subdetails">
+            <span class="span"><img  src="./assets/star.svg">  <small>   {{item.star}}</small></span>
+          </div>
+          <div class="subdetails">
+            <span class="span"><img src="./assets/clock.svg"><small>{{item.time}}</small></span>
+          </div>
+          <div class="subdetails">
+            <span class="span"><img  src="./assets/money.svg"><small>{{item.price}}</small></span>
+          </div>
         </div>
-        <div class="subdetails">
-          <span class="span"><ion-icon name="time-outline"></ion-icon><small>{{item.time}}</small></span>
-        </div>
-        <div class="subdetails">
-          <span class="span"><img class="dollar" src="./assets/dollar.png"><small>{{item.price}}</small></span>
-        </div>
-      </div>
-    </ion-col>
-  </ion-row>
-</ion-grid>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
 
 </ion-content>
 <ion-toolbar>
