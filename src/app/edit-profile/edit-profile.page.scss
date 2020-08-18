@@ -33,6 +33,8 @@
   margin-top: 5px;
 }
 ion-input {
+  --padding-start: 0px;
+  border-bottom: 1px solid #EFEFEF;
   ::ng-deep input:focus {
     border-bottom: 1px solid black;
   };
