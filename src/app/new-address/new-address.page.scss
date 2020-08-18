@@ -12,16 +12,19 @@
 }
 
 ion-input {
+  --padding-start: 0px;
   border-bottom: 1px solid #EFEFEF;
-
+  font-size: 12px;
+  font-family: "Sf regular";
   ::ng-deep input:focus {
     border-bottom: 1px solid black;
-  }
+  };
 }
 
 .header {
   font-family: "Sf bold";
   font-size: 30px;
+  margin-bottom: 30px;
 }
 
 .radioLable {
@@ -39,4 +42,15 @@ ion-input {
   text-transform: none;
   font-family: "Sf regular";
   font-size: 14px;
+}
+ion-checkbox{
+  --border-radius: 50%;
+  --background-checked: #EA0A8E;
+  --border-color-checked: #EA0A8E;
+  --checkmark-width: 3px;
+}
+.clear {
+  position: absolute;
+  top: 2.5px;
+  left: 85%;
 }

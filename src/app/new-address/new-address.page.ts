@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-new-address',
@@ -7,9 +9,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewAddressPage implements OnInit {
   input1 = 'Bulevardul Dimitrie Cantemir 49B';
-  constructor() { }
+  constructor(private router: Router,
+              private location: Location) { }
 
   ngOnInit() {
   }
-
 }
