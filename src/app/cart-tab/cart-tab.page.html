@@ -18,7 +18,7 @@
                     <div class="item-quantity">{{item.quantity}}</div>
                     <ion-grid>
                         <ion-row>
-                            <ion-col>
+                            <ion-col size="8">
                                 <div class="price-bar">
                                     <div class="minus-button"
                                          [ngStyle]="item.count <= 1 ? {'background-color': '#FF2650'} : {'background-color': '#D0D0D2'}"
@@ -33,11 +33,13 @@
                                     </div>
                                 </div>
                             </ion-col>
-                            <ion-col size="3">
-                                <div class="priceTag">
-                                    &#x20b9;{{item.discountedPrice.toString()}}.00
+                            <ion-col size="4">
+                                <div class="ion-float-right">
+                                    <div class="priceTag ">
+                                        &#x20b9;{{item.discountedPrice.toString()}}.00
+                                    </div>
+                                    <div class="originalPrice ">&#x20b9;{{item.originalPrice}}</div>
                                 </div>
-                                <div class="originalPrice">&#x20b9;{{item.originalPrice}}</div>
                             </ion-col>
                         </ion-row>
                     </ion-grid>
@@ -46,46 +48,37 @@
             <div class="total" *ngIf="itemList.length !== 0">
                 <ion-grid>
                     <ion-row>
-                        <ion-col size="4">
+                        <ion-col size="6">
                             <div class="total-text">
                                 Total
                             </div>
                         </ion-col>
                         <ion-col size="6">
-
-                        </ion-col>
-                        <ion-col>
-                            <div class="total-text">
+                            <div class="total-text ion-float-right">
                                 &#x20b9;{{totalValue}}
                             </div>
                         </ion-col>
                     </ion-row>
                     <ion-row>
-                        <ion-col size="4">
+                        <ion-col size="6">
                             <div class="total-text">
                                 Discount
                             </div>
                         </ion-col>
                         <ion-col size="6">
-
-                        </ion-col>
-                        <ion-col>
-                            <div class="total-text">
+                            <div class="total-text ion-float-right">
                                 &#x20b9;{{discount}}
                             </div>
                         </ion-col>
                     </ion-row>
                     <ion-row>
-                        <ion-col size="4">
+                        <ion-col size="6">
                             <div class="total-text2">
                                 Total
                             </div>
                         </ion-col>
-                        <ion-col size="5">
-
-                        </ion-col>
-                        <ion-col>
-                            <div class="total-text2">
+                        <ion-col size="6">
+                            <div class="total-text2 ion-float-right">
                                 &#x20b9;{{totalValue}}
                             </div>
                         </ion-col>
