@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ToastController} from '@ionic/angular';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-profile-tab',
@@ -10,7 +11,8 @@ export class ProfileTabPage implements OnInit {
   notification = true;
   newsletters = false;
   blank = true;
-  constructor(public toastController: ToastController) { }
+  constructor(public toastController: ToastController,
+              public router: Router) { }
 
   ngOnInit() {
   }

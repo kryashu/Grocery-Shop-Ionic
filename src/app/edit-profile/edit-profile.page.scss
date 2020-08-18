@@ -1,0 +1,39 @@
+.logo {
+  width: 25px;
+  margin: auto;
+}
+.header{
+  font-size: 30px;
+  font-family: "Sf bold";
+}
+.tag{
+  font-family: "Sf regular";
+  font-size: 12px;
+  color: #919099;
+  margin-top: 3em;
+}
+.value{
+  font-family: "Sf regular";
+  font-size: 14px;
+  margin-top: 7px;
+  font-weight: 600;
+}
+.update{
+  --background: #EA0A8E;
+  color: white;
+  font-family: "Sf regular";
+  font-size: 12px;
+  margin-top: 20%;
+  text-transform: none;
+  --border-radius: 5px;
+}
+.warning {
+  color: #FF2650;
+  font-size: small;
+  margin-top: 5px;
+}
+ion-input {
+  ::ng-deep input:focus {
+    border-bottom: 1px solid black;
+  };
+}

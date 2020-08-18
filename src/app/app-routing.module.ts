@@ -61,6 +61,10 @@ const routes: Routes = [
   {
     path: 'country-popup',
     loadChildren: () => import('./country-popup/country-popup.module').then( m => m.CountryPopupPageModule)
+  },
+  {
+    path: 'edit-profile',
+    loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
   }
 
 
