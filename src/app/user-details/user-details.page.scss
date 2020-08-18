@@ -21,6 +21,7 @@ ion-input {
 ion-radio{
    margin-right: 8px!important;
   --color-checked: #EA0A8E;
+  --border-color-checked: #EA0A8E;
 }
 ::ng-deep ion-radio-group {
   display: flex!important;

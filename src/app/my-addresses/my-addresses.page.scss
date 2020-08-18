@@ -1,0 +1,43 @@
+.logo {
+  width: 25px;
+  margin: auto;
+}
+.edit {
+  position: absolute;
+  top: 2.5px;
+  left: 85%;
+}
+.header{
+  font-family: "Sf bold";
+  font-size: 30px;
+}
+::ng-deep ion-radio-group {
+  display: block!important;
+}
+ion-radio{
+  margin-right: 20px;
+  --color-checked: #EA0A8E;
+  --border-color-checked: #EA0A8E;
+}
+ion-label {
+  margin-top: 10px;
+  .add-name {
+    color: grey;
+    font-family: "Sf regular";
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+  .address{
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .change{
+    padding-top: 10px;
+    font-family: "Sf bold";
+    font-size: 14px;
+    color: #EA0A8E;
+  }
+}
+ion-item{
+  --padding-start: 0;
+}

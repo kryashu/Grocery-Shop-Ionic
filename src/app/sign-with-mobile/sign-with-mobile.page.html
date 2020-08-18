@@ -27,10 +27,10 @@
         <img src="./assets/down-arrow.svg" width="10" height="10">
       </ion-col>
       <ion-col size="2" style="justify-content: flex-start;align-items: center;display: flex">
-        <ion-input class="amd" [(ngModel)]="amd"></ion-input>
+        <ion-input class="amd" [(ngModel)]="amd" readonly></ion-input>
       </ion-col>
       <ion-col size="8">
-      <ion-input class="main" placeholder="Enter Your Phone Number" [clearInput]="true" (click)="clear()" type="tel" [(ngModel)]="phoneNumber" (ngModelChange)="changeflag()"></ion-input>
+      <ion-input class="main" placeholder="Enter Your Phone Number" [clearInput]="true" (click)="clear()" type="tel" (keypress)="numberOnly($event)"  [(ngModel)]="phoneNumber" (ngModelChange)="changeflag()"></ion-input>
       </ion-col>
     </ion-row>
     <a class="warning" *ngIf="warningFlag">Phone Number is Invalid!</a>
