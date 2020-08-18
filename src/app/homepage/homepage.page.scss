@@ -76,3 +76,11 @@ ion-grid {
 ion-col{
   padding: 0px;
 }
+.nav{
+  position: absolute;
+  top: 19px;
+  left: 90%;
+  path {
+    fill: black;
+  }
+}
