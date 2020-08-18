@@ -16,7 +16,7 @@ export class CartTabPage implements OnInit {
   discountValue = 0;
   maxCount = 0;
   total = 0;
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     for (const item of this.itemList) {
