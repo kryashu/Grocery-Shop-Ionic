@@ -37,12 +37,12 @@
                 </ion-col>
                 <ion-col size="0.5"></ion-col>
                 <ion-col size="2" style="text-align: right; display: flex;justify-content: center; align-items: center">
-                    <span class="price">${{addZeroes((item.price * item.count).toString())}}</span>
+                    <span class="price">&#x20b9;{{addZeroes((item.price * item.count).toString())}}</span>
                 </ion-col>
             </ion-row>
         </ion-grid>
         <div class="button ion-margin-start" style="margin-top: 5em">
-            <ion-button expand="block" class="lowerBtn" [disabled]="totalPrice === 0" (click)="submit()">Add to order ${{addZeroes(totalPrice.toString())}}</ion-button>
+            <ion-button expand="block" class="lowerBtn" [disabled]="totalPrice === 0" (click)="submit()">Add to order &#x20b9;{{addZeroes(totalPrice.toString())}}</ion-button>
         </div>
     </ion-content>
 </ion-app>
