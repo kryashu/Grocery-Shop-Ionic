@@ -1,0 +1,22 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <img src="./assets/Back%20button.png" (click)="back()" class="back">
+    <div class="logo">
+      <img src="./assets/Logo.png">
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="ion-margin-start ion-margin-horizontal">
+  <div class="header">Add new address</div>
+  <ion-input [(ngModel)]="input1" class="ion-margin-vertical"></ion-input>
+  <ion-input placeholder="Enter the complete address (floor, app no)" class="ion-margin-vertical"></ion-input>
+  <ion-input placeholder="Enter the address name (work, home)" class="ion-margin-vertical"></ion-input>
+  <div style="display: flex; margin-top: 25px" class="ion-margin-vertical">
+  <ion-radio slot="start"></ion-radio>
+  <ion-label class="radioLable ion-margin-start">Make this my default address?</ion-label>
+  </div>
+  <ion-button class="save-button" expand="block">Save address</ion-button>
+</div>
+</ion-content>

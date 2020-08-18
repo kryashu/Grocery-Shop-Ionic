@@ -1,0 +1,42 @@
+.logo {
+  width: 25px;
+  //margin-left: 45%;
+  margin: auto;
+}
+
+.back {
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 30px;
+  transform: translate(-50%, -50%);
+}
+
+ion-input {
+  border-bottom: 1px solid #EFEFEF;
+
+  ::ng-deep input:focus {
+    border-bottom: 1px solid black;
+  }
+}
+
+.header {
+  font-family: "Sf bold";
+  font-size: 30px;
+}
+
+.radioLable {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: 'Sf regular';
+  font-size: 12px
+}
+.save-button{
+  --background: #EA0A8E;
+  color: white;
+  margin-top: 50px;
+  text-transform: none;
+  font-family: "Sf regular";
+  font-size: 14px;
+}
