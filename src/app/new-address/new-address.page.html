@@ -18,7 +18,7 @@
     <ion-checkbox  slot="start"></ion-checkbox>
   <ion-label class="radioLable ion-margin-start">Make this my default address?</ion-label>
   </div>
-  <ion-button class="save-button" expand="block">Save address</ion-button>
+  <ion-button class="save-button" expand="block" (click)="router.navigate(['tabs','profile-tab'])">Save address</ion-button>
 </div>
 </ion-content>
 <ion-toolbar>

@@ -1,0 +1,57 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <div class="logo">
+      <img src="./assets/Logo.png">
+    </div>
+    <img class="ion-float-right edit" src="./assets/Controls%20-%20Buttons%20-%20Dark%20-%20Add.png" (click)="router.navigate(['select-location'])">
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+<div class="ion-margin-vertical ion-margin-start ion-margin-horizontal">
+  <div class="header">
+    My addresses
+  </div>
+  <div>
+    <ion-list lines="none" >
+      <ion-radio-group value="biff" [(ngModel)]="address" >
+        <ion-item>
+          <ion-label>
+            <ion-grid>
+              <ion-row>
+                <ion-col size="9">
+            <div class="add-name">Home Address</div>
+            <div class="address">Piata Unirii 2, Apartment 23…</div>
+                  </ion-col>
+                <ion-col size="3">
+                  <div class="change" (click)="router.navigate(['select-location'])">Change</div>
+                </ion-col>
+              </ion-row>
+            </ion-grid>
+          </ion-label>
+          <ion-radio slot="start" value="Male"></ion-radio>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>
+          <ion-grid>
+            <ion-row>
+              <ion-col size="10">
+                <div class="add-name">Work Address</div>
+                <div class="address">No address added</div>
+              </ion-col>
+              <ion-col size="2">
+                <div class="change" (click)="router.navigate(['select-location'])">Add</div>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+          </ion-label>
+          <ion-radio slot="start" value="Female"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-list>
+  </div>
+</div>
+</ion-content>
+<ion-toolbar>
+  <app-tabs></app-tabs>
+</ion-toolbar>

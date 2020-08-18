@@ -1,0 +1,30 @@
+<ion-app>
+  <ion-content>
+    <img src="./assets/Back%20button.png" class="back" (click)="location.back()">
+    <!--  <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">-->
+    <!--    <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"-->
+    <!--                (dragEnd)="markerDragEnd($event)"></agm-marker>-->
+    <div style="height: 60%">
+
+    </div>
+    <div class="search-div">
+      <div style="height: 1px">
+
+      </div>
+      <div class="header ion-margin-start">
+        Select your location from the map
+      </div>
+      <div class="subheader ion-margin-vertical ion-margin-start">
+        Move the map pin to find your location and select the delivery address.
+      </div>
+      <div class="search ion-margin-start ion-margin-vertical">
+        <ion-searchbar type="text" class="native-input sc-ion-input-ios" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search></ion-searchbar>
+      </div>
+      <div style="display: flex;justify-content: center;align-items: center" class="ion-margin-vertical">
+        <ion-button class="search-button" expand="block" (click)="router.navigate(['new-address'])">Next</ion-button>
+      </div>
+      <div class="btn-text" (click)="router.navigate(['new-address'])">Add it manually</div>
+      <div style="height: 30px"></div>
+    </div>
+  </ion-content>
+</ion-app>

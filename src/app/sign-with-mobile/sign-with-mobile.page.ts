@@ -11,7 +11,7 @@ import {CountryPopupPage} from '../country-popup/country-popup.page';
   styleUrls: ['./sign-with-mobile.page.scss'],
 })
 export class SignWithMobilePage implements OnInit {
-  country = CountryCode.countryCode[0];
+  country = CountryCode.countryCode[104];
   amd = '+' + this.country.callingCodes[0];
   buttonFlag = true;
   phoneNumber ;
@@ -60,4 +60,11 @@ async openModal(){
           this.amd = '+' + data.data.callingCodes[0];
       }
 }
+    numberOnly(event): boolean {
+        const charCode = (event.which) ? event.which : event.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            return false;
+        }
+        return true;
+    }
 }

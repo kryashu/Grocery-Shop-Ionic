@@ -85,7 +85,7 @@
                     </ion-row>
                 </ion-grid>
             </div>
-            <ion-button expand="block" class="subButton" *ngIf="itemList.length !== 0" (click)="router.navigate(['new-address'])">Proceed to checkout</ion-button>
+            <ion-button expand="block" class="subButton" *ngIf="itemList.length !== 0" (click)="router.navigate(['my-addresses'])">Proceed to checkout</ion-button>
             <div *ngIf="itemList.length === 0" class="basket"><img src="./assets/bag.png" width="200"></div>
             <div *ngIf="itemList.length === 0" class="no-item ion-margin-vertical"> No item in cart!</div>
             <div class="continue" routerLink="/tabs/homepage">Continue Shopping</div>
