@@ -24,7 +24,7 @@ export class NewAddressPage implements OnInit {
     this.change();
     return false
     } else  {
-      this.router.navigate(['tabs','profile-tab'])
+      this.router.navigate(['my-addresses'])
       return true
     }
   }
