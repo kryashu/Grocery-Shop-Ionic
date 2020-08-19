@@ -41,62 +41,7 @@ ion-label {
 ion-item{
   --padding-start: 0;
 }
-.radio-button__input {
-  opacity: 0;
-  position: absolute;
-}
 
-.radio-button__control {
-  position: relative;
-  display: inline-block;
-  width: 27px;
-  height: 27px;
-  margin-right: 12px;
-  vertical-align: middle;
-  background-color: inherit;
-  color: #EA0A8E;
-  border: 1px solid gray;
-  border-radius: 24px;
-}
-
-.radio-button__input:checked+.radio-button__control:after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  width: 13px;
-  height: 13px;
-  background-color: #EA0A8E;
-  border-radius: 12px;
-}
-
-.radio-button__input:checked+.radio-button__control {
-  border-color: #EA0A8E;
-}
-
-.radio-button__control {
-  transform: scale(0.75);
-}
-
-.radio-button {
-  cursor: pointer;
-  padding-right: 25px;
-}
-input[type=radio] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-input {
-  font-size: 1rem;
-  line-height: 1.5;
-  padding: 11px 23px;
-  border: 1px solid rgba(0,0,0,.15);
-  border-radius: 0;
-  outline: 0;
-  background-color: transparent;
-}
 
 ion-grid {
   padding: 0px;
@@ -105,6 +50,76 @@ ion-grid {
 ion-col {
   padding: 0px;
 }
-//.option {
-//  margin-top: 15px;
-//}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid lightgray ;
+  //border-bottom: 1px solid grey;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #EA0A8E;
+  border: 1px solid #EA0A8E;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 8px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
