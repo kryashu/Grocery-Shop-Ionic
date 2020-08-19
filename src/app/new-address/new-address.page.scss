@@ -42,6 +42,7 @@ ion-input {
   text-transform: none;
   font-family: "Sf regular";
   font-size: 14px;
+  height: 44px;
 }
 ion-checkbox{
   --border-radius: 50%;
@@ -53,4 +54,8 @@ ion-checkbox{
   position: absolute;
   top: 2.5px;
   left: 85%;
+}
+.cursor{
+  text-transform: capitalize;
+  caret-color: #EA0A8E;
 }

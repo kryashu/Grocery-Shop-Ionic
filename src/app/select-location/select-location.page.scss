@@ -22,6 +22,11 @@ ion-content {
 .search{
   margin-right: 30px;
   margin-top: 29px;
+
+}
+.bottom-line {
+  border-bottom: 1px solid #EFEFEF;
+  margin-top: 12px;
 }
 .subheader{
   font-family: "Sf regular";
@@ -52,7 +57,7 @@ ion-content {
 
 ::ng-deep .searchbar-search-icon.sc-ion-searchbar-md{
   left: 0px;
-  top: 15px
+  top: 15px;
 }
 
 ::ng-deep .searchbar-input.sc-ion-searchbar-md{
@@ -61,3 +66,4 @@ ion-content {
   padding-inline-start: 40px;
   padding-top: 10px;
 }
+.input-group {display: flex}

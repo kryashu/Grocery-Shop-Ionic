@@ -12,41 +12,80 @@
     My addresses
   </div>
   <div>
-      <ion-radio-group value="biff" [(ngModel)]="address" >
-          <div style="display: flex">
-              <ion-radio slot="start" style="margin-top: 30px;margin-right: 10px" value="Male"></ion-radio>
-          <ion-label>
-            <ion-grid>
-              <ion-row>
-                <ion-col size="9">
-            <div class="add-name">Home Address</div>
-            <div class="address">Piata Unirii 2, Apartment 23…</div>
-                  </ion-col>
-                <ion-col size="3">
-            <div class="change" (click)="router.navigate(['select-location'])" style="margin-left: 20px; white-space: nowrap">Change</div>
-                </ion-col>
-              </ion-row>
-            </ion-grid>
-          </ion-label>
-          </div>
-          <div style="display: flex">
-              <ion-radio slot="start" style="margin-top: 30px;margin-right: 10px" value="Female"></ion-radio>
-          <ion-label>
-          <ion-grid>
-            <ion-row>
-              <ion-col>
-                <div class="add-name">Work Address</div>
-                <div class="address">No address added</div>
+      <ion-grid class="option ion-margin-vertical">
+          <ion-row>
+              <ion-col size-xs="9" class="ion-margin-vertical">
+                  <div class="radio-btn1">
+                      <div class="radio-btn1">
+                          <label class="radio-button">
+                              <input type="radio" class="radio-button__input"
+                                     name="PV-select">
+                              <span class="radio-button__control"></span>
+                              <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 14px; position: absolute;top: -5px">Home Address</span>
+                              <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 16px; position: absolute;bottom: -5px">Piata Unirii 2, Apartment 23…</span>
+                          </label>
+                      </div>
+                  </div>
               </ion-col>
-              <ion-col style="margin-left: 120px">
-                <div class="change" (click)="router.navigate(['select-location'])">Add</div>
+              <ion-col size-xs="3" class="ion-margin-vertical">
+                <b style="color: #EA0A8E" (click)="router.navigate(['select-location'])" role="button" class="ion-float-right">Change</b>
               </ion-col>
-            </ion-row>
-          </ion-grid>
-          </ion-label>
+          </ion-row>
+          <ion-row>
+              <ion-col size-xs="9" class="ion-margin-vertical">
+                  <div class="radio-btn1">
+                      <div class="radio-btn1">
+                          <label class="radio-button">
+                              <input type="radio" class="radio-button__input"
+                                     name="PV-select">
+                              <span class="radio-button__control"></span>
+                              <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 14px; position: absolute;top: -5px">Work Address</span>
+                              <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 16px; position: absolute;bottom: -5px">No address added</span>
+                          </label>
+                      </div>
+                  </div>
+              </ion-col>
+              <ion-col size-xs="3" class="ion-margin-vertical">
+                  <b style="color: #EA0A8E" (click)="router.navigate(['select-location'])" role="button" class="ion-float-right">Add</b>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+      <!--      <ion-radio-group value="biff" [(ngModel)]="address" >-->
+<!--          <div style="display: flex">-->
+<!--              <ion-radio slot="start" style="margin-top: 30px;margin-right: 10px" value="Male"></ion-radio>-->
+<!--          <ion-label>-->
+<!--            <ion-grid>-->
+<!--              <ion-row>-->
+<!--                <ion-col size="9">-->
+<!--            <div class="add-name">Home Address</div>-->
+<!--            <div class="address">Piata Unirii 2, Apartment 23…</div>-->
+<!--                  </ion-col>-->
+<!--                <ion-col size="3">-->
+<!--            <div class="change" (click)="router.navigate(['select-location'])" style="margin-left: 20px; white-space: nowrap">Change</div>-->
+<!--                </ion-col>-->
+<!--              </ion-row>-->
+<!--            </ion-grid>-->
+<!--          </ion-label>-->
+<!--          </div>-->
+<!--          <div style="display: flex">-->
 
-              </div>
-      </ion-radio-group>
+<!--              <ion-radio slot="start" style="margin-top: 30px;margin-right: 10px" value="Female"></ion-radio>-->
+<!--          <ion-label>-->
+<!--          <ion-grid>-->
+<!--            <ion-row>-->
+<!--              <ion-col>-->
+<!--                <div class="add-name">Work Address</div>-->
+<!--                <div class="address">No address added</div>-->
+<!--              </ion-col>-->
+<!--              <ion-col style="margin-left: 120px">-->
+<!--                <div class="change" (click)="router.navigate(['select-location'])">Add</div>-->
+<!--              </ion-col>-->
+<!--            </ion-row>-->
+<!--          </ion-grid>-->
+<!--          </ion-label>-->
+
+<!--              </div>-->
+<!--      </ion-radio-group>-->
   </div>
 </div>
 </ion-content>
