@@ -12,6 +12,12 @@
   color: #919099;
   margin-top: 3em;
 }
+.back {
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 30px;
+  transform: translate(-50%, -50%);
+}
 .value{
   font-family: "Sf regular";
   font-size: 14px;
@@ -24,6 +30,7 @@
   font-family: "Sf regular";
   font-size: 12px;
   margin-top: 20%;
+  height: 44px;
   text-transform: none;
   --border-radius: 5px;
 }

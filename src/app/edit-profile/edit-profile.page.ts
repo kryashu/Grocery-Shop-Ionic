@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-
+import {Location} from '@angular/common';
 @Component({
   selector: 'app-edit-profile',
   templateUrl: './edit-profile.page.html',
@@ -13,7 +13,8 @@ export class EditProfilePage implements OnInit {
   phoneFlag = false;
   nameFlag = false;
   addressFlag = false;
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+              private location: Location) { }
 
   ngOnInit() {
   }
@@ -40,5 +41,9 @@ clearWarning(field){
     }else if (field === 'address'){
       this.addressFlag = false;
     }
+}
+
+back() {
+      this.location.back()
 }
 }

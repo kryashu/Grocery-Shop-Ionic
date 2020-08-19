@@ -10,6 +10,7 @@ import {Router} from '@angular/router';
 export class WhereDeliverPage implements OnInit {
   address1 = 'Piata Unirii 2';
   address2 = '';
+  address3 = ''
   constructor(private location: Location,
               private router: Router) { }
 

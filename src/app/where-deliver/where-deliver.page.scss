@@ -18,7 +18,7 @@
 
 .search {
   margin-right: 30px;
-  margin-top: 29px;
+  //margin-top: 29px;
 
 }
 
@@ -41,7 +41,12 @@
 
 .input-group {
   display: flex;
-  border-bottom: 1px solid black;
+  input{
+    border-bottom: 1px solid #EFEFEF;
+  }
+  ::ng-deep input:focus {
+    border-bottom: 1px solid black;
+  }
 }
 
 .save-button {
@@ -56,8 +61,13 @@
 
 .input {
   border: none;
+  width: 100%;
   outline: none;
   margin-bottom: 5px;
   text-transform: capitalize;
-  caret-color: #EA0A8E
+  caret-color: #EA0A8E;
 }
+.item-interactive.ion-valid {
+  --highlight-background: black;
+}
+
