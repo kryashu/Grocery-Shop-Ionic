@@ -18,12 +18,18 @@ export class SigninPage implements OnInit {
   }
 signInWithGoogle(){
   this.googlePlus.login({})
-      .then(res => console.log(res))
+      .then(res => {
+        console.log(res);
+        this.router.navigate(['tabs', 'homepage']);
+      })
       .catch(err => console.error(err));
 }
 signInWithFB(){
   this.fb.login(['public_profile', 'user_friends', 'email'])
-      .then((res: FacebookLoginResponse) => console.log('Logged into Facebook!', res))
+      .then((res: FacebookLoginResponse) => {
+        console.log('Logged into Facebook!', res);
+        this.router.navigate(['tabs', 'homepage']);
+      } )
       .catch(e => console.log('Error logging into Facebook', e));
   }
 }
