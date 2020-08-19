@@ -1,0 +1,52 @@
+.logo {
+  width: 25px;
+  //margin-left: 45%;
+  margin: auto;
+}
+.clear {
+  position: absolute;
+  top: 2px;
+  left: 85%;
+}
+.image{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 30%;
+}
+.header{
+  font-family: "Sf bold";
+  font-size: 30px;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.subheader{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  font-family: "Sf regular";
+  font-size: 15px;
+  margin-top: 20px;
+}
+.main-btn{
+  --background: #EA0A8E;
+  text-transform: none;
+  font-size: 15px;
+  font-family: "Sf regular";
+  --border-radius: 5px;
+  margin-top: 30%;
+}
+.btn{
+  font-family: "Sf regular";
+  font-size: 12px;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}

@@ -1,5 +1,6 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
+      <img src="./assets/Back%20button.png" (click)="back()" class="back">
     <div class="logo">
       <img src="./assets/Logo.png">
     </div>
@@ -16,8 +17,8 @@
           <ion-row>
               <ion-col size-xs="9" class="ion-margin-vertical">
                       <label class="container" >
-                          <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 14px; position: absolute;top: -5px">Home Address</span>
-                          <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 16px; position: absolute;bottom: -30px">Piata Uniri , Apra2 ...</span>
+                          <span class="radio-button__label" style=" font-family: 'sf medium';color: gray;font-size: 14px; position: absolute;top: -6px">Home Address</span>
+                          <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 16px; position: absolute;bottom: -38px">Piata Uniri , Apra2 ...</span>
                           <input type="checkbox" [name]="1"  [disabled]="isChecked && (this.isCheckedName !== 1)" [value]="1" [id]="1">
                           <span class="checkmark" ></span>
                       </label>
@@ -30,8 +31,8 @@
           <ion-row>
               <ion-col size-xs="9" class="ion-margin-vertical">
                   <label class="container" >
-                      <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 14px; position: absolute;top: -5px">Work Address</span>
-                      <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 16px; position: absolute;bottom: -30px">No address added</span>
+                      <span class="radio-button__label" style=" font-family: 'sf medium';color: gray;font-size: 14px; position: absolute;top: -6px">Work Address</span>
+                      <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 16px; position: absolute;bottom: -38px">No address added</span>
                       <input type="checkbox" [name]="2"  [disabled]="isChecked && (this.isCheckedName !== 2)" [value]="2" [id]="2">
                       <span class="checkmark"></span>
                   </label>

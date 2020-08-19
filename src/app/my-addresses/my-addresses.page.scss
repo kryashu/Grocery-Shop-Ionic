@@ -2,6 +2,12 @@
   width: 25px;
   margin: auto;
 }
+.back {
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 30px;
+  transform: translate(-50%, -50%);
+}
 .edit {
   position: absolute;
   top: 2.5px;
@@ -87,10 +93,9 @@ ion-col {
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
-
-}
+//.container:hover input ~ .checkmark {
+//  background-color: #ccc;
+//}
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {

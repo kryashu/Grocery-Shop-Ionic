@@ -77,6 +77,18 @@ const routes: Routes = [
   {
     path: 'select-location',
     loadChildren: () => import('./select-location/select-location.module').then( m => m.SelectLocationPageModule)
+  },
+  {
+    path: 'deliver-first',
+    loadChildren: () => import('./deliver-first/deliver-first.module').then( m => m.DeliverFirstPageModule)
+  },
+  {
+    path: 'location',
+    loadChildren: () => import('./location/location.module').then( m => m.LocationPageModule)
+  },
+  {
+    path: 'where-deliver',
+    loadChildren: () => import('./where-deliver/where-deliver.module').then( m => m.WhereDeliverPageModule)
   }
 
 
