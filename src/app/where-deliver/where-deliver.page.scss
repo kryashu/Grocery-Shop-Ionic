@@ -1,0 +1,63 @@
+.logo {
+  width: 25px;
+  //margin-left: 45%;
+  margin: auto;
+}
+
+.clear {
+  position: absolute;
+  top: 2px;
+  left: 85%;
+}
+
+.header {
+  font-family: "Sf bold";
+  font-size: 32px;
+  margin-top: 20px;
+}
+
+.search {
+  margin-right: 30px;
+  margin-top: 29px;
+
+}
+
+.bottom-line {
+  border-bottom: 1px solid #EFEFEF;
+  margin-top: 12px;
+}
+
+::ng-deep .searchbar-search-icon.sc-ion-searchbar-md {
+  left: 0px;
+  top: 15px;
+}
+
+::ng-deep .searchbar-input.sc-ion-searchbar-md {
+  --box-shadow: white;
+  border-bottom: 0.3px solid lightgrey;
+  padding-inline-start: 40px;
+  padding-top: 10px;
+}
+
+.input-group {
+  display: flex;
+  border-bottom: 1px solid black;
+}
+
+.save-button {
+  --background: #EA0A8E;
+  color: white;
+  margin-top: 50px;
+  text-transform: none;
+  font-family: "Sf regular";
+  font-size: 14px;
+  height: 44px;
+}
+
+.input {
+  border: none;
+  outline: none;
+  margin-bottom: 5px;
+  text-transform: capitalize;
+  caret-color: #EA0A8E
+}

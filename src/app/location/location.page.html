@@ -1,0 +1,37 @@
+<ion-app>
+  <ion-content>
+    <img src="./assets/Back%20button.png" class="back" (click)="location.back()">
+    <!--  <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom">-->
+    <!--    <agm-marker [latitude]="latitude" [longitude]="longitude" [markerDraggable]="true"-->
+    <!--                (dragEnd)="markerDragEnd($event)"></agm-marker>-->
+    <div style="height: 60%">
+
+    </div>
+    <div class="search-div">
+      <div style="height: 1px">
+
+      </div>
+      <div class="header ion-margin-start">
+        Select your location from the map
+      </div>
+      <div class="subheader ion-margin-vertical ion-margin-start">
+        Move the map pin to find your location and select the delivery address.
+      </div>
+      <div class="search ion-margin-start ion-margin-vertical">
+        <!--        <ion-searchbar type="text" class="native-input sc-ion-input-ios" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search></ion-searchbar>-->
+        <!--      -->
+        <div class="input-group mb-3">
+          <div class="input-group-prepend" style="border: none; margin-right: 10px; margin-top: 5px">
+            <img src="./assets/nav-search.svg">
+          </div>
+          <input style="border: none; outline: none" type="text" class="form-control" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="bottom-line"></div>
+      </div>
+      <div style="display: flex;justify-content: center;align-items: center" class="ion-margin-vertical">
+        <ion-button class="search-button" expand="block" (click)="router.navigate(['where-deliver'])">Next</ion-button>
+      </div>
+      <div style="height: 20px"></div>
+    </div>
+  </ion-content>
+</ion-app>

@@ -36,7 +36,7 @@ gCheck = false
        this.gCheck = true;
        return false;
      } else {
-      this.router.navigate(['tabs','homepage']);
+      this.router.navigate(['deliver-first']);
       return true;
     }
 }
