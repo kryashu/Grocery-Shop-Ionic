@@ -89,6 +89,10 @@ const routes: Routes = [
   {
     path: 'where-deliver',
     loadChildren: () => import('./where-deliver/where-deliver.module').then( m => m.WhereDeliverPageModule)
+  },
+  {
+    path: 'confirm-address',
+    loadChildren: () => import('./confirm-address/confirm-address.module').then( m => m.ConfirmAddressPageModule)
   }
 
 
