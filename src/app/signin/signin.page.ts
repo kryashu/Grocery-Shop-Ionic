@@ -19,7 +19,7 @@ export class SigninPage implements OnInit {
 signInWithGoogle(){
   this.googlePlus.login({
     scope: '',
-    webClientId: '1043507768297-8d4u0k5jkr8fde2te23e06ulf6cna06c.apps.googleusercontent.com',
+    webClientId: '1043507768297-n1k0jcl4cr0vrnqfrqvhrvhign86c9n2.apps.googleusercontent.com',
     offline: true})
       .then(res => {
         console.log(res);

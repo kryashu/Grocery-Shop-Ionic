@@ -83,7 +83,9 @@
       },
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-app-version": {},
-      "cordova-plugin-googleplus": {},
+      "cordova-plugin-googleplus": {
+        "REVERSED_CLIENT_ID": "1043507768297-n1k0jcl4cr0vrnqfrqvhrvhign86c9n2.apps.googleusercontent.com"
+      },
       "cordova-plugin-facebook4": {
         "APP_ID": "324282458764491",
         "APP_NAME": "Untouched Ionic App"
