@@ -84,7 +84,7 @@
       "cordova-plugin-ionic-keyboard": {},
       "cordova-plugin-app-version": {},
       "cordova-plugin-googleplus": {
-        "REVERSED_CLIENT_ID": "io.ionic.starter"
+        "REVERSED_CLIENT_ID": "io.ionic.starter1"
       },
       "cordova-plugin-facebook4": {
         "APP_ID": "324282458764491",
