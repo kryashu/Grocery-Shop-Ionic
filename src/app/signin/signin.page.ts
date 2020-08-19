@@ -20,14 +20,16 @@ signInWithGoogle(){
   this.googlePlus.login({})
       .then(res => {
         console.log(res);
+        alert(res);
         this.router.navigate(['tabs', 'homepage']);
       })
-      .catch(err => console.error(err));
+      .catch(err => alert(err));
 }
 signInWithFB(){
   this.fb.login(['public_profile', 'user_friends', 'email'])
       .then((res: FacebookLoginResponse) => {
         console.log('Logged into Facebook!', res);
+        alert(res);
         this.router.navigate(['tabs', 'homepage']);
       } )
       .catch(e => console.log('Error logging into Facebook', e));
