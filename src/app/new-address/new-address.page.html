@@ -11,14 +11,14 @@
 <ion-content>
 <div class="ion-margin-start ion-margin-vertical ion-margin-horizontal">
   <div class="header">Add new address</div>
-  <ion-input [(ngModel)]="input1" class="ion-margin-vertical"></ion-input>
-  <ion-input placeholder="Enter the complete address (floor, app no)" class="ion-margin-vertical"></ion-input>
-  <ion-input placeholder="Enter the address name (work, home)" class="ion-margin-vertical"></ion-input>
+  <ion-input [(ngModel)]="input1" class="ion-margin-vertical cursor"></ion-input>
+  <ion-input [(ngModel)]="input2" placeholder="Enter the complete address (floor, app no)" class="ion-margin-vertical cursor"></ion-input>
+  <ion-input [(ngModel)]="input3" placeholder="Enter the address name (work, home)" class="ion-margin-vertical cursor"></ion-input>
   <div style="display: flex; margin-top: 25px" class="ion-margin-vertical">
     <ion-checkbox  slot="start"></ion-checkbox>
   <ion-label class="radioLable ion-margin-start">Make this my default address?</ion-label>
   </div>
-  <ion-button class="save-button" expand="block" (click)="router.navigate(['tabs','profile-tab'])">Save address</ion-button>
+  <ion-button class="save-button" expand="block" (click)="saveAddress()">Save address</ion-button>
 </div>
 </ion-content>
 <ion-toolbar>
