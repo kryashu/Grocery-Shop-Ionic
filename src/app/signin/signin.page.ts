@@ -17,7 +17,10 @@ export class SigninPage implements OnInit {
   ngOnInit() {
   }
 signInWithGoogle(){
-  this.googlePlus.login({})
+  this.googlePlus.login({
+    scope: '',
+    webClientId: '1043507768297-fe1jfsg899ahfrirqd4cmah5rd5a3rsp.apps.googleusercontent.com',
+    offline: true})
       .then(res => {
         console.log(res);
         alert(res);
