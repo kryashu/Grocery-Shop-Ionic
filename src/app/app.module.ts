@@ -11,7 +11,8 @@ import { AppRoutingModule } from './app-routing.module';
 import {SigninPageModule} from './signin/signin.module';
 import {TabsPageModule} from './tabs/tabs.module';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
-
+import { GooglePlus } from '@ionic-native/google-plus/ngx';
+import { Facebook } from '@ionic-native/facebook/ngx';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -24,6 +25,8 @@ import { Keyboard } from '@ionic-native/keyboard/ngx';
     StatusBar,
     SplashScreen,
     Keyboard,
+    GooglePlus,
+      Facebook,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
