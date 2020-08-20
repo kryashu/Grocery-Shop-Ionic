@@ -17,7 +17,7 @@
             Enter your credit card details.
         </div>
 
-        <ion-input placeholder="Enter card holder name" style="text-transform: capitalize"></ion-input>
+        <ion-input placeholder="Enter card holder name" style="text-transform: capitalize" [(ngModel)]="name"></ion-input>
         <ion-input placeholder="XXXX XXXX XXXX XXXX" type="tel" maxlength="19" [(ngModel)]="cardNumber" (ngModelChange)="cardformat()"></ion-input>
         <ion-grid>
             <ion-row>
@@ -32,6 +32,9 @@
                 </ion-col>
             </ion-row>
         </ion-grid>
-        <ion-button class="button" expand="block">Continue</ion-button>
+        <ion-button class="button" expand="block" (click)="add()" [disabled]="(!cardNumber || !expirey) || !name">Continue</ion-button>
     </div>
 </ion-content>
+<ion-toolbar>
+    <app-tabs></app-tabs>
+</ion-toolbar>

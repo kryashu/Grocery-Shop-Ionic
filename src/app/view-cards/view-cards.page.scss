@@ -1,0 +1,151 @@
+.logo {
+  width: 25px;
+  margin: auto;
+}
+.back {
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 30px;
+  transform: translate(-50%, -50%);
+}
+.edit {
+  position: absolute;
+  top: 2.5px;
+  left: 88%;
+}
+.header{
+  font-family: "Sf bold";
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+ion-grid {
+  padding: 0px;
+}
+
+ion-col {
+  padding: 0px;
+}
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid lightgray;
+  //border-bottom: 1px solid grey;
+}
+
+/* On mouse-over, add a grey background color */
+//.container:hover input ~ .checkmark {
+//  background-color: #ccc;
+//}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #EA0A8E;
+  border: 1px solid #EA0A8E;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 8px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.change {
+  color: #EA0A8E;
+  margin-top: 5px;
+  font-size: 14px;
+  font-family: 'Sf bold'
+}
+.value {
+  font-family: 'sf medium';
+  font-size: 15px;
+  position: absolute;
+  top: -6px;
+  white-space: nowrap
+}
+
+.name {
+  font-family: 'sf medium';
+  color: gray;
+  font-size: 14px;
+  position: absolute;
+  bottom: -38px;
+}
+.image{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin-top: 30%;
+}
+.header1{
+  font-family: "Sf bold";
+  font-size: 30px;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.subheader1{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  font-family: "Sf regular";
+  font-size: 15px;
+  margin-top: 20px;
+}
+.pencil {
+  height: 20px;
+  margin-top: 5px;
+}

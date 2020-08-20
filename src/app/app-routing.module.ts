@@ -101,6 +101,14 @@ const routes: Routes = [
   {
     path: 'create-card',
     loadChildren: () => import('./create-card/create-card.module').then( m => m.CreateCardPageModule)
+  },
+  {
+    path: 'view-cards',
+    loadChildren: () => import('./view-cards/view-cards.module').then( m => m.ViewCardsPageModule)
+  },
+  {
+    path: 'select-payment',
+    loadChildren: () => import('./select-payment/select-payment.module').then( m => m.SelectPaymentPageModule)
   }
 
 

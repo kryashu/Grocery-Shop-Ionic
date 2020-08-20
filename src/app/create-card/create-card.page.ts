@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Location} from '@angular/common';
+import {ToastController} from '@ionic/angular';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-create-card',
@@ -8,8 +10,11 @@ import {Location} from '@angular/common';
 })
 export class CreateCardPage implements OnInit {
   expirey;
+  name;
   cardNumber;
-  constructor(private location: Location) { }
+  constructor(private router: Router,
+              private location: Location,
+              public toastController: ToastController) { }
 
   ngOnInit() {
   }
@@ -22,5 +27,18 @@ export class CreateCardPage implements OnInit {
     if (this.expirey.length === 2){
       this.expirey += '/';
     }
+  }
+  add(){
+    this.saved();
+    this.router.navigate(['view-cards']);
+  }
+  async saved(){
+    const toast = await this.toastController.create({
+      message: 'Credit card added.',
+      position: 'bottom',
+      duration: 2000,
+      cssClass: 'Toast'
+    });
+    await toast.present();
   }
 }
