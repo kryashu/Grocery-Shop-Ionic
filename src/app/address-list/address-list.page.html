@@ -1,13 +1,14 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
-    <img src="./assets/Delete%20button.png" (click)="delete()" class="back">
+    <img src="./assets/Back%20button.png" (click)="back()" class="back">
     <div class="logo">
       <img src="./assets/Logo.png">
     </div>
+    <img class="ion-float-right edit" src="./assets/Controls%20-%20Buttons%20-%20Dark%20-%20Add.png" (click)="router.navigate(['select-location'])">
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div class="ion-margin-vertical ion-margin-start ion-margin-horizontal">
+  <div class="ion-margin-vertical ion-margin-start ">
     <div class="header">
       My addresses
     </div>
@@ -22,8 +23,11 @@
               <span class="checkmark" ></span>
             </label>
           </ion-col>
-          <ion-col size-xs="3" class="ion-margin-vertical">
-            <b  (click)="router.navigate(['select-location'])" role="button" class="ion-float-right change">Change</b>
+          <ion-col size-xs="3" class="" style="display: flex; align-items: center">
+        <div class="ion-float-right" style="display: flex;align-items: center;margin-left: 12%">
+            <img src="./assets/Delete%20button.png" (click)="delete()"  role="button" class="ion-float-right change ">
+            <img class="ion-float-right pencil " src="./assets/edit-black.png" (click)="router.navigate(['select-location'])">
+        </div>
           </ion-col>
         </ion-row>
       </ion-grid>

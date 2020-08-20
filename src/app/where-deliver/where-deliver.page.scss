@@ -73,6 +73,9 @@
   text-transform: capitalize;
   caret-color: #EA0A8E;
 }
+ion-input::-webkit-input-placeholder {
+  text-transform: none !important;
+}
 .item-interactive.ion-valid {
   --highlight-background: black;
 }

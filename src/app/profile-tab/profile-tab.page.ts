@@ -18,7 +18,7 @@ export class ProfileTabPage implements OnInit {
   }
   async change(name, value){
   const toast = await this.toastController.create({
-    message: name + ' ' + value + ' Successfully',
+    message: name + ' ' + value,
     duration: 2000,
     cssClass: 'Toast'
   });
