@@ -19,7 +19,7 @@
             <label class="container" >
               <span class="radio-button__label name">{{address.name}}</span>
               <span class="radio-button__label value" >{{address.value}}</span>
-              <input type="checkbox" [(ngModel)]="address.isSelected" (change)="check(address.name)">
+              <input type="checkbox" [(ngModel)]="address.isSelected" (change)="check(address.name, $event)">
               <span class="checkmark" ></span>
             </label>
           </ion-col>

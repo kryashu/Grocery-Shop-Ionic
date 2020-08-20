@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {Location} from '@angular/common';
+import {AlertController} from '@ionic/angular';
 
 @Component({
     selector: 'app-address-list',
@@ -10,7 +11,8 @@ import {Location} from '@angular/common';
 export class AddressListPage implements OnInit {
 
     constructor(private router: Router,
-                private location: Location) {
+                private location: Location,
+                public alertController: AlertController) {
     }
 
     addressList = [{name: 'Home address', value: 'Piata Unirii 2, Apartment 23…', isSelected: false}, {
@@ -26,7 +28,9 @@ export class AddressListPage implements OnInit {
         this.location.back();
     }
 
-    check(name) {
+    check(name, event) {
+        if (event.target.checked){
+            this.presentAlertMultipleButtons();}
         for (const address of this.addressList) {
             if (name === address.name) {
                 address.isSelected = true;
@@ -45,4 +49,30 @@ export class AddressListPage implements OnInit {
             }
         }
     }
+    async presentAlertMultipleButtons() {
+    const alert = await this.alertController.create({
+        cssClass: 'alertCancel',
+        header: 'Are you sure!',
+        message: 'You want to deliver at this address?',
+        buttons: [
+            {
+                text: 'Cancel',
+                role: 'cancel',
+                cssClass: 'secondary',
+                handler: (blah) => {
+                    console.log('Confirm Cancel: blah');
+                }
+            },
+              {
+                text: 'Okay',
+                handler: () => {
+                    this.router.navigate(['select-payment']);
+                }
+            }
+        ]
+    });
+
+    await alert.present();
+}
+
 }

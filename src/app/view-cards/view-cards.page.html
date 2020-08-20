@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <img src="./assets/Back%20button.png" (click)="back()" class="back">
+        <div class="logo">
+            <img src="./assets/Logo.png">
+        </div>
+        <img class="ion-float-right edit" src="./assets/Controls%20-%20Buttons%20-%20Dark%20-%20Add.png" (click)="router.navigate(['create-card'])">
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="ion-margin-start " *ngIf="cardList.length > 0">
+        <div class="header">My payment methods</div>
+
+        <div>
+            <ion-grid class="option ion-margin-vertical">
+                <ion-row *ngFor="let card of cardList" class="ion-margin-vertical">
+                    <ion-col size-xs="9" class="ion-margin-vertical">
+                        <label class="container">
+                            <span class="radio-button__label value">{{card.value}}</span>
+                            <span class="radio-button__label name">{{card.name}}</span>
+                            <input type="checkbox" [(ngModel)]="card.isSelected" (change)="check(card.name)">
+                            <span class="checkmark"></span>
+                        </label>
+                    </ion-col>
+                    <ion-col size-xs="3" class="" style="display: flex; align-items: center">
+                        <div class="ion-float-right" style="display: flex;align-items: center;margin-left: 12%">
+                            <img src="./assets/Delete%20button.png" (click)="delete(card.name)"  role="button" class="ion-float-right change ">
+                            <img class="ion-float-right pencil " src="./assets/edit-black.png" (click)="router.navigate(['create-card'])">
+                        </div>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+    <div class="ion-margin-start ion-margin-horizontal" *ngIf="cardList.length === 0">
+        <div class="image">
+            <img src="./assets/nocard.png">
+        </div>
+        <div class="header1">No credit card</div>
+        <div class="subheader1">You don’t have any credit cards associated with your account.</div>
+    </div>
+</ion-content>
+<ion-toolbar>
+    <app-tabs></app-tabs>
+</ion-toolbar>

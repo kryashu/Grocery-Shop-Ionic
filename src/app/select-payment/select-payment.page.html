@@ -1,0 +1,29 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <img src="./assets/Back%20button.png" (click)="back()" class="back">
+    <div class="logo">
+      <img src="./assets/Logo.png">
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="ion-margin-horizontal ion-margin-start">
+  <div class="header">
+    Select payment method
+  </div>
+  <div>
+    <ion-grid class="option ion-margin-vertical">
+      <ion-row *ngFor="let card of methodList" class="ion-margin-vertical">
+        <ion-col size-xs="9" class="ion-margin-vertical">
+          <label class="container">
+            <span class="radio-button__label name">{{card.name}}</span>
+            <input type="checkbox" [(ngModel)]="card.isSelected" (change)="check(card.name)">
+            <span class="checkmark"></span>
+          </label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</div>
+</ion-content>
