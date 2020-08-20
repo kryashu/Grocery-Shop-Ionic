@@ -16,11 +16,6 @@
   margin-top: 20px;
 }
 
-.search {
-  margin-right: 30px;
-  //margin-top: 29px;
-
-}
 
 .bottom-line {
   border-bottom: 1px solid #EFEFEF;
@@ -63,7 +58,18 @@
   border: none;
   width: 100%;
   outline: none;
+  margin-left: 20px;
   margin-bottom: 5px;
+  text-transform: capitalize;
+  caret-color: #EA0A8E;
+}
+.input1 {
+  border: none;
+  width: 100%;
+  outline: none;
+  margin-bottom: 5px;
+  left: 0;
+  position: fixed;
   text-transform: capitalize;
   caret-color: #EA0A8E;
 }
@@ -71,3 +77,6 @@
   --highlight-background: black;
 }
 
+ion-list{
+  width: 100%;
+}

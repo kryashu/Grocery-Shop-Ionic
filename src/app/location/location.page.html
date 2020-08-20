@@ -11,15 +11,13 @@
       <div style="height: 1px">
 
       </div>
-      <div class="header ion-margin-start">
+      <div class="header ion-margin-start ion-margin-horizontal">
         Select your location from the map
       </div>
-      <div class="subheader ion-margin-vertical ion-margin-start">
+      <div class="subheader ion-margin-vertical ion-margin-start ion-margin-horizontal">
         Move the map pin to find your location and select the delivery address.
       </div>
       <div class="search ion-margin-start ion-margin-vertical">
-        <!--        <ion-searchbar type="text" class="native-input sc-ion-input-ios" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search></ion-searchbar>-->
-        <!--      -->
         <div class="input-group mb-3">
           <div class="input-group-prepend" style="border: none; margin-right: 10px; margin-top: 5px">
             <img src="./assets/nav-search.svg">
@@ -28,7 +26,7 @@
         </div>
         <div class="bottom-line"></div>
       </div>
-      <div style="display: flex;justify-content: center;align-items: center" class="ion-margin-vertical">
+      <div style="display: flex;justify-content: center;align-items: center" class="ion-margin-vertical ion-margin-start ion-margin-horizontal">
         <ion-button class="search-button" expand="block" (click)="router.navigate(['where-deliver'])">Next</ion-button>
       </div>
       <div style="height: 20px"></div>

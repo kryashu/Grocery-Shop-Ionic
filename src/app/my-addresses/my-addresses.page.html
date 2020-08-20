@@ -18,13 +18,13 @@
               <ion-col size-xs="9" class="ion-margin-vertical">
                       <label class="container" >
                           <span class="radio-button__label" style=" font-family: 'sf medium';color: gray;font-size: 14px; position: absolute;top: -6px">Home Address</span>
-                          <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 16px; position: absolute;bottom: -38px">Piata Uniri , Apra2 ...</span>
+                          <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 15px; position: absolute;bottom: -38px">Piata Uniri , Apra2 ...</span>
                           <input type="checkbox" [name]="1"  [disabled]="isChecked && (this.isCheckedName !== 1)" [value]="1" [id]="1">
                           <span class="checkmark" ></span>
                       </label>
               </ion-col>
               <ion-col size-xs="3" class="ion-margin-vertical">
-                <b style="color: #EA0A8E" (click)="router.navigate(['select-location'])" role="button" class="ion-float-right">Change</b>
+                <b style="color: #EA0A8E;margin-top: 5px" (click)="router.navigate(['select-location'])" role="button" class="ion-float-right">Change</b>
               </ion-col>
           </ion-row>
           <br>
@@ -32,13 +32,13 @@
               <ion-col size-xs="9" class="ion-margin-vertical">
                   <label class="container" >
                       <span class="radio-button__label" style=" font-family: 'sf medium';color: gray;font-size: 14px; position: absolute;top: -6px">Work Address</span>
-                      <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 16px; position: absolute;bottom: -38px">No address added</span>
+                      <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 15px; position: absolute;bottom: -38px">No address added</span>
                       <input type="checkbox" [name]="2"  [disabled]="isChecked && (this.isCheckedName !== 2)" [value]="2" [id]="2">
                       <span class="checkmark"></span>
                   </label>
               </ion-col>
               <ion-col size-xs="3" class="ion-margin-vertical">
-                  <b style="color: #EA0A8E" (click)="router.navigate(['select-location'])" role="button" class="ion-float-right">Add</b>
+                  <b style="color: #EA0A8E;margin-top: 5px" (click)="router.navigate(['select-location'])" role="button" class="ion-float-right">Add</b>
               </ion-col>
           </ion-row>
       </ion-grid>

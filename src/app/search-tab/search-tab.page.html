@@ -11,21 +11,21 @@
             <div style="height: 1px">
 
             </div>
-      <div class="header ion-margin-start">
+      <div class="header ion-margin-start ion-margin-horizontal">
         Search nearby stores
       </div>
-      <div class="search ion-margin-start">
+      <div class="search ion-margin-start ion-margin-horizontal">
       <ion-searchbar type="text" class="native-input sc-ion-input-ios" (keydown.enter)="$event.preventDefault()" placeholder="Search Nearest Location" autocorrect="off" autocapitalize="off" spellcheck="off" type="text" #search></ion-searchbar>
       </div>
-      <div style="display: flex;justify-content: center;align-items: center">
+      <div class="ion-margin-start ion-margin-horizontal">
         <ion-button class="search-button" expand="block">Search</ion-button>
       </div>
 
-      <div class="header ion-margin-start">
+      <div class="header ion-margin-start ion-margin-horizontal">
         Near by stores
       </div>
 
-        <div *ngFor="let shop of storeList" class="ion-margin-start">
+        <div *ngFor="let shop of storeList" class="ion-margin-start ion-margin-horizontal">
              <span>
                 <img routerLink="/shop"  class="shop-img" src="./assets/shop.jpg"/>
              <div class="subhead">{{shop.name}}</div>
@@ -44,10 +44,10 @@
            </span>
 
       </div>
-      <div class="header ion-margin-start">
+      <div class="header ion-margin-start ion-margin-horizontal">
         Gift Cards
       </div>
-      <div *ngFor="let shop of caardList" class="ion-margin-start">
+      <div *ngFor="let shop of caardList" class="ion-margin-start ion-margin-horizontal">
              <span>
                 <img routerLink="/shop"  class="shop-img" src="./assets/blank.png"/>
              <div class="subhead">{{shop.name}}</div>

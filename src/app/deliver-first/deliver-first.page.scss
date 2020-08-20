@@ -36,15 +36,16 @@
 .main-btn{
   --background: #EA0A8E;
   text-transform: none;
-  font-size: 15px;
+  font-size: 14px;
   font-family: "Sf regular";
   --border-radius: 5px;
-  margin-top: 30%;
+  height: 45px;
+  width: 100%;
 }
 .btn{
   font-family: "Sf regular";
   font-size: 12px;
-  margin-top: 20px;
+  margin-top: 25px;
   justify-content: center;
   align-items: center;
   display: flex;
