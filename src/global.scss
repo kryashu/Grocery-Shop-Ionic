@@ -113,11 +113,7 @@
   margin-left: 10%;
   text-align: center;
 }
-.Toast{
-  --background: #EA0A8E;
-  --color: white;
-  font-family: "Sf bold";
-}
+
 .alertCancel{
   .alert-wrapper{
     background: #EA0A8E;
@@ -139,4 +135,17 @@
 }
 .ion-margin-horizontal{
   margin-right: 30px;
+}
+.Toast{
+  --background: #1A1824;
+  --width: 200px;
+  --height: 30px;
+  height: 90%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  text-align: center;
+  font-family: "Sf regular";
+  font-size: 11px;
+  white-space: nowrap;
 }

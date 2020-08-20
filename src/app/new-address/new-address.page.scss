@@ -18,7 +18,7 @@ ion-input {
   font-size: 15px;
   font-family: "Sf regular";
   ::ng-deep input:focus {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid 	#000000;
   };
 }
 
@@ -38,6 +38,7 @@ ion-input {
 }
 .save-button{
   --background: #EA0A8E;
+  --border-radius: 5px;
   color: white;
   margin-top: 50px;
   text-transform: none;
