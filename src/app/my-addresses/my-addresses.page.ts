@@ -7,6 +7,11 @@ import {Location} from '@angular/common';
   styleUrls: ['./my-addresses.page.scss'],
 })
 export class MyAddressesPage implements OnInit {
+  addressList = [{name: 'Home address', value: 'Piata Unirii 2, Apartment 23…', isSelected: false}, {
+    name: 'Work address',
+    value: 'No address added',
+    isSelected: false
+  }];
   address;
   isChecked;
   isCheckedName;
@@ -19,9 +24,14 @@ export class MyAddressesPage implements OnInit {
   back() {
     this.location.back()
   }
-  check(e) {
-    this.isChecked = !this.isChecked;
-    this.isCheckedName = e.target.name;
+  check(name) {
+    for (const address of this.addressList) {
+      if (name === address.name) {
+        address.isSelected = true;
+      } else {
+        address.isSelected = false;
+      }
+    }
   }
 
 }

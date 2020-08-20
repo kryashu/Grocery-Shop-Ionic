@@ -24,17 +24,26 @@ export class NewAddressPage implements OnInit {
     this.change();
     return false
     } else  {
-      this.router.navigate(['my-addresses'])
+      this,this.saved();
+      this.router.navigate(['address-list']);
       return true
     }
   }
   async change(){
     const toast = await this.toastController.create({
-      message: 'Plese fill full address',
+      message: 'Please enter complete address.',
       duration: 2000,
       cssClass: 'Toast'
     });
     await toast.present();
   }
-
+  async saved(){
+    const toast = await this.toastController.create({
+      message: 'Your address has been saved.',
+      position: 'bottom',
+      duration: 2000,
+      cssClass: 'Toast'
+    });
+    await toast.present();
+  }
 }

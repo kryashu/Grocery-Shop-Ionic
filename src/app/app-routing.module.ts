@@ -93,6 +93,14 @@ const routes: Routes = [
   {
     path: 'confirm-address',
     loadChildren: () => import('./confirm-address/confirm-address.module').then( m => m.ConfirmAddressPageModule)
+  },
+  {
+    path: 'address-list',
+    loadChildren: () => import('./address-list/address-list.module').then( m => m.AddressListPageModule)
+  },
+  {
+    path: 'create-card',
+    loadChildren: () => import('./create-card/create-card.module').then( m => m.CreateCardPageModule)
   }
 
 

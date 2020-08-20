@@ -14,31 +14,17 @@
   </div>
   <div>
       <ion-grid class="option ion-margin-vertical">
-          <ion-row>
-              <ion-col size-xs="9" class="ion-margin-vertical">
-                      <label class="container" >
-                          <span class="radio-button__label" style=" font-family: 'sf medium';color: gray;font-size: 14px; position: absolute;top: -6px">Home Address</span>
-                          <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 15px; position: absolute;bottom: -38px">Piata Uniri , Apra2 ...</span>
-                          <input type="checkbox" [name]="1"  [disabled]="isChecked && (this.isCheckedName !== 1)" [value]="1" [id]="1">
-                          <span class="checkmark" ></span>
-                      </label>
-              </ion-col>
-              <ion-col size-xs="3" class="ion-margin-vertical">
-                <b style="color: #EA0A8E;margin-top: 5px" (click)="router.navigate(['select-location'])" role="button" class="ion-float-right">Change</b>
-              </ion-col>
-          </ion-row>
-          <br>
-          <ion-row>
+          <ion-row *ngFor="let address of addressList" class="ion-margin-vertical">
               <ion-col size-xs="9" class="ion-margin-vertical">
                   <label class="container" >
-                      <span class="radio-button__label" style=" font-family: 'sf medium';color: gray;font-size: 14px; position: absolute;top: -6px">Work Address</span>
-                      <span class="radio-button__label" style=" font-family: 'sf medium';font-size: 15px; position: absolute;bottom: -38px">No address added</span>
-                      <input type="checkbox" [name]="2"  [disabled]="isChecked && (this.isCheckedName !== 2)" [value]="2" [id]="2">
-                      <span class="checkmark"></span>
+                      <span class="radio-button__label name">{{address.name}}</span>
+                      <span class="radio-button__label value" >{{address.value}}</span>
+                      <input type="checkbox" [(ngModel)]="address.isSelected" (change)="check(address.name)">
+                      <span class="checkmark" ></span>
                   </label>
               </ion-col>
               <ion-col size-xs="3" class="ion-margin-vertical">
-                  <b style="color: #EA0A8E;margin-top: 5px" (click)="router.navigate(['select-location'])" role="button" class="ion-float-right">Add</b>
+                  <b  (click)="router.navigate(['select-location'])" role="button" class="ion-float-right change">{{address.value === 'No address added' ? 'Add' : 'Change'}}</b>
               </ion-col>
           </ion-row>
       </ion-grid>

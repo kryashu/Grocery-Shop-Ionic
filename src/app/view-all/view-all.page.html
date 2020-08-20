@@ -12,6 +12,11 @@
   <ion-grid >
     <h2 class="view-all-header">{{input}}</h2>
     <ion-row>
+    <ion-col size-xs="12">
+      <ion-searchbar placeholder="Search items"></ion-searchbar>
+    </ion-col>
+    </ion-row>
+    <ion-row>
       <ion-col *ngFor="let item of viewList"  size-sm="3" size-xs="6" size-md="4" (click)="click()">
         <div style="margin-right: 10px" *ngIf="item.img"><img src="{{item.img}}" class="image"></div>
         <div class="name" *ngIf="item.name">

@@ -8,6 +8,8 @@
   margin-top: 8px;
   margin-left: 30px;
   transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
 }
 
 .edit {
@@ -140,12 +142,6 @@ ion-col {
   transform: rotate(45deg);
 }
 
-.change {
-  color: #EA0A8E;
-  margin-top: 5px;
-  font-size: 14px;
-  font-family: 'Sf bold'
-}
 .value {
   font-family: 'sf medium';
   font-size: 15px;
@@ -160,4 +156,11 @@ ion-col {
   font-size: 14px;
   position: absolute;
   top: -6px
+}
+
+.change {
+  color: #EA0A8E;
+  margin-top: 5px;
+  font-size: 14px;
+  font-family: 'Sf bold'
 }

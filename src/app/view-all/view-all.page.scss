@@ -65,3 +65,14 @@ ion-grid {
 ion-col{
   padding: 0px;
 }
+::ng-deep .searchbar-search-icon.sc-ion-searchbar-md{
+  left: 0px;
+  top: 15px
+}
+
+::ng-deep .searchbar-input.sc-ion-searchbar-md{
+  --box-shadow: white;
+  border-bottom: 0.3px solid lightgrey;
+  padding-inline-start: 40px;
+  padding-top: 10px;
+}

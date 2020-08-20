@@ -1,0 +1,35 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <img src="./assets/Delete%20button.png" (click)="delete()" class="back">
+    <div class="logo">
+      <img src="./assets/Logo.png">
+    </div>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="ion-margin-vertical ion-margin-start ion-margin-horizontal">
+    <div class="header">
+      My addresses
+    </div>
+    <div>
+      <ion-grid class="option ion-margin-vertical">
+        <ion-row *ngFor="let address of addressList" class="ion-margin-vertical">
+          <ion-col size-xs="9" class="ion-margin-vertical">
+            <label class="container" >
+              <span class="radio-button__label name">{{address.name}}</span>
+              <span class="radio-button__label value" >{{address.value}}</span>
+              <input type="checkbox" [(ngModel)]="address.isSelected" (change)="check(address.name)">
+              <span class="checkmark" ></span>
+            </label>
+          </ion-col>
+          <ion-col size-xs="3" class="ion-margin-vertical">
+            <b  (click)="router.navigate(['select-location'])" role="button" class="ion-float-right change">Change</b>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+  </div>
+</ion-content>
+<ion-toolbar>
+  <app-tabs></app-tabs>
+</ion-toolbar>
