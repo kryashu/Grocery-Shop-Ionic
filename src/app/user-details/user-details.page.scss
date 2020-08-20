@@ -3,14 +3,13 @@
   margin: auto;
 }
 h1{
-  font-family: "sf bold";
-  font-size: 35px;
-  margin: 30px;
+  font-family: "Sf bold";
+  font-size: 30px;
 }
 .details {
   display: flex;
   flex-direction: column;
-  margin-left: 30px;
+  margin-top: 20px;
 }
 ion-input {
   border-bottom: 1px solid #EFEFEF;
@@ -19,6 +18,7 @@ ion-input {
   }
 }
 ion-radio{
+  margin-left: 0px!important;
    margin-right: 8px!important;
   --color-checked: #EA0A8E;
   --border-color-checked: #EA0A8E;
@@ -27,11 +27,10 @@ ion-radio{
   display: flex!important;
 }
 .gender {
-  margin-left: 10px;
+margin-left: 13px;
+  width: 93%;
 }
 .upperBtn{
-  margin-left: 30px;
-  margin-right: 30px;
   margin-top: 100px;
   --background: #EA0A8E;
   width: 100%;

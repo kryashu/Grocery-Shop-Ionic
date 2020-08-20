@@ -14,7 +14,9 @@
   </div>
   <div class="header">Where do you want us to deliver?</div>
   <div class="subheader">Please allow app access to your location to find restaurants near you.</div>
+  <div style="position: fixed; bottom: 50px; width: 83%">
   <ion-button class="main-btn" expand="block" (click)="router.navigate(['where-deliver'])">Use current location</ion-button>
-  <div class="btn" (click)="router.navigate(['location'])">Select it manually</div>
+  <div class="btn ion-margin-start ion-margin-horizontal" (click)="router.navigate(['location'])">Select it manually</div>
+  </div>
 </div>
 </ion-content>

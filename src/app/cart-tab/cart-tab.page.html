@@ -8,7 +8,7 @@
     </ion-header>
 
     <ion-content>
-        <div class="main ion-margin-horizontal ion-margin-vertical">
+        <div class="main ion-margin-horizontal ion-margin-start ion-margin-vertical">
             <div class="header">My Shopping Bag</div>
             <div *ngIf="itemList.length !== 0" class="subHead">{{maxCount}} items added</div>
             <div class="items" *ngFor="let item of itemList">

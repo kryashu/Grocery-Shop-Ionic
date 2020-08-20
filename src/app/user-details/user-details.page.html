@@ -8,12 +8,12 @@
     </ion-toolbar>
   </ion-header>
   <ion-content>
-    <ion-grid class=" ion-margin-top ">
+    <ion-grid class="ion-margin-vertical ion-margin-start ion-margin-horizontal">
       <ion-row>
         <h1>Few details to get thing personalized</h1>
       </ion-row>
       <ion-row class="details">
-        <ion-col size="11">
+        <ion-col size="11" style="padding: 0">
           <ion-input class="cursor" placeholder="Enter Your Name" [(ngModel)]="name" (ngModelChange)="checkName()"></ion-input>
           <small *ngIf="nameCheck">Please enter your name
           </small>
@@ -25,8 +25,10 @@
 
         </ion-col>
       </ion-row>
+    </ion-grid>
+    <ion-grid>
       <ion-row class="gender">
-        <ion-col size="12">
+        <ion-col style="padding: 0px">
           <ion-list lines="none" >
             <ion-radio-group value="biff" [(ngModel)]="gender" >
               <ion-item>
@@ -50,7 +52,7 @@
 
       </ion-row>
       <ion-row>
-        <ion-button expand="block" class="upperBtn" (click)="confirm()">Next</ion-button>
+        <ion-button expand="block" class="upperBtn ion-margin-start ion-margin-horizontal" (click)="confirm()">Next</ion-button>
       </ion-row>
     </ion-grid>
   </ion-content>
