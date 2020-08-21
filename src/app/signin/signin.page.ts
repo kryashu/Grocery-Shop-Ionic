@@ -19,13 +19,10 @@ export class SigninPage implements OnInit {
 
 signInWithGoogle(){
     // tslint:disable-next-line:max-line-length
-  this.googlePlus.login({scopes: '', // optional, space-separated list of scopes, If not included or empty, defaults to `profile` and `email`.
-      // tslint:disable-next-line:max-line-length
-      webClientId: '17228169572-1sa7pt5p09venm95af3ogjotoecrg97h.apps.googleusercontent.com', // optional clientId of your Web application from Credentials settings of your project - On Android, this MUST be included to get an idToken. On iOS, it is not required.
-      offline: true})
+  this.googlePlus.login({})
       .then(res => {
         console.log(res);
-        alert(res);
+        alert(res.toString());
         this.router.navigate(['tabs', 'homepage']);
       })
       .catch(err => alert(err));
