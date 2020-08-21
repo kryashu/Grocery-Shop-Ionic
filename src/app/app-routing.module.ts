@@ -54,7 +54,8 @@ const routes: Routes = [
   {
     path: 'add-review',
     loadChildren: () => import('./add-review/add-review.module').then( m => m.AddReviewPageModule)
-  },  {
+  },
+  {
     path: 'dialog-exit-app',
     loadChildren: () => import('./dialog-exit-app/dialog-exit-app.module').then( m => m.DialogExitAppPageModule)
   },
@@ -121,6 +122,10 @@ const routes: Routes = [
   {
     path: 'order-confirm',
     loadChildren: () => import('./order-confirm/order-confirm.module').then( m => m.OrderConfirmPageModule)
+  },
+  {
+    path: 'track-order',
+    loadChildren: () => import('./track-order/track-order.module').then( m => m.TrackOrderPageModule)
   }
 
 
