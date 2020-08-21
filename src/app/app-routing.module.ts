@@ -109,6 +109,10 @@ const routes: Routes = [
   {
     path: 'select-payment',
     loadChildren: () => import('./select-payment/select-payment.module').then( m => m.SelectPaymentPageModule)
+  },
+  {
+    path: 'checkout',
+    loadChildren: () => import('./checkout/checkout.module').then( m => m.CheckoutPageModule)
   }
 
 

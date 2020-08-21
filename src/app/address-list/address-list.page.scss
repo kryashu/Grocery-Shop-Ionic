@@ -168,3 +168,21 @@ ion-col {
   height: 20px;
   margin-top: 5px;
 }
+.subheader{
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  margin-top: 20%;
+  font-family: "sf bold";
+  font-size: 20px;
+}
+.text{
+  font-family: "Sf medium";
+  margin-top: 20px;
+  font-size: 15px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
