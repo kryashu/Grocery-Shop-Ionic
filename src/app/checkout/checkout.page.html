@@ -1,9 +1,59 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>checkout</ion-title>
+    <img src="./assets/Back%20button.png" class="back" (click)="location.back()">
+    <div class="logo">
+      <img src="./assets/Logo.png">
+    </div>
+    <img class="ion-float-right edit" src="./assets/clear.svg" (click)="location.back()">
   </ion-toolbar>
 </ion-header>
-
 <ion-content>
-
+  <div class="ion-margin-start" style="margin-right: 15px">
+    <div class="header">
+      Checkout
+    </div>
+    <div>
+      <ion-grid class="option">
+        <ion-row  class="ion-margin-vertical">
+          <ion-col size-xs="9" class="ion-margin-vertical">
+            <label class="container">
+              <span class="radio-button__label value">•••• •••• •••• 4432</span>
+              <span class="radio-button__label name">Mastercard - 06/23</span>
+              <span class="checkmark"></span>
+            </label>
+          </ion-col>
+          <ion-col size-xs="3" class="ion-float-right" style="display: flex; align-items: center">
+            <div class="change ion-float-right">
+              Change
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+    <div class="items" *ngFor="let item of itemList">
+      <img src="./assets/blank.png" class="image-block">
+      <div class="item-details">
+        <ion-grid>
+          <ion-row>
+            <ion-col size="8">
+        <div class="item-name">{{item.name}}</div>
+        <div class="item-quantity">{{item.count}} items x ${{item.discountedPrice}}.00</div>
+            </ion-col>
+            <ion-col size="4" style="margin-top: 5px">
+            <div class="priceTag ion-float-right">
+              &#x20b9;{{item.discountedPrice.toString()}}.00
+            </div>
+            <div class="originalPrice ion-float-right">&#x20b9;{{item.originalPrice}}</div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
+    </div>
+    <div class="coupon">
+      <div class="input-group-append" style="border: none; margin-right: 10px; margin-top: 5px">
+        see coupons
+      </div>
+    <ion-input placeholder="Enter Coupon Code"></ion-input>
+    </div>
+  </div>
 </ion-content>
