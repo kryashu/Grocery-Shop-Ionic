@@ -15,7 +15,7 @@
   <div>
     <ion-grid class="option ion-margin-vertical">
       <ion-row *ngFor="let card of methodList" class="ion-margin-vertical">
-        <ion-col size-xs="9" class="ion-margin-vertical">
+        <ion-col size-xs="9" style="margin-top: 16px">
           <label class="container">
             <span class="radio-button__label name">{{card.name}}</span>
             <input type="checkbox" [(ngModel)]="card.isSelected" (change)="check(card.name)">
