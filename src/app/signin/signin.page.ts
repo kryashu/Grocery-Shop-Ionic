@@ -23,17 +23,17 @@ export class SigninPage implements OnInit {
         this.googlePlus.login({})
             .then(res => {
                 console.log(res);
-                alert(JSON.stringify(res));
+                //alert(JSON.stringify(res));
                 this.router.navigate(['tabs', 'homepage']);
             })
-            .catch(err => alert(err));
+            .catch(err => console.log(err));
     }
 
     signInWithFB() {
         this.fb.login(['public_profile', 'user_friends', 'email'])
             .then((res: FacebookLoginResponse) => {
                 console.log('Logged into Facebook!', res);
-                alert(JSON.stringify(res));
+                //alert(JSON.stringify(res));
                 this.router.navigate(['tabs', 'homepage']);
             })
             .catch(e => console.log('Error logging into Facebook', e));
