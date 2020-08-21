@@ -130,6 +130,10 @@ const routes: Routes = [
   {
     path: 'order-details',
     loadChildren: () => import('./order-details/order-details.module').then( m => m.OrderDetailsPageModule)
+  },
+  {
+    path: 'my-orders',
+    loadChildren: () => import('./my-orders/my-orders.module').then( m => m.MyOrdersPageModule)
   }
 
 

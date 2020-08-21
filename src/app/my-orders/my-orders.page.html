@@ -1,0 +1,42 @@
+<ion-header class="ion-no-border">
+    <ion-toolbar>
+        <div class="logo">
+            <img src="./assets/Logo.png">
+        </div>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <div class="ion-margin-start ion-margin-horizontal">
+        <div class="header">
+            My Orders
+        </div>
+        <div>
+            <ion-grid>
+                <ion-row *ngFor="let order of orders" style="margin-top: 40px" (click)="router.navigate(['order-details'])">
+                    <ion-col size="2">
+                        <img src="./assets/blank.png" class="image">
+                    </ion-col>
+                    <ion-col size="7">
+                        <div class="name">{{order.name}}</div>
+                        <div style="margin-top: 3px">
+                            <span class="item-price">&#x20b9;{{order.price}}.00</span>
+                            <span class="item-subprice">&#x20b9;{{order.discountedPrice}}0</span>
+                        </div>
+                    </ion-col>
+                    <ion-col size="3">
+                        <div class="status">
+                            {{order.status}}
+                        </div>
+                    </ion-col>
+                    <div style="width: 100%">
+                        <ion-button class="reorder ion-float-right">Reorder</ion-button>
+                    </div>
+                </ion-row>
+            </ion-grid>
+        </div>
+    </div>
+</ion-content>
+<ion-toolbar>
+    <app-tabs></app-tabs>
+</ion-toolbar>
