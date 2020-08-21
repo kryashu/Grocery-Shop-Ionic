@@ -1,0 +1,127 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <img src="./assets/Back%20button.png" (click)="back()" class="back">
+    <div class="logo">
+      <img src="./assets/Logo.png">
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="ion-margin-horizontal ion-margin-vertical">
+  <div class="header">Order Details</div>
+  <ion-grid>
+    <ion-row>
+      <ion-col size-xs="8">
+           <div style="display: flex">
+             <div class="nav">
+               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.369" viewBox="0 0 16 14.369"><defs><style>.a{opacity:0.3;}.b{fill:#1a1824;}</style></defs><g class="a" transform="translate(0 -26.091)"><g transform="translate(0 26.091)"><path class="b" d="M15.878,26.34a.62.62,0,0,0-.642-.232L.474,29.68a.619.619,0,0,0-.158,1.142l5.457,3.065,1.344,6.088a.619.619,0,0,0,.509.478.627.627,0,0,0,.1.007.619.619,0,0,0,.535-.307l7.66-13.13A.62.62,0,0,0,15.878,26.34ZM7.985,38.16l-.976-4.42L9.1,32.183a.619.619,0,0,0-.739-.994L6.271,32.745,2.3,30.513l11.817-2.859Z" transform="translate(0 -26.091)"/></g></g></svg>
+             </div>
+             <div class="text-pink " style="font-size: 15px">
+               More Market
+             </div>
+           </div>
+      </ion-col>
+      <ion-col size-xs="4">
+        <div class="text-gray ion-float-right">Help</div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <ion-grid class="ion-margin-vertical">
+    <ion-row>
+      <ion-col size-xs="8">
+        <div style="display: flex">
+          <div class="nav1">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14.369" viewBox="0 0 16 14.369"><defs><style>.a{opacity:0.3;}.b{fill:#1a1824;}</style></defs><g class="a" transform="translate(0 -26.091)"><g transform="translate(0 26.091)"><path class="b" d="M15.878,26.34a.62.62,0,0,0-.642-.232L.474,29.68a.619.619,0,0,0-.158,1.142l5.457,3.065,1.344,6.088a.619.619,0,0,0,.509.478.627.627,0,0,0,.1.007.619.619,0,0,0,.535-.307l7.66-13.13A.62.62,0,0,0,15.878,26.34ZM7.985,38.16l-.976-4.42L9.1,32.183a.619.619,0,0,0-.739-.994L6.271,32.745,2.3,30.513l11.817-2.859Z" transform="translate(0 -26.091)"/></g></g></svg>
+          </div>
+        <div style="display: flex; flex-direction: column">
+          <div class="" style="font-size: 15px">
+            More Market
+          </div>
+          <div>
+            <small class="text-gray">{{home}}</small>
+          </div>
+        </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+  <div class="horizontal-line">
+  </div>
+  <div class="ion-margin-horizontal ion-margin-vertical" >
+  <div style="display: flex;">
+    <div class="confirm" style="margin-right: 10px; margin-top: 8px" >
+      <img src="./assets/order-con.svg">
+    </div>
+    <div>
+  <small>Order delivered on 28 Jan 2020, 01:44PM by Sachin Makhija</small>
+    </div>
+  </div>
+  </div>
+<!--  //order details-->
+  <div style="background: #EFEFEF;height: 25px;display: flex;align-items: center">
+<div class="ion-margin-horizontal" >
+  <small>Order Details</small>
+</div>
+  </div>
+
+<!--  //order item-->
+   <div class="ion-margin-horizontal ion-margin-vertical" >
+     <div class="items" *ngFor="let item of itemList">
+       <img src="./assets/blank.png" class="image-block">
+       <div class="item-details">
+         <ion-grid>
+           <ion-row>
+             <ion-col size="8">
+               <div class="item-name">{{item.name}}</div>
+               <div class="item-quantity">{{item.count}} items x ${{item.discountedPrice}}.00</div>
+             </ion-col>
+             <ion-col size="4" style="margin-top: 5px;">
+               <div class="ion-float-right" style="justify-content: flex-end; display: flex;flex-direction: column">
+                 <div class="priceTag ion-float-right">
+                   &#x20b9;{{item.discountedPrice.toString()}}.00
+                 </div>
+                 <div class="originalPrice ion-float-right">&#x20b9;{{item.originalPrice}}</div>
+               </div>
+             </ion-col>
+           </ion-row>
+         </ion-grid>
+       </div>
+     </div>
+   </div>
+  <div class="horizontal-line">
+  </div>
+  <div class="ion-margin-vertical ion-margin-horizontal">
+    <!--    // Total count-->
+    <ion-grid class="ion-margin-vertical">
+      <ion-row>
+        <ion-col size-xs="5">
+          <small class="ion-float-right  text-gray">Total</small>
+        </ion-col>
+        <ion-col size-xs="7">
+          <small class="ion-float-right text-gray">&#x20b9;33.00</small>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-xs="5">
+          <small class="ion-float-right text-gray">Discount</small>
+        </ion-col>
+        <ion-col size-xs="7">
+          <small class="ion-float-right text-gray">&#x20b9;3.00</small>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-xs="5">
+          <p class="ion-float-right text-pink">Total</p>
+        </ion-col>
+        <ion-col size-xs="7">
+          <p class="ion-float-right text-pink">&#x20b9;30.00</p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>
+<ion-toolbar>
+  <app-tabs></app-tabs>
+</ion-toolbar>
