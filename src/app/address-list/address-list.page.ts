@@ -29,8 +29,9 @@ export class AddressListPage implements OnInit {
     }
 
     check(name, event) {
-        if (event.target.checked){
-            this.presentAlertMultipleButtons();}
+        if (event.target.checked) {
+            this.proceedAlert();
+        }
         for (const address of this.addressList) {
             if (name === address.name) {
                 address.isSelected = true;
@@ -40,39 +41,65 @@ export class AddressListPage implements OnInit {
         }
     }
 
-    delete() {
+    delete(name) {
         for (const address of this.addressList) {
-            if (address.isSelected) {
-                this.addressList.splice(this.addressList.indexOf(address),1);
+            if (address.name === name) {
+                this.addressList.splice(this.addressList.indexOf(address), 1);
             } else {
                 address.isSelected = false;
             }
         }
     }
-    async presentAlertMultipleButtons() {
-    const alert = await this.alertController.create({
-        cssClass: 'alertCancel',
-        header: 'Are you sure!',
-        message: 'You want to deliver at this address?',
-        buttons: [
-            {
-                text: 'Cancel',
-                role: 'cancel',
-                cssClass: 'secondary',
-                handler: (blah) => {
-                    console.log('Confirm Cancel: blah');
-                }
-            },
-              {
-                text: 'Okay',
-                handler: () => {
-                    this.router.navigate(['select-payment']);
-                }
-            }
-        ]
-    });
 
-    await alert.present();
-}
+    async proceedAlert() {
+        const alert = await this.alertController.create({
+            cssClass: 'alertCancel',
+            header: 'Are you sure!',
+            message: 'You want to deliver at this address?',
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    cssClass: 'secondary',
+                    handler: (blah) => {
+                        console.log('Confirm Cancel: blah');
+                    }
+                },
+                {
+                    text: 'Okay',
+                    handler: () => {
+                        this.router.navigate(['select-payment']);
+                    }
+                }
+            ]
+        });
 
+        await alert.present();
+    }
+
+    async deleteAlert(name) {
+        const alert = await this.alertController.create({
+            cssClass: 'alertCancel',
+            header: 'Are you sure!',
+            message: 'You want to delete this address?',
+            buttons: [
+                {
+                    text: 'Cancel',
+                    role: 'cancel',
+                    cssClass: 'secondary',
+                    handler: (blah) => {
+                        console.log('Confirm Cancel: blah');
+                    }
+                },
+                {
+                    text: 'Okay',
+                    handler: () => {
+                        this.delete(name);
+                    }
+                }
+            ]
+        });
+
+        await alert.present();
+    }
 }

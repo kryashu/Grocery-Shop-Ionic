@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 import {Location} from '@angular/common';
+import {AlertController} from '@ionic/angular';
 
 @Component({
   selector: 'app-view-cards',
@@ -19,14 +20,15 @@ export class ViewCardsPage implements OnInit {
   }];
 
   constructor(private router: Router,
-              private location: Location) {
+              private location: Location,
+              public alertController: AlertController) {
   }
 
   ngOnInit() {
   }
 
   back() {
-    this.location.back()
+    this.location.back();
   }
 
   check(name) {
@@ -47,5 +49,30 @@ export class ViewCardsPage implements OnInit {
         card.isSelected = false;
       }
     }
+  }
+  async deleteAlert(name) {
+    const alert = await this.alertController.create({
+      cssClass: 'alertCancel',
+      header: 'Are you sure!',
+      message: 'You want to remove this card?',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        },
+        {
+          text: 'Okay',
+          handler: () => {
+            this.delete(name);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 }
