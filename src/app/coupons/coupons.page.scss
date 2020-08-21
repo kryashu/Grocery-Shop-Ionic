@@ -1,0 +1,60 @@
+.logo {
+  width: 25px;
+  margin: auto;
+}
+.back {
+  position: absolute;
+  margin-top: 8px;
+  margin-left: 40px;
+  transform: translate(-50%, -50%);
+}
+ion-grid {
+  padding: 0px;
+}
+ion-col {
+  padding: 0px;
+}
+.border {
+  background: #F3F3F3;
+  padding: 15px;
+  margin-top: 15px;
+}
+.border1 {
+  margin-top: 15px;
+}
+.coupon{
+  background: white;
+  height: 50px;
+  ::ng-deep input {
+    padding-left: 25%;
+    padding-right: 25%;
+  }
+}
+.text-pink {
+  color: #EA0A8E;
+}
+.text-gray {
+  color: #949494;
+}
+.text-black {
+color: #3B3C41;
+}
+.horizontal-line {
+  border-bottom: 1px solid lightgray;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+}
+.expire {
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+::ng-deep .searchbar-input.sc-ion-searchbar-md{
+  --box-shadow: white;
+  border-bottom: 0.3px solid lightgrey;
+  padding-inline-start: 40px;
+  padding-top: 10px;
+}
+::ng-deep .searchbar-search-icon.sc-ion-searchbar-md{
+  left: 0px;
+  top: 15px
+}

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {Location} from "@angular/common";
+import {AlertController} from "@ionic/angular";
 
 @Component({
   selector: 'app-view-all',
@@ -15,7 +16,8 @@ export class ViewAllPage implements OnInit {
   input;
   constructor(private route: ActivatedRoute,
               private router: Router,
-              private _location: Location) { }
+              private _location: Location,
+              public alertController: AlertController) { }
 
   ngOnInit() {
     this.route.params.subscribe(params => {
@@ -43,4 +45,6 @@ click(){
       this.router.navigate(['shop']);
     }
 }
+
+
 }

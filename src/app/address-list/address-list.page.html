@@ -8,7 +8,7 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-  <div class="ion-margin-vertical ion-margin-start ">
+  <div class="ion-margin-vertical ion-margin-horizontal ">
     <div class="header" *ngIf="addressList.length > 0">
       My addresses
     </div>
@@ -24,7 +24,7 @@
             </label>
           </ion-col>
           <ion-col size-xs="3" class="" style="display: flex; align-items: center">
-        <div class="ion-float-right" style="display: flex;align-items: center;margin-left: 12%">
+        <div class="ion-float-right" style="display: flex;align-items: center;margin-left: 25%">
             <img src="./assets/Delete%20button.png" (click)="deleteAlert(address.name)"  role="button" class="ion-float-right change ">
             <img class="ion-float-right pencil " src="./assets/edit-black.png" (click)="router.navigate(['select-location'])">
         </div>
@@ -32,12 +32,13 @@
         </ion-row>
       </ion-grid>
     </div>
-    <div *ngIf="addressList.length === 0" class="subheader ion-margin-horizontal">
+    <div *ngIf="addressList.length === 0" class="subheader">
       No Address found!
+     <small> Please add an address.</small>
     </div>
-    <div  class="text ion-margin-horizontal" *ngIf="addressList.length === 0">
-     Please add an address.
-    </div>
+<!--    <div  class="text" *ngIf="addressList.length === 0">-->
+<!--     Please add an address.-->
+<!--    </div>-->
   </div>
 </ion-content>
 <ion-toolbar>

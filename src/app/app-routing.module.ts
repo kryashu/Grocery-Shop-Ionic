@@ -54,7 +54,8 @@ const routes: Routes = [
   {
     path: 'add-review',
     loadChildren: () => import('./add-review/add-review.module').then( m => m.AddReviewPageModule)
-  },  {
+  },
+  {
     path: 'dialog-exit-app',
     loadChildren: () => import('./dialog-exit-app/dialog-exit-app.module').then( m => m.DialogExitAppPageModule)
   },
@@ -113,6 +114,14 @@ const routes: Routes = [
   {
     path: 'checkout',
     loadChildren: () => import('./checkout/checkout.module').then( m => m.CheckoutPageModule)
+  },
+  {
+    path: 'coupons',
+    loadChildren: () => import('./coupons/coupons.module').then( m => m.CouponsPageModule)
+  },
+  {
+    path: 'order-confirm',
+    loadChildren: () => import('./order-confirm/order-confirm.module').then( m => m.OrderConfirmPageModule)
   },
   {
     path: 'track-order',

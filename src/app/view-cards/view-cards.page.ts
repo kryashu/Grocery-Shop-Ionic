@@ -31,7 +31,10 @@ export class ViewCardsPage implements OnInit {
     this.location.back();
   }
 
-  check(name) {
+  check(name, event) {
+    if (event.target.checked) {
+      this.proceedAlert();
+    }
     for (const card of this.cardList) {
       if (name === card.name) {
         card.isSelected = true;
@@ -40,6 +43,31 @@ export class ViewCardsPage implements OnInit {
       }
     }
 
+  }
+  async proceedAlert() {
+    const alert = await this.alertController.create({
+      cssClass: 'alertCancel',
+      header: 'Are you sure!',
+      message: 'You want to use this card',
+      buttons: [
+        {
+          text: 'Cancel',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: (blah) => {
+            console.log('Confirm Cancel: blah');
+          }
+        },
+        {
+          text: 'Okay',
+          handler: () => {
+            this.router.navigate(['checkout']);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
   delete(name){
     for (const card of this.cardList) {

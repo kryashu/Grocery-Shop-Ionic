@@ -61,7 +61,7 @@ export class SelectPaymentPage implements OnInit {
                         if (flag) {
                             this.router.navigate(['view-cards']);
                         }else{
-                            this.router.navigate(['view-cards']);
+                            this.router.navigate(['checkout']);
                         }
                     }
                 }
