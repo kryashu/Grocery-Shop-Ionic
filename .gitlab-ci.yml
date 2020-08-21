@@ -19,7 +19,8 @@ build_android:
     - npm i
     - ionic cordova platform rm android
     - ionic cordova platform add android
-    - ionic cordova build android 
+    - ionic cordova build android
+    - jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.keystore platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk alias_name
   artifacts:
     paths:
       - platforms/android/app/build/outputs/apk

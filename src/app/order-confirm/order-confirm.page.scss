@@ -1,11 +1,16 @@
 .logo {
   width: 25px;
-  //margin-left: 45%;
   margin: auto;
 }
-.clear {
+.back {
   position: absolute;
-  top: 2px;
+  margin-top: 8px;
+  margin-left: 40px;
+  transform: translate(-50%, -50%);
+}
+.edit {
+  position: absolute;
+  top: 2.5px;
   left: 85%;
 }
 .image{
@@ -13,9 +18,9 @@
   display: flex;
   align-items: center;
   text-align: center;
-  margin-top: 30%;
+  margin-top: 40%;
 }
-.header{
+.header1{
   font-family: "Sf bold";
   font-size: 30px;
   display: flex;
@@ -24,7 +29,7 @@
   align-items: center;
   text-align: center;
 }
-.subheader{
+.subheader1{
   justify-content: center;
   align-items: center;
   display: flex;
@@ -33,21 +38,14 @@
   font-size: 15px;
   margin-top: 20px;
 }
-.main-btn{
-  --background: #EA0A8E;
+.track-order{
   text-transform: none;
-  font-size: 14px;
-  font-family: "Sf regular";
-  --border-radius: 5px;
-  height: 45px;
-  width: 100%;
-}
-.btn{
-  font-family: "Sf regular";
-  font-size: 12px;
-  margin-top: 25px;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  text-align: center;
+  --background: #EA0A8E;
+  width: 85%;
+  height: 44px;
+  margin: auto;
+  font-family: "sf regular";
+  font-size: 16px;
+  --border-radius: 7px !important;
+
 }

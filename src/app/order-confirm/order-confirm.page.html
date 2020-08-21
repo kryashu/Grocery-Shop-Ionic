@@ -1,0 +1,26 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <img src="./assets/Back%20button.png" (click)="back()" class="back">
+    <div class="logo">
+      <img src="./assets/Logo.png">
+    </div>
+    <img class="ion-float-right edit" src="./assets/clear.svg" (click)="back()">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-margin-vertical ion-margin-horizontal">
+    <div class="image">
+      <img src="./assets/nocard.png">
+    </div>
+    <div class="header1">Congratulations!</div>
+    <div class="subheader1">Your order has been sent. In about 50 minutes it should be at your door.</div>
+<!--   <div class="button">-->
+<!--     <ion-button class="track-order" expand="block" >Track your order</ion-button>-->
+<!--   </div>-->
+  </div>
+  <div class="button" style="position: fixed; width: 100%; bottom: 2%">
+    <ion-button class="track-order" expand="block" routerLink="/track-order" >Track your order</ion-button>
+  </div>
+</ion-content>
+

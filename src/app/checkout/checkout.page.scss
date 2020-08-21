@@ -6,14 +6,14 @@
 .back {
   position: absolute;
   margin-top: 8px;
-  margin-left: 30px;
+  margin-left: 40px;
   transform: translate(-50%, -50%);
 }
 
 .edit {
   position: absolute;
   top: 2.5px;
-  left: 88%;
+  left: 85%;
 }
 
 .header {
@@ -102,5 +102,39 @@ ion-input {
   }
 }
 .coupon{
-  margin-top: 20%;
+  //margin-top: 20%;
+  margin-block-start: 4em;
+  margin-block-end: 2.5em;
+}
+.heading {
+  font-family: "sf bold";
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.your-rating {
+  height: 30px;
+  width: 50px;
+  background: #EAEAEB;
+  margin-right: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.place-order{
+  text-transform: none;
+  --background: #EA0A8E;
+  width: 100%;
+  height: 44px;
+  font-family: "sf regular";
+  font-size: 16px;
+  --border-radius: 7px !important;
+
+}
+.horizontal-line {
+  border-bottom: 1px solid #EAEAEB;
+  width: 100%;
+  //margin-block-start: 4em;
+  //margin-block-end: 2.5em;
 }

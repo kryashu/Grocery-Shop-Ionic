@@ -113,6 +113,14 @@ const routes: Routes = [
   {
     path: 'checkout',
     loadChildren: () => import('./checkout/checkout.module').then( m => m.CheckoutPageModule)
+  },
+  {
+    path: 'coupons',
+    loadChildren: () => import('./coupons/coupons.module').then( m => m.CouponsPageModule)
+  },
+  {
+    path: 'order-confirm',
+    loadChildren: () => import('./order-confirm/order-confirm.module').then( m => m.OrderConfirmPageModule)
   }
 
 
