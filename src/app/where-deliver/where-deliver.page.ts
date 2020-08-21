@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {Location} from '@angular/common';
+import {Location, TitleCasePipe} from '@angular/common';
 import {Router} from '@angular/router';
 
 @Component({
@@ -12,9 +12,14 @@ export class WhereDeliverPage implements OnInit {
   address2 = '';
   address3 = ''
   constructor(private location: Location,
-              private router: Router) { }
+              private router: Router,
+              private titlecasePipe: TitleCasePipe) { }
 
   ngOnInit() {
   }
-
+  transformName(){
+    this.address3 = this.titlecasePipe.transform(this.address3);
+    this.address1 = this.titlecasePipe.transform(this.address1);
+    this.address2 = this.titlecasePipe.transform(this.address2);
+  }
 }

@@ -13,6 +13,7 @@ import {TabsPageModule} from './tabs/tabs.module';
 import { Keyboard } from '@ionic-native/keyboard/ngx';
 import { GooglePlus } from '@ionic-native/google-plus/ngx';
 import { Facebook } from '@ionic-native/facebook/ngx';
+import {TitleCasePipe} from "@angular/common";
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -23,6 +24,7 @@ import { Facebook } from '@ionic-native/facebook/ngx';
   ],
   providers: [
     StatusBar,
+      TitleCasePipe,
     SplashScreen,
     Keyboard,
     GooglePlus,
