@@ -34,14 +34,14 @@
   padding-top: 10px;
 }
 
-.input-group {
-  display: flex;
-  input{
+ion-item {
     border-bottom: 1px solid #EFEFEF;
-  }
-  ::ng-deep input:focus {
-    border-bottom: 1px solid black;
-  }
+  //border-bottom: 1px solid black;
+  //::ng-deep ion-input {
+  //  ::ng-deep input{
+  //  border-bottom: 1px solid black;
+  //}
+  //}
 }
 
 .save-button {
@@ -70,7 +70,7 @@
   margin-bottom: 5px;
   left: 0;
   position: fixed;
-  text-transform: capitalize;
+  //text-transform: capitalize;
   caret-color: #EA0A8E;
 }
 ion-input::-webkit-input-placeholder {
@@ -78,8 +78,11 @@ ion-input::-webkit-input-placeholder {
 }
 .item-interactive.ion-valid {
   --highlight-background: black;
+  --border-width: 0 0 .1px 0;
+  --show-full-highlight: .5
 }
 
 ion-list{
   width: 100%;
 }
+

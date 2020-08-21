@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
-import {Location} from '@angular/common';
+import {Location, TitleCasePipe} from '@angular/common';
 import {ToastController} from "@ionic/angular";
 
 @Component({
@@ -14,9 +14,15 @@ export class NewAddressPage implements OnInit {
   input3;
   constructor(private router: Router,
               private location: Location,
-              public toastController: ToastController) { }
+              public toastController: ToastController,
+              private titlecasePipe: TitleCasePipe) { }
 
   ngOnInit() {
+  }
+  transformName(){
+    this.input3 = this.titlecasePipe.transform(this.input3);
+    this.input2 = this.titlecasePipe.transform(this.input2);
+    this.input1 = this.titlecasePipe.transform(this.input1);
   }
 
   saveAddress() {
