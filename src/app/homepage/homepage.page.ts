@@ -29,7 +29,7 @@ export class HomepagePage implements OnInit {
               //this.presentalert();
               this.navCtrl.navigateBack('/tabs/homepage');
             }else{
-                this.navCtrl.navigateBack('/tabs/homepage');
+                this.navCtrl.pop();
             }
           });
         }
