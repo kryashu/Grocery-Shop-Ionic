@@ -134,7 +134,15 @@ const routes: Routes = [
   {
     path: 'my-orders',
     loadChildren: () => import('./my-orders/my-orders.module').then( m => m.MyOrdersPageModule)
+  },  {
+    path: 'edit-card',
+    loadChildren: () => import('./edit-card/edit-card.module').then( m => m.EditCardPageModule)
+  },
+  {
+    path: 'edit-address',
+    loadChildren: () => import('./edit-address/edit-address.module').then( m => m.EditAddressPageModule)
   }
+
 
 
 ];

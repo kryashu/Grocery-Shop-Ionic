@@ -156,3 +156,22 @@
 .text-pink {
   color: #EA0A8E;
 }
+.datepicker {
+  --border-radius: 15px;
+ .picker-toolbar .sc-ion-picker-md {
+        justify-content: space-between;
+
+      }
+}
+.picker-opt.picker-opt-selected, .picker-prefix, .picker-suffix {
+  color: #EA0A8E;
+}
+.picker-toolbar.sc-ion-picker-md {
+  justify-content: space-between;
+}
+.picker-button.sc-ion-picker-md, .picker-button.activated.sc-ion-picker-md {
+  color: black;
+}
+.picker-wrapper.sc-ion-picker-md {
+  border-radius: 15px 15px 0 0;
+}
