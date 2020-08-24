@@ -51,7 +51,6 @@ export class HomepagePage implements OnInit {
             buttons: [
                 {
                     text: 'NO',
-                    role: 'cancel',
                     cssClass: 'alertButton',
                     handler: () => {
                         this.flag = true;
