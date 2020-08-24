@@ -28,7 +28,30 @@ export class HomepagePage implements OnInit {
         this.router.events.subscribe((e) => {
             this.subscribe = this.platform.backButton.subscribeWithPriority(0, () => {
                 if (this.router.url.slice(0, 6) === '/tabs') {
-                    this.presentalert();
+                    const alert = this.alertController.create({
+                        header: 'Untouched Ionic',
+                        message: 'Are you sure you want to exit?',
+                        cssClass: 'alertCancel',
+                        backdropDismiss: true,
+                        buttons: [
+                            {
+                                text: 'NO',
+                                role: 'cancel',
+                                cssClass: 'alertButton',
+                                handler: () => {
+                                    this.alertController.dismiss();
+                                    return false;
+                                }
+                            }, {
+                                text: 'YES',
+                                cssClass: 'alertButton',
+                                handler: () => {
+                                    navigator['app'].exitApp();
+                                }
+                            }
+                        ]
+                    });
+                    alert.present();
                 } else {
                     this.navCtrl.pop();
                 }
@@ -39,10 +62,6 @@ export class HomepagePage implements OnInit {
     }
 
     ngOnInit() {
-    }
-
-    async close() {
-        await this.modalController.dismiss();
     }
 
     async presentalert() {
@@ -74,14 +93,6 @@ export class HomepagePage implements OnInit {
 
     openViewAll(name) {
         this.router.navigate(['/view-all', {value: name}]);
-    }
-
-    async exitApp() {
-        const modal = await this.modalController.create({
-            component: DialogExitAppPage,
-            cssClass: 'exitApp'
-        });
-        return await modal.present();
     }
 
 }
