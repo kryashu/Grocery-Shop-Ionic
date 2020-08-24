@@ -10,7 +10,7 @@ import {AlertController} from '@ionic/angular';
 })
 export class SelectPaymentPage implements OnInit {
     methodList = [{name: 'Pick up myself', isSelected: false}, {name: 'Cash on Delivery', isSelected: false}, {
-        name: 'Pay with credit card',
+        name: 'Pay with credit/Debit card',
         isSelected: false
     }];
 

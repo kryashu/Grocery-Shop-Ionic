@@ -86,9 +86,17 @@
                 </ion-grid>
             </div>
             <ion-button expand="block" class="subButton" *ngIf="itemList.length !== 0" (click)="router.navigate(['address-list'])">Proceed to checkout</ion-button>
+<!--            <div *ngIf="itemList.length === 0" class="basket"><img src="./assets/bag.png" width="200"></div>-->
+<!--            <div *ngIf="itemList.length === 0" class="no-item ion-margin-vertical"> No item in cart!</div>-->
+            <div *ngIf="itemList.length !== 0" class="continue" routerLink="/tabs/homepage">Continue Shopping</div>
+        </div>
+        <div class="ion-margin-horizontal ion-align-items-center ion-justify-content-center" style='height: 80%;display: flex;flex-direction: column'>
             <div *ngIf="itemList.length === 0" class="basket"><img src="./assets/bag.png" width="200"></div>
             <div *ngIf="itemList.length === 0" class="no-item ion-margin-vertical"> No item in cart!</div>
-            <div class="continue" routerLink="/tabs/homepage">Continue Shopping</div>
+            <div  *ngIf="itemList.length === 0" class="continue" routerLink="/tabs/homepage">Continue Shopping</div>
         </div>
+<!--        <div class="ion-margin-horizontal">-->
+<!--            -->
+<!--        </div>-->
     </ion-content>
 </ion-app>

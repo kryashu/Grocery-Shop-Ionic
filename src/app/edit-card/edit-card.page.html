@@ -1,0 +1,41 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <img src="./assets/Back%20button.png" class="back" (click)="location.back()">
+    <div class="logo">
+      <img src="./assets/Logo.png">
+    </div>
+    <img class="ion-float-right edit" src="./assets/clear.svg" (click)="location.back()">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-margin-start ion-margin-horizontal">
+    <div class="header">
+      Edit credit/Debit card
+    </div>
+    <div class="subheader ion-margin-vertical">
+      Enter your credit/Debit card details.
+    </div>
+
+    <ion-input placeholder="Enter card holder name" style="text-transform: capitalize" [(ngModel)]="name"></ion-input>
+    <ion-input placeholder="XXXX XXXX XXXX XXXX" type="tel" maxlength="19" [(ngModel)]="cardNumber" (ngModelChange)="cardformat()"></ion-input>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="4">
+<!--          <ion-input placeholder="MM/YY" type="tel" [(ngModel)]="expirey" (ngModelChange)="formatDate()" maxlength="5"></ion-input>-->
+          <ion-datetime placeholder="MM/YY" displayFormat="MM/YY" pickerFormat="MM/YY"  (click)="date()"></ion-datetime>
+        </ion-col>
+        <ion-col size="4">
+
+        </ion-col>
+        <ion-col size="4">
+          <ion-input type="password" maxlength="4" placeholder="CVV"></ion-input>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-button class="button" expand="block" (click)="add()" [disabled]="(!cardNumber || !expirey) || !name">Continue</ion-button>
+  </div>
+</ion-content>
+<ion-toolbar>
+  <app-tabs></app-tabs>
+</ion-toolbar>
