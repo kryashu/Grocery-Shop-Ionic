@@ -128,6 +128,10 @@ const routes: Routes = [
     loadChildren: () => import('./track-order/track-order.module').then( m => m.TrackOrderPageModule)
   },
   {
+    path: 'order-details',
+    loadChildren: () => import('./order-details/order-details.module').then( m => m.OrderDetailsPageModule)
+  },
+  {
     path: 'my-orders',
     loadChildren: () => import('./my-orders/my-orders.module').then( m => m.MyOrdersPageModule)
   }
