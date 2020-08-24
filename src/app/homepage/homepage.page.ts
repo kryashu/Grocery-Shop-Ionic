@@ -23,16 +23,14 @@ export class HomepagePage implements OnInit {
               public alertController: AlertController,
               ) {
     this.router.events.subscribe((e) => {
-        if (this.router.url === '/tabs/homepage') {
           this.subscribe = this.platform.backButton.subscribeWithPriority(0, () => {
-            if (this.router.url === '/tabs/homepage'){
+            if (this.router.url.slice(0, 5) === '/tabs'){
               //this.presentalert();
               this.navCtrl.navigateBack('/tabs/homepage');
             }else{
                 this.navCtrl.pop();
             }
           });
-        }
     });
 
 
