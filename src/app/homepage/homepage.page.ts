@@ -27,31 +27,8 @@ export class HomepagePage implements OnInit {
     ) {
         this.router.events.subscribe((e) => {
             this.subscribe = this.platform.backButton.subscribeWithPriority(0, () => {
-                if (this.router.url.slice(0, 6) === '/tabs') {
-                    const alert = this.alertController.create({
-                        header: 'Untouched Ionic',
-                        message: 'Are you sure you want to exit?',
-                        cssClass: 'alertCancel',
-                        backdropDismiss: true,
-                        buttons: [
-                            {
-                                text: 'NO',
-                                role: 'cancel',
-                                cssClass: 'alertButton',
-                                handler: () => {
-                                    this.alertController.dismiss();
-                                    return false;
-                                }
-                            }, {
-                                text: 'YES',
-                                cssClass: 'alertButton',
-                                handler: () => {
-                                    navigator['app'].exitApp();
-                                }
-                            }
-                        ]
-                    });
-                    alert.present();
+                if (this.router.url.slice(0, 5) === '/tabs') {
+                    this.presentalert();
                 } else {
                     this.navCtrl.pop();
                 }
@@ -63,6 +40,7 @@ export class HomepagePage implements OnInit {
 
     ngOnInit() {
     }
+
 
     async presentalert() {
         const alert = await this.alertController.create({
