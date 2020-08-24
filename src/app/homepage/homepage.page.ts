@@ -18,6 +18,7 @@ const {App} = Plugins;
 export class HomepagePage implements OnInit {
     subscribe: any;
     flag = true;
+
     constructor(private router: Router,
                 private toastController: ToastController,
                 private platform: Platform,
@@ -52,10 +53,9 @@ export class HomepagePage implements OnInit {
                 {
                     text: 'NO',
                     cssClass: 'alertButton',
+                    role: 'cancel',
                     handler: () => {
                         this.flag = true;
-                        this.alertController.dismiss();
-                        return false;
                     }
                 }, {
                     text: 'YES',
@@ -66,8 +66,9 @@ export class HomepagePage implements OnInit {
                 }
             ]
         });
+
         if (this.flag) {
-            this.flag =  false;
+            this.flag = false;
             await alert.present();
         }
     }
