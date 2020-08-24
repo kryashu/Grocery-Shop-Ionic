@@ -17,7 +17,7 @@ const {App} = Plugins;
 })
 export class HomepagePage implements OnInit {
     subscribe: any;
-
+    flag = true;
     constructor(private router: Router,
                 private toastController: ToastController,
                 private platform: Platform,
@@ -54,6 +54,7 @@ export class HomepagePage implements OnInit {
                     role: 'cancel',
                     cssClass: 'alertButton',
                     handler: () => {
+                        this.flag = true;
                         this.alertController.dismiss();
                         return false;
                     }
@@ -66,7 +67,10 @@ export class HomepagePage implements OnInit {
                 }
             ]
         });
-        await alert.present();
+        if (this.flag) {
+            this.flag =  false;
+            await alert.present();
+        }
     }
 
     openViewAll(name) {
